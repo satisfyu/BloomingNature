@@ -43,6 +43,27 @@ public class TabRegistry {
                 out.accept(ObjectRegistry.LARCH_SAPLING.get());
                 out.accept(BoatsAndSignsRegistry.LARCH_SIGN_ITEM.get());
                 out.accept(BoatsAndSignsRegistry.LARCH_HANGING_SIGN_ITEM.get());
+
+                out.accept(ObjectRegistry.ASPEN_LOG.get());
+                out.accept(ObjectRegistry.ASPEN_WOOD.get());
+                out.accept(ObjectRegistry.STRIPPED_ASPEN_WOOD.get());
+                out.accept(ObjectRegistry.STRIPPED_ASPEN_LOG.get());
+                out.accept(ObjectRegistry.ASPEN_PLANKS.get());
+                out.accept(ObjectRegistry.ASPEN_STAIRS.get());
+                out.accept(ObjectRegistry.ASPEN_SLAB.get());
+                out.accept(ObjectRegistry.ASPEN_PRESSURE_PLATE.get());
+                out.accept(ObjectRegistry.ASPEN_BUTTON.get());
+                out.accept(ObjectRegistry.ASPEN_TRAPDOOR.get());
+                out.accept(ObjectRegistry.ASPEN_DOOR.get());
+                out.accept(ObjectRegistry.ASPEN_WINDOW.get());
+                out.accept(ObjectRegistry.ASPEN_FENCE.get());
+                out.accept(ObjectRegistry.ASPEN_FENCE_GATE.get());
+                out.accept(ObjectRegistry.ASPEN_LEAVES.get());
+                out.accept(ObjectRegistry.ASPEN_SAPLING.get());
+                out.accept(BoatsAndSignsRegistry.ASPEN_SIGN_ITEM.get());
+                out.accept(BoatsAndSignsRegistry.ASPEN_HANGING_SIGN_ITEM.get());
+
+
                 out.accept(ObjectRegistry.SWAMP_OAK_LOG.get());
                 out.accept(ObjectRegistry.SWAMP_OAK_WOOD.get());
                 out.accept(ObjectRegistry.STRIPPED_SWAMP_OAK_WOOD.get());
@@ -91,6 +112,8 @@ public class TabRegistry {
                 out.accept(ObjectRegistry.TALL_LUPINE_PURPLE.get());
                 out.accept(BoatsAndSignsRegistry.LARCH_CHEST_BOAT.get());
                 out.accept(BoatsAndSignsRegistry.LARCH_BOAT.get());
+                out.accept(BoatsAndSignsRegistry.ASPEN_CHEST_BOAT.get());
+                out.accept(BoatsAndSignsRegistry.ASPEN_BOAT.get());
                 out.accept(BoatsAndSignsRegistry.SWAMP_OAK_CHEST_BOAT.get());
                 out.accept(BoatsAndSignsRegistry.SWAMP_OAK_BOAT.get());
                 out.accept(ObjectRegistry.WANDERING_GARDENER_SPAWN_EGG.get());
