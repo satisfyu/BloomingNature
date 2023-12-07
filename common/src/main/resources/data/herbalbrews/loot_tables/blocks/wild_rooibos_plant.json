@@ -37,7 +37,7 @@
                   ]
                 }
               ],
-              "name": "herbalbrews:wild_rooibos_plant"
+              "name": "bloomingnature:wild_rooibos_plant"
             },
             {
               "type": "minecraft:item",
@@ -56,7 +56,7 @@
                   "enchantment": "minecraft:fortune"
                 }
               ],
-              "name": "herbalbrews:wild_rooibos_plant"
+              "name": "bloomingnature:wild_rooibos_plant"
             }
           ]
         }
@@ -122,7 +122,7 @@
               "function": "minecraft:explosion_decay"
             }
           ],
-          "name": "herbalbrews:rooibos_leaf"
+          "name": "bloomingnature:rooibos_leaf"
         }
       ],
       "rolls": 1.0

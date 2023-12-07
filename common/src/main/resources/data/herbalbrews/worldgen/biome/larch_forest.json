@@ -15,7 +15,7 @@
       "offset": 2
     },
     "music": {
-      "sound": "minecraft:music.overworld.herbalbrews",
+      "sound": "minecraft:music.overworld.bloomingnature",
       "min_delay": 12000,
       "max_delay": 24000,
       "replace_current_music": false
@@ -152,7 +152,7 @@
     ],
     [
       "minecraft:amethyst_geode",
-      "herbalbrews:stone_slabs"
+      "bloomingnature:stone_slabs"
     ],
     [
       "minecraft:monster_room",
@@ -201,8 +201,8 @@
     [
       "minecraft:glow_lichen",
       "minecraft:patch_grass_taiga_2",
-      "herbalbrews:larch_trees",
-      "herbalbrews:larch_fallen",
+      "bloomingnature:larch_trees",
+      "bloomingnature:larch_fallen",
       "minecraft:brown_mushroom_taiga",
       "minecraft:red_mushroom_taiga",
       "minecraft:patch_pumpkin",

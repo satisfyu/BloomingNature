@@ -26,7 +26,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "herbalbrews:white_orchid"
+          "name": "bloomingnature:white_orchid"
         }
       ],
       "rolls": 1

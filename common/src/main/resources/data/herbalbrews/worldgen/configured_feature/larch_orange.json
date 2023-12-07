@@ -13,7 +13,7 @@
     "dirt_provider": {
       "type": "minecraft:simple_state_provider",
       "state": {
-        "Name": "herbalbrews:larch_log",
+        "Name": "bloomingnature:larch_log",
         "Properties": {
           "axis": "y"
         }
@@ -22,7 +22,7 @@
     "trunk_provider": {
       "type": "minecraft:simple_state_provider",
       "state": {
-        "Name": "herbalbrews:larch_log",
+        "Name": "bloomingnature:larch_log",
         "Properties": {
           "axis": "y"
         }
@@ -31,7 +31,7 @@
     "foliage_provider": {
       "type": "minecraft:simple_state_provider",
       "state": {
-        "Name": "herbalbrews:orange_leaves",
+        "Name": "bloomingnature:orange_leaves",
         "Properties": {
           "waterlogged": "false",
           "persistent": "false",

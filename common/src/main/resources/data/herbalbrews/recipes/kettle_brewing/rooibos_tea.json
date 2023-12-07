@@ -1,15 +1,15 @@
 {
-  "type": "herbalbrews:kettle_brewing",
+  "type": "bloomingnature:kettle_brewing",
   "experience": 0.8,
   "ingredients": [
     {
-      "item": "herbalbrews:rooibos_leaf"
+      "item": "bloomingnature:rooibos_leaf"
     },
     {
       "item": "minecraft:water_bucket"
     }
   ],
   "result": {
-    "item": "herbalbrews:rooibos_tea"
+    "item": "bloomingnature:rooibos_tea"
   }
 }

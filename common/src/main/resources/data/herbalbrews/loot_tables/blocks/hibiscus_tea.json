@@ -11,7 +11,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "herbalbrews:hibiscus_tea"
+          "name": "bloomingnature:hibiscus_tea"
         }
       ],
       "rolls": 1.0

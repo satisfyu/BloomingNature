@@ -26,7 +26,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "herbalbrews:bird_of_paradise"
+          "name": "bloomingnature:bird_of_paradise"
         }
       ],
       "rolls": 1

@@ -3,7 +3,7 @@
   "group": "white_dye",
   "ingredients": [
     {
-      "item": "herbalbrews:mountain_laurel"
+      "item": "bloomingnature:mountain_laurel"
     }
   ],
   "result": {

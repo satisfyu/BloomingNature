@@ -26,7 +26,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "herbalbrews:hibiscus"
+          "name": "bloomingnature:hibiscus"
         }
       ],
       "rolls": 1

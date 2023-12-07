@@ -7,7 +7,7 @@
         {
           "type": "minecraft:item",
           "weight": 1,
-          "name": "herbalbrews:herbalbrews_standard",
+          "name": "bloomingnature:bloomingnature_standard",
           "functions": [
             {
               "function": "minecraft:set_count",

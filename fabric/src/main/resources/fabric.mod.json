@@ -1,36 +1,30 @@
 {
   "schemaVersion": 1,
-  "id": "herbalbrews",
+  "id": "bloomingnature",
   "version": "${version}",
-  "name": "Herbal Brews",
+  "name": "Blooming Nature",
   "description": "New Flowers, new crafting Stations, Tea",
   "authors": [
     "satisfy"
   ],
   "contact": {
-    "sources": "https://github.com/satisfyu/HerbalBrews"
+    "sources": "https://github.com/satisfyu/bloomingnature"
   },
   "license": "ARR",
-  "icon": "assets.herbalbrews.icon.png",
+  "icon": "assets.bloomingnature.icon.png",
   "environment": "*",
   "entrypoints": {
     "main": [
-      "satisfyu.herbalbrews.fabric.HerbalBrewsFabric"
+      "satisfyu.bloomingnature.fabric.BloomingNatureFabric"
     ],
     "client": [
-      "satisfyu.herbalbrews.fabric.client.HerbalbrewsClientFabric"
+      "satisfyu.bloomingnature.fabric.client.BloomingNatureClientFabric"
     ],
     "terrablender":  [
-      "satisfyu.herbalbrews.fabric.terrablender.TerrablenderFabric"
+      "satisfyu.bloomingnature.fabric.terrablender.TerrablenderFabric"
     ],
     "doapi": [
-      "satisfyu.herbalbrews.util.DoApiImpl"
-    ],
-    "rei_client": [
-      "satisfyu.herbalbrews.fabric.rei.HerbalbrewsREIClientPluginFabric"
-    ],
-    "jei_mod_plugin": [
-      "satisfyu.herbalbrews.compat.jei.HerbalbrewsJEIPlugin"
+      "satisfyu.bloomingnature.util.DoApiImpl"
     ]
   },
   "depends": {

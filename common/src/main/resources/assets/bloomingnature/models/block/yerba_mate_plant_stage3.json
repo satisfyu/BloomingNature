@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "bloomingnature:block/yerba_mate_plant_stage3"
+  }
+}

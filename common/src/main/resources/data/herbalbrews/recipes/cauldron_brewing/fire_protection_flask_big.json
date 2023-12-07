@@ -1,15 +1,15 @@
 {
-  "type": "herbalbrews:cauldron_brewing",
+  "type": "bloomingnature:cauldron_brewing",
   "experience": 0.8,
   "ingredients": [
     {
-      "item": "herbalbrews:fire_protection_flask"
+      "item": "bloomingnature:fire_protection_flask"
     },
     {
       "item": "minecraft:redstone"
     }
   ],
   "result": {
-    "item": "herbalbrews:fire_protection_flask_big"
+    "item": "bloomingnature:fire_protection_flask_big"
   }
 }

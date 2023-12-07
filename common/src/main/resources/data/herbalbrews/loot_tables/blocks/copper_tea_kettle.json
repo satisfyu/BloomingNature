@@ -11,7 +11,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "herbalbrews:copper_tea_kettle"
+          "name": "bloomingnature:copper_tea_kettle"
         }
       ],
       "rolls": 1.0

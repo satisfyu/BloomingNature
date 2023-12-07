@@ -11,7 +11,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "herbalbrews:stove"
+          "name": "bloomingnature:stove"
         }
       ],
       "rolls": 1.0

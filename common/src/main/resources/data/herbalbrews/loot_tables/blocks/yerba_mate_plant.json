@@ -16,18 +16,18 @@
               "type": "minecraft:item",
               "conditions": [
                 {
-                  "block": "herbalbrews:yerba_mate_plant",
+                  "block": "bloomingnature:yerba_mate_plant",
                   "condition": "minecraft:block_state_property",
                   "properties": {
                     "age": "3"
                   }
                 }
               ],
-              "name": "herbalbrews:yerba_mate_leaf"
+              "name": "bloomingnature:yerba_mate_leaf"
             },
             {
               "type": "minecraft:item",
-              "name": "herbalbrews:yerba_mate_leaf"
+              "name": "bloomingnature:yerba_mate_leaf"
             }
           ]
         }
@@ -39,7 +39,7 @@
       "bonus_rolls": 0.0,
       "conditions": [
         {
-          "block": "herbalbrews:yerba_mate_plant",
+          "block": "bloomingnature:yerba_mate_plant",
           "condition": "minecraft:block_state_property",
           "properties": {
             "age": "3"
@@ -60,7 +60,7 @@
               }
             }
           ],
-          "name": "herbalbrews:yerba_mate_leaf"
+          "name": "bloomingnature:yerba_mate_leaf"
         }
       ],
       "rolls": 1

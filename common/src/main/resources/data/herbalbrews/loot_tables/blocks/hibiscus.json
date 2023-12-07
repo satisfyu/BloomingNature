@@ -37,7 +37,7 @@
                   ]
                 }
               ],
-              "name": "herbalbrews:tea_blossom"
+              "name": "bloomingnature:tea_blossom"
             },
             {
               "type": "minecraft:item",
@@ -56,7 +56,7 @@
                   "enchantment": "minecraft:fortune"
                 }
               ],
-              "name": "herbalbrews:tea_blossom"
+              "name": "bloomingnature:tea_blossom"
             }
           ]
         }
@@ -122,7 +122,7 @@
               "function": "minecraft:explosion_decay"
             }
           ],
-          "name": "herbalbrews:hibiscus"
+          "name": "bloomingnature:hibiscus"
         }
       ],
       "rolls": 1.0

@@ -3,7 +3,7 @@
   "group": "purple_dye",
   "ingredients": [
     {
-      "item": "herbalbrews:hyssop"
+      "item": "bloomingnature:hyssop"
     }
   ],
   "result": {

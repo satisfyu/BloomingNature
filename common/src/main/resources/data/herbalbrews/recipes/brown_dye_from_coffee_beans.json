@@ -3,7 +3,7 @@
   "group": "brown_dye",
   "ingredients": [
     {
-      "item": "herbalbrews:coffee_beans"
+      "item": "bloomingnature:coffee_beans"
     }
   ],
   "result": {

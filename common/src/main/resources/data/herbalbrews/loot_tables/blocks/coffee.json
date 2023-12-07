@@ -11,7 +11,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "herbalbrews:coffee"
+          "name": "bloomingnature:coffee"
         }
       ],
       "rolls": 1.0

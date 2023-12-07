@@ -16,18 +16,18 @@
               "type": "minecraft:item",
               "conditions": [
                 {
-                  "block": "herbalbrews:coffee_plant",
+                  "block": "bloomingnature:coffee_plant",
                   "condition": "minecraft:block_state_property",
                   "properties": {
                     "age": "3"
                   }
                 }
               ],
-              "name": "herbalbrews:coffee_beans"
+              "name": "bloomingnature:coffee_beans"
             },
             {
               "type": "minecraft:item",
-              "name": "herbalbrews:coffee_beans"
+              "name": "bloomingnature:coffee_beans"
             }
           ]
         }
@@ -39,7 +39,7 @@
       "bonus_rolls": 0.0,
       "conditions": [
         {
-          "block": "herbalbrews:coffee_plant",
+          "block": "bloomingnature:coffee_plant",
           "condition": "minecraft:block_state_property",
           "properties": {
             "age": "3"
@@ -60,7 +60,7 @@
               }
             }
           ],
-          "name": "herbalbrews:coffee_beans"
+          "name": "bloomingnature:coffee_beans"
         }
       ],
       "rolls": 1

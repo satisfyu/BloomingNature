@@ -8,7 +8,7 @@
           "to_place": {
             "type": "minecraft:simple_state_provider",
             "state": {
-              "Name": "herbalbrews:wild_yerba_mate_plant"
+              "Name": "bloomingnature:wild_yerba_mate_plant"
             }
           }
         }

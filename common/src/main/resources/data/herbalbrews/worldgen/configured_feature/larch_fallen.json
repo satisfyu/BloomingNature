@@ -41,7 +41,7 @@
                 "provider": {
                   "type": "minecraft:simple_state_provider",
                   "state": {
-                    "Name": "herbalbrews:larch_log",
+                    "Name": "bloomingnature:larch_log",
                     "Properties": {
                       "axis": "z"
                     }
@@ -109,7 +109,7 @@
                 "provider": {
                   "type": "minecraft:simple_state_provider",
                   "state": {
-                    "Name": "herbalbrews:larch_log",
+                    "Name": "bloomingnature:larch_log",
                     "Properties": {
                       "axis": "z"
                     }
@@ -177,7 +177,7 @@
                 "provider": {
                   "type": "minecraft:simple_state_provider",
                   "state": {
-                    "Name": "herbalbrews:larch_log",
+                    "Name": "bloomingnature:larch_log",
                     "Properties": {
                       "axis": "x"
                     }
@@ -245,7 +245,7 @@
                 "provider": {
                   "type": "minecraft:simple_state_provider",
                   "state": {
-                    "Name": "herbalbrews:larch_log",
+                    "Name": "bloomingnature:larch_log",
                     "Properties": {
                       "axis": "x"
                     }

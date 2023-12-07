@@ -1,5 +1,5 @@
 {
-  "type": "herbalbrews:cauldron_brewing",
+  "type": "bloomingnature:cauldron_brewing",
   "experience": 0.8,
   "ingredients": [
     {
@@ -10,6 +10,6 @@
     }
   ],
   "result": {
-    "item": "herbalbrews:regeneration_flask"
+    "item": "bloomingnature:regeneration_flask"
   }
 }

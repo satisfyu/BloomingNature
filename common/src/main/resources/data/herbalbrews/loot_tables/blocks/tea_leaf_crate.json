@@ -11,7 +11,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "herbalbrews:tea_leaf_crate"
+          "name": "bloomingnature:tea_leaf_crate"
         }
       ],
       "rolls": 1.0

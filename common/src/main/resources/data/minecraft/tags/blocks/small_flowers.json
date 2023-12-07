@@ -1,15 +1,15 @@
 {
   "values": [
-    "herbalbrews:lavender",
-    "herbalbrews:white_orchid",
-    "herbalbrews:bird_of_paradise",
-    "herbalbrews:mountain_laurel",
-    "herbalbrews:mountain_snowbell",
-    "herbalbrews:hyssop",
-    "herbalbrews:joe_pye",
-    "herbalbrews:hibiscus",
-    "herbalbrews:goatsbeard",
-    "herbalbrews:genisteae"
+    "bloomingnature:lavender",
+    "bloomingnature:white_orchid",
+    "bloomingnature:bird_of_paradise",
+    "bloomingnature:mountain_laurel",
+    "bloomingnature:mountain_snowbell",
+    "bloomingnature:hyssop",
+    "bloomingnature:joe_pye",
+    "bloomingnature:hibiscus",
+    "bloomingnature:goatsbeard",
+    "bloomingnature:genisteae"
 
   ]
 }

@@ -12,7 +12,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "herbalbrews:dried_oolong_tea",
+          "name": "bloomingnature:dried_oolong_tea",
           "functions": [
             {
               "function": "minecraft:set_count",

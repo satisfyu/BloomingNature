@@ -1,5 +1,5 @@
 {
-  "feature": "herbalbrews:rooibos_plant_patch",
+  "feature": "bloomingnature:rooibos_plant_patch",
   "placement": [
     {
       "type": "minecraft:rarity_filter",

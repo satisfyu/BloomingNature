@@ -1,15 +1,15 @@
 {
-  "type": "herbalbrews:kettle_brewing",
+  "type": "bloomingnature:kettle_brewing",
   "experience": 0.8,
   "ingredients": [
     {
-      "item": "herbalbrews:green_tea_leaf"
+      "item": "bloomingnature:green_tea_leaf"
     },
     {
       "item": "minecraft:water_bucket"
     }
   ],
   "result": {
-    "item": "herbalbrews:green_tea"
+    "item": "bloomingnature:green_tea"
   }
 }

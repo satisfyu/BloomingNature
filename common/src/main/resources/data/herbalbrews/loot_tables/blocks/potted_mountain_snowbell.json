@@ -26,7 +26,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "herbalbrews:mountain_snowbell"
+          "name": "bloomingnature:mountain_snowbell"
         }
       ],
       "rolls": 1

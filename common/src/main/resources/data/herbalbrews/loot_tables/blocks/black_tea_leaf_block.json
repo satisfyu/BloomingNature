@@ -12,7 +12,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "herbalbrews:dried_black_tea",
+          "name": "bloomingnature:dried_black_tea",
           "functions": [
             {
               "function": "minecraft:set_count",

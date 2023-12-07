@@ -1,15 +1,15 @@
 {
-  "type": "herbalbrews:cauldron_brewing",
+  "type": "bloomingnature:cauldron_brewing",
   "experience": 0.8,
   "ingredients": [
     {
-      "item": "herbalbrews:health_flask"
+      "item": "bloomingnature:health_flask"
     },
     {
       "item": "minecraft:glistering_melon_slice"
     }
   ],
   "result": {
-    "item": "herbalbrews:health_flask_big"
+    "item": "bloomingnature:health_flask_big"
   }
 }

@@ -1,8 +1,8 @@
 {
   "replace": false,
   "values": [
-    "herbalbrews:stove",
-    "herbalbrews:tea_kettle",
-    "herbalbrews:copper_tea_kettle"
+    "bloomingnature:stove",
+    "bloomingnature:tea_kettle",
+    "bloomingnature:copper_tea_kettle"
   ]
 }

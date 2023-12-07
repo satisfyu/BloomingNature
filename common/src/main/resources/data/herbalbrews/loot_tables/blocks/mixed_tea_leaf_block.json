@@ -11,7 +11,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "herbalbrews:green_tea_leaf",
+          "name": "bloomingnature:green_tea_leaf",
           "functions": [
             {
               "function": "minecraft:set_count",
@@ -21,7 +21,7 @@
         },
         {
           "type": "minecraft:item",
-          "name": "herbalbrews:dried_black_tea",
+          "name": "bloomingnature:dried_black_tea",
           "functions": [
             {
               "function": "minecraft:set_count",

@@ -1,9 +1,9 @@
 {
-  "type": "herbalbrews:kettle_brewing",
+  "type": "bloomingnature:kettle_brewing",
   "experience": 0.8,
   "ingredients": [
     {
-      "item": "herbalbrews:lavender"
+      "item": "bloomingnature:lavender"
     },
     {
       "item": "minecraft:water_bucket"
@@ -13,6 +13,6 @@
     }
   ],
   "result": {
-    "item": "herbalbrews:lavender_tea"
+    "item": "bloomingnature:lavender_tea"
   }
 }

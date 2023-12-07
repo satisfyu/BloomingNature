@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "key": {
     "X": {
-      "item": "herbalbrews:green_tea_leaf"
+      "item": "bloomingnature:green_tea_leaf"
     }
   },
   "pattern": [
@@ -11,6 +11,6 @@
     "XXX"
   ],
   "result": {
-    "item": "herbalbrews:green_tea_leaf_block"
+    "item": "bloomingnature:green_tea_leaf_block"
   }
 }

@@ -12,7 +12,7 @@
     "dirt_provider": {
       "type": "minecraft:simple_state_provider",
       "state": {
-        "Name": "herbalbrews:swamp_oak_log",
+        "Name": "bloomingnature:swamp_oak_log",
         "Properties": {
           "axis": "y"
         }
@@ -21,7 +21,7 @@
     "trunk_provider": {
       "type": "minecraft:simple_state_provider",
       "state": {
-        "Name": "herbalbrews:swamp_oak_log",
+        "Name": "bloomingnature:swamp_oak_log",
         "Properties": {
           "axis": "y"
         }
@@ -30,7 +30,7 @@
     "foliage_provider": {
       "type": "minecraft:simple_state_provider",
       "state": {
-        "Name": "herbalbrews:swamp_oak_leaves",
+        "Name": "bloomingnature:swamp_oak_leaves",
         "Properties": {
           "persistent": "false",
           "distance": "7",

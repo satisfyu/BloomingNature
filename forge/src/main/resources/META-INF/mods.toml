@@ -4,37 +4,37 @@ loaderVersion = "[47,)"
 license = "ARR"
 
 [[mods]]
-modId = "herbalbrews"
+modId = "bloomingnature"
 version = "${version}"
-displayName = "Herbal Brews"
+displayName = "Blooming Nature"
 authors = "satisfy"
 description = '''
 New Flowers, new crafting Stations, Tea
 '''
 #logoFile = ""
 
-[[dependencies.herbalbrews]]
+[[dependencies.bloomingnature]]
 modId = "forge"
 mandatory = true
 versionRange = "[47,)"
 ordering = "NONE"
 side = "BOTH"
 
-[[dependencies.herbalbrews]]
+[[dependencies.bloomingnature]]
 modId = "minecraft"
 mandatory = true
 versionRange = "[1.20.1,)"
 ordering = "NONE"
 side = "BOTH"
 
-[[dependencies.herbalbrews]]
+[[dependencies.bloomingnature]]
 modId = "architectury"
 mandatory = true
 versionRange = "[9.1.12,)"
 ordering = "AFTER"
 side = "BOTH"
 
-[[dependencies.herbalbrews]]
+[[dependencies.bloomingnature]]
 modId = "terrablender"
 mandatory = true
 versionRange = "[3.0.0.163,)"

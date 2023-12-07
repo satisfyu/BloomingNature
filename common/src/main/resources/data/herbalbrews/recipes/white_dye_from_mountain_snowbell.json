@@ -3,7 +3,7 @@
   "group": "white_dye",
   "ingredients": [
     {
-      "item": "herbalbrews:mountain_snowbell"
+      "item": "bloomingnature:mountain_snowbell"
     }
   ],
   "result": {

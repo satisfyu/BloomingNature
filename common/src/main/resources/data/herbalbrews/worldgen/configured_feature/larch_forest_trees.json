@@ -4,21 +4,21 @@
     "features": [
       {
         "chance": 0.5,
-        "feature": "herbalbrews:larch_checked"
+        "feature": "bloomingnature:larch_checked"
       },
       {
         "chance": 0.2,
-        "feature": "herbalbrews:larch_green_checked"
+        "feature": "bloomingnature:larch_green_checked"
       },
       {
         "chance": 0.3,
-        "feature": "herbalbrews:larch_orange_checked"
+        "feature": "bloomingnature:larch_orange_checked"
       },
       {
         "chance": 0.4,
-        "feature": "herbalbrews:small_bush_checked"
+        "feature": "bloomingnature:small_bush_checked"
       }
     ],
-    "default": "herbalbrews:larch_checked"
+    "default": "bloomingnature:larch_checked"
   }
 }

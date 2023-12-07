@@ -16,18 +16,18 @@
               "type": "minecraft:item",
               "conditions": [
                 {
-                  "block": "herbalbrews:tea_plant",
+                  "block": "bloomingnature:tea_plant",
                   "condition": "minecraft:block_state_property",
                   "properties": {
                     "age": "3"
                   }
                 }
               ],
-              "name": "herbalbrews:green_tea_leaf"
+              "name": "bloomingnature:green_tea_leaf"
             },
             {
               "type": "minecraft:item",
-              "name": "herbalbrews:tea_blossom"
+              "name": "bloomingnature:tea_blossom"
             }
           ]
         }
@@ -39,7 +39,7 @@
       "bonus_rolls": 0.0,
       "conditions": [
         {
-          "block": "herbalbrews:tea_plant",
+          "block": "bloomingnature:tea_plant",
           "condition": "minecraft:block_state_property",
           "properties": {
             "age": "3"
@@ -60,7 +60,7 @@
               }
             }
           ],
-          "name": "herbalbrews:tea_blossom"
+          "name": "bloomingnature:tea_blossom"
         }
       ],
       "rolls": 1

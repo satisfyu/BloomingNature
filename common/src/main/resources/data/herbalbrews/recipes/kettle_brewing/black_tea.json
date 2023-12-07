@@ -1,9 +1,9 @@
 {
-  "type": "herbalbrews:kettle_brewing",
+  "type": "bloomingnature:kettle_brewing",
   "experience": 0.8,
   "ingredients": [
     {
-      "item": "herbalbrews:dried_black_tea"
+      "item": "bloomingnature:dried_black_tea"
     },
     {
       "item": "minecraft:water_bucket"
@@ -13,6 +13,6 @@
     }
   ],
   "result": {
-    "item": "herbalbrews:black_tea"
+    "item": "bloomingnature:black_tea"
   }
 }

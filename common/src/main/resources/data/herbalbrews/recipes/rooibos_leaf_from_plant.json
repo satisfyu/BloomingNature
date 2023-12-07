@@ -2,10 +2,10 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "herbalbrews:rooibos_plant"
+      "item": "bloomingnature:rooibos_plant"
     }
   ],
   "result": {
-    "item": "herbalbrews:rooibos_leaf"
+    "item": "bloomingnature:rooibos_leaf"
   }
 }
