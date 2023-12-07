@@ -1,0 +1,15 @@
+{
+  "type": "herbalbrews:kettle_brewing",
+  "experience": 0.8,
+  "ingredients": [
+    {
+      "item": "herbalbrews:dried_oolong_tea"
+    },
+    {
+      "item": "minecraft:water_bucket"
+    }
+  ],
+  "result": {
+    "item": "herbalbrews:oolong_tea"
+  }
+}

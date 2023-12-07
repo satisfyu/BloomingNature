@@ -1,0 +1,15 @@
+{
+  "type": "herbalbrews:cauldron_brewing",
+  "experience": 0.8,
+  "ingredients": [
+    {
+      "item": "herbalbrews:regeneration_flask"
+    },
+    {
+      "item": "minecraft:ghast_tear"
+    }
+  ],
+  "result": {
+    "item": "herbalbrews:regeneration_flask_big"
+  }
+}
