@@ -1,8 +1,0 @@
-{
-  "replace": false,
-  "values": [
-    "bloomingnature:stove",
-    "#forge:allows_cooking",
-    "#c:allows_cooking"
-  ]
-}

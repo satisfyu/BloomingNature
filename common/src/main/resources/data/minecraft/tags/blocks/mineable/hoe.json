@@ -1,12 +1,6 @@
 {
   "replace": false,
   "values": [
-    "bloomingnature:stove",
-    "bloomingnature:tea_kettle",
-    "bloomingnature:green_tea_leaf_block",
-    "bloomingnature:black_tea_leaf_block",
-    "bloomingnature:mixed_tea_leaf_block",
-    "bloomingnature:oolong_tea_leaf_block"
 
   ]
 }

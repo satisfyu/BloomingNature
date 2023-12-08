@@ -1,9 +1,21 @@
 {
   "replace": false,
   "values": [
+    "bloomingnature:swamp_oak_log",
+    "bloomingnature:swamp_oak_wood",
+    "bloomingnature:stripped_swamp_oak_log",
+    "bloomingnature:stripped_swamp_oak_wood",
     "bloomingnature:larch_log",
     "bloomingnature:larch_wood",
     "bloomingnature:stripped_larch_log",
-    "bloomingnature:stripped_larch_wood"
+    "bloomingnature:stripped_larch_wood",
+    "bloomingnature:aspen_log",
+    "bloomingnature:aspen_wood",
+    "bloomingnature:stripped_aspen_log",
+    "bloomingnature:stripped_aspen_wood",
+    "bloomingnature:baobab_log",
+    "bloomingnature:baobab_wood",
+    "bloomingnature:stripped_baobab_log",
+    "bloomingnature:stripped_baobab_wood"
   ]
 }

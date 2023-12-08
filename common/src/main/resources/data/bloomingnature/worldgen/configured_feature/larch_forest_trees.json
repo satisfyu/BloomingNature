@@ -16,7 +16,7 @@
       },
       {
         "chance": 0.4,
-        "feature": "bloomingnature:small_bush_checked"
+        "feature": "bloomingnature:larch_bush_checked"
       }
     ],
     "default": "bloomingnature:larch_checked"

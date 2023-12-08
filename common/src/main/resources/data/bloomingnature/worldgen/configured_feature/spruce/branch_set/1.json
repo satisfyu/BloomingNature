@@ -1,0 +1,71 @@
+{
+  "config": {
+    "features": [
+      {
+        "feature": "bloomingnature:spruce/branch/1_east",
+        "placement": [
+          {
+            "xz_spread": 0,
+            "y_spread": {
+              "value": {
+                "min_inclusive": 0,
+                "max_inclusive": 1
+              },
+              "type": "minecraft:uniform"
+            },
+            "type": "minecraft:random_offset"
+          }
+        ]
+      },
+      {
+        "feature": "bloomingnature:spruce/branch/1_south",
+        "placement": [
+          {
+            "xz_spread": 0,
+            "y_spread": {
+              "value": {
+                "min_inclusive": 0,
+                "max_inclusive": 1
+              },
+              "type": "minecraft:uniform"
+            },
+            "type": "minecraft:random_offset"
+          }
+        ]
+      },
+      {
+        "feature": "bloomingnature:spruce/branch/1_west",
+        "placement": [
+          {
+            "xz_spread": 0,
+            "y_spread": {
+              "value": {
+                "min_inclusive": 0,
+                "max_inclusive": 1
+              },
+              "type": "minecraft:uniform"
+            },
+            "type": "minecraft:random_offset"
+          }
+        ]
+      },
+      {
+        "feature": "bloomingnature:spruce/branch/1_north",
+        "placement": [
+          {
+            "xz_spread": 0,
+            "y_spread": {
+              "value": {
+                "min_inclusive": 0,
+                "max_inclusive": 1
+              },
+              "type": "minecraft:uniform"
+            },
+            "type": "minecraft:random_offset"
+          }
+        ]
+      }
+    ]
+  },
+  "type": "minecraft:simple_random_selector"
+}

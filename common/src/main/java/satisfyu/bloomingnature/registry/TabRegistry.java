@@ -16,14 +16,6 @@ public class TabRegistry {
             .title(Component.translatable("creative_tab.bloomingnature"))
             .displayItems((parameters, out) -> {
 
-                out.accept(ObjectRegistry.RED_BRICKS.get());
-                out.accept(ObjectRegistry.RED_BRICK_SLAB.get());
-                out.accept(ObjectRegistry.RED_BRICK_STAIRS.get());
-                out.accept(ObjectRegistry.RED_BRICK_WALL.get());
-                out.accept(ObjectRegistry.CALCITE_BRICKS.get());
-                out.accept(ObjectRegistry.CALCITE_BRICK_SLAB.get());
-                out.accept(ObjectRegistry.CALCITE_BRICK_STAIRS.get());
-                out.accept(ObjectRegistry.CALCITE_BRICK_WALL.get());
 
                 out.accept(ObjectRegistry.LARCH_LOG.get());
                 out.accept(ObjectRegistry.LARCH_WOOD.get());
@@ -43,6 +35,25 @@ public class TabRegistry {
                 out.accept(ObjectRegistry.LARCH_SAPLING.get());
                 out.accept(BoatsAndSignsRegistry.LARCH_SIGN_ITEM.get());
                 out.accept(BoatsAndSignsRegistry.LARCH_HANGING_SIGN_ITEM.get());
+
+                out.accept(ObjectRegistry.BAOBAB_LOG.get());
+                out.accept(ObjectRegistry.BAOBAB_WOOD.get());
+                out.accept(ObjectRegistry.STRIPPED_BAOBAB_WOOD.get());
+                out.accept(ObjectRegistry.STRIPPED_BAOBAB_LOG.get());
+                out.accept(ObjectRegistry.BAOBAB_PLANKS.get());
+                out.accept(ObjectRegistry.BAOBAB_STAIRS.get());
+                out.accept(ObjectRegistry.BAOBAB_SLAB.get());
+                out.accept(ObjectRegistry.BAOBAB_PRESSURE_PLATE.get());
+                out.accept(ObjectRegistry.BAOBAB_BUTTON.get());
+                out.accept(ObjectRegistry.BAOBAB_TRAPDOOR.get());
+                out.accept(ObjectRegistry.BAOBAB_DOOR.get());
+                out.accept(ObjectRegistry.BAOBAB_WINDOW.get());
+                out.accept(ObjectRegistry.BAOBAB_FENCE.get());
+                out.accept(ObjectRegistry.BAOBAB_FENCE_GATE.get());
+                out.accept(ObjectRegistry.BAOBAB_LEAVES.get());
+                out.accept(ObjectRegistry.BAOBAB_SAPLING.get());
+                out.accept(BoatsAndSignsRegistry.BAOBAB_SIGN_ITEM.get());
+                out.accept(BoatsAndSignsRegistry.BAOBAB_HANGING_SIGN_ITEM.get());
 
                 out.accept(ObjectRegistry.ASPEN_LOG.get());
                 out.accept(ObjectRegistry.ASPEN_WOOD.get());
@@ -86,6 +97,14 @@ public class TabRegistry {
 
                 out.accept(ObjectRegistry.FLOWER_POT_BIG.get());
                 out.accept(ObjectRegistry.FLOWER_BOX.get());
+                out.accept(ObjectRegistry.RED_BRICKS.get());
+                out.accept(ObjectRegistry.RED_BRICK_SLAB.get());
+                out.accept(ObjectRegistry.RED_BRICK_STAIRS.get());
+                out.accept(ObjectRegistry.RED_BRICK_WALL.get());
+                out.accept(ObjectRegistry.CALCITE_BRICKS.get());
+                out.accept(ObjectRegistry.CALCITE_BRICK_SLAB.get());
+                out.accept(ObjectRegistry.CALCITE_BRICK_STAIRS.get());
+                out.accept(ObjectRegistry.CALCITE_BRICK_WALL.get());
 
                 out.accept(ObjectRegistry.BEGONIE.get());
                 out.accept(ObjectRegistry.JOE_PYE.get());
@@ -96,7 +115,8 @@ public class TabRegistry {
                 out.accept(ObjectRegistry.CARDINAL.get());
                 out.accept(ObjectRegistry.BOTTLEBRUSHES.get());
                 out.accept(ObjectRegistry.DAPHNE.get());
-
+                out.accept(ObjectRegistry.WILD_SUNFLOWER.get());
+                out.accept(ObjectRegistry.GOLDEN_ROD.get());
                 out.accept(ObjectRegistry.BIRD_OF_PARADISE.get());
                 out.accept(ObjectRegistry.WHITE_ORCHID.get());
                 out.accept(ObjectRegistry.BLUEBELL.get());

@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/button_pressed",
   "textures": {
-    "texture": "bloomingnature:block/aspen_planks_0"
+    "texture": "bloomingnature:block/aspen_planks"
   }
 }

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:random_selector",
+  "config": {
+    "features": [
+      {
+        "chance": 0.3,
+        "feature": "bloomingnature:aspen_tree_straight_checked"
+      },
+      {
+        "chance": 0.3,
+        "feature": "bloomingnature:aspen_tree_branched_checked"
+      }
+    ],
+    "default": "bloomingnature:aspen_tree_branched_checked"
+  }
+}

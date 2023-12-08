@@ -1,7 +1,5 @@
 {
   "variants": {
-    "": [ { "model": "bloomingnature:block/aspen_planks_1", "weight":1 }
-    ,{ "model": "bloomingnature:block/aspen_planks_2", "weight":1 }
-    ,{ "model": "bloomingnature:block/aspen_planks_3", "weight":1 }
+    "": [ { "model": "bloomingnature:block/aspen_planks", "weight":1 }
     ]   }
 }
