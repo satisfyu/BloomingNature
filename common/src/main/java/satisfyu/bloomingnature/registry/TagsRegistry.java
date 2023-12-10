@@ -12,5 +12,6 @@ public class TagsRegistry {
     public static final TagKey<Item> SHOVEL = TagKey.create(Registries.ITEM, new BloomingNatureIdentifier("shovel"));
     public static final TagKey<Item> BIG_FLOWER = TagKey.create(Registries.ITEM, new BloomingNatureIdentifier("big_flower"));
     public static final TagKey<Item> SMALL_FLOWER = TagKey.create(Registries.ITEM, new BloomingNatureIdentifier("small_flower"));
+    public static final TagKey<Item> SQUIRREL_HOLDABLE = TagKey.create(Registries.ITEM, new BloomingNatureIdentifier("squirrel_holdable"));
 
 }

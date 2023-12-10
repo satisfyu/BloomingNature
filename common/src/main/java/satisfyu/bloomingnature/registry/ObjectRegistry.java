@@ -21,11 +21,9 @@ import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.level.material.PushReaction;
 import org.jetbrains.annotations.NotNull;
+import party.lemons.biomemakeover.block.CattailBlock;
 import satisfyu.bloomingnature.BloomingNature;
-import satisfyu.bloomingnature.blocks.FlowerBoxBlock;
-import satisfyu.bloomingnature.blocks.FlowerPotBigBlock;
-import satisfyu.bloomingnature.blocks.LarchWindowBlock;
-import satisfyu.bloomingnature.blocks.SwampOakWindowBlock;
+import satisfyu.bloomingnature.blocks.*;
 import satisfyu.bloomingnature.util.BloomingNatureIdentifier;
 import satisfyu.bloomingnature.util.GeneralUtil;
 
@@ -111,22 +109,39 @@ public class ObjectRegistry {
     public static final RegistrySupplier<Block> ASPEN_LEAVES = registerWithItem("aspen_leaves", () -> new LeavesBlock(BlockBehaviour.Properties.of().strength(0.2f).randomTicks().sound(SoundType.GRASS).noOcclusion().isViewBlocking((state, world, pos) -> false).isSuffocating((state, world, pos) -> false)));
     public static final RegistrySupplier<Block> ASPEN_SAPLING = registerWithItem("aspen_sapling", () -> new SaplingBlock(new AbstractTreeGrower() {@Override protected @NotNull ResourceKey<ConfiguredFeature<?, ?>> getConfiguredFeature(@NotNull RandomSource random, boolean bees) {return GeneralUtil.configuredFeatureKey("aspen_tree_branched");}}, BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
 
-    public static final RegistrySupplier<Block> SNOWY_FIR_LOG = registerWithItem("snowy_fir_log", () -> new RotatedPillarBlock(BlockBehaviour.Properties.of().sound(SoundType.WOOD).strength(2.0f)));
-    public static final RegistrySupplier<Block> SNOWY_FIR_WOOD = registerWithItem("snowy_fir_wood", () -> new RotatedPillarBlock(BlockBehaviour.Properties.of().sound(SoundType.WOOD).strength(2.0f)));
-    public static final RegistrySupplier<Block> STRIPPED_SNOWY_FIR_WOOD = registerWithItem("stripped_snowy_fir_wood", () -> new RotatedPillarBlock(BlockBehaviour.Properties.of().sound(SoundType.WOOD).strength(2.0f)));
-    public static final RegistrySupplier<Block> STRIPPED_SNOWY_FIR_LOG = registerWithItem("stripped_snowy_fir_log", () -> new RotatedPillarBlock(BlockBehaviour.Properties.of().sound(SoundType.WOOD).strength(2.0f)));
-    public static final RegistrySupplier<Block> SNOWY_FIR_PLANKS = registerWithItem("snowy_fir_planks", () -> new Block(BlockBehaviour.Properties.of().sound(SoundType.WOOD).strength(2.0f, 3.0f).mapColor(MapColor.TERRACOTTA_ORANGE)));
-    public static final RegistrySupplier<Block> SNOWY_FIR_STAIRS = registerWithItem("snowy_fir_stairs", () -> new StairBlock(SNOWY_FIR_PLANKS.get().defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.OAK_STAIRS)));
-    public static final RegistrySupplier<Block> SNOWY_FIR_SLAB = registerWithItem("snowy_fir_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SLAB)));
-    public static final RegistrySupplier<Block> SNOWY_FIR_PRESSURE_PLATE = registerWithItem("snowy_fir_pressure_plate", () -> new PressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING, BlockBehaviour.Properties.of().noCollission().strength(0.5f).sound(SoundType.WOOD).mapColor(SNOWY_FIR_PLANKS.get().defaultMapColor()), BlockSetType.OAK));
-    public static final RegistrySupplier<Block> SNOWY_FIR_BUTTON = registerWithItem("snowy_fir_button", () -> createWoodenButtonBlock(BlockSetType.OAK, FeatureFlags.VANILLA));
-    public static final RegistrySupplier<Block> SNOWY_FIR_TRAPDOOR = registerWithItem("snowy_fir_trapdoor", () -> new TrapDoorBlock(BlockBehaviour.Properties.copy(Blocks.OAK_TRAPDOOR), BlockSetType.OAK));
-    public static final RegistrySupplier<Block> SNOWY_FIR_DOOR = registerWithItem("snowy_fir_door", () -> new DoorBlock(BlockBehaviour.Properties.of().strength(3.0f).sound(SoundType.WOOD).noOcclusion().mapColor(SNOWY_FIR_PLANKS.get().defaultMapColor()), BlockSetType.OAK));
-    public static final RegistrySupplier<Block> SNOWY_FIR_FENCE = registerWithItem("snowy_fir_fence", () -> new FenceBlock(BlockBehaviour.Properties.of().strength(2.0f, 3.0f).sound(SoundType.WOOD)));
-    public static final RegistrySupplier<Block> SNOWY_FIR_FENCE_GATE = registerWithItem("snowy_fir_fence_gate", () -> new FenceGateBlock(BlockBehaviour.Properties.of().strength(2.0f, 3.0f).sound(SoundType.WOOD).mapColor(SNOWY_FIR_PLANKS.get().defaultMapColor()), WoodType.OAK));
-    public static final RegistrySupplier<Block> SNOWY_FIR_WINDOW = registerWithItem("snowy_fir_window", () -> new SwampOakWindowBlock(BlockBehaviour.Properties.of().strength(0.2f).randomTicks().sound(SoundType.GRASS).noOcclusion().isViewBlocking((state, world, pos) -> false).isSuffocating((state, world, pos) -> false)));
-    public static final RegistrySupplier<Block> SNOWY_FIR_LEAVES = registerWithItem("snowy_fir_leaves", () -> new LeavesBlock(BlockBehaviour.Properties.of().strength(0.2f).randomTicks().sound(SoundType.GRASS).noOcclusion().isViewBlocking((state, world, pos) -> false).isSuffocating((state, world, pos) -> false)));
-    public static final RegistrySupplier<Block> SNOWY_FIR_SAPLING = registerWithItem("snowy_fir_sapling", () -> new SaplingBlock(new AbstractTreeGrower() {@Override protected @NotNull ResourceKey<ConfiguredFeature<?, ?>> getConfiguredFeature(@NotNull RandomSource random, boolean bees) {return GeneralUtil.configuredFeatureKey("snowy_fir");}}, BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
+    public static final RegistrySupplier<Block> PALM_LOG = registerWithItem("palm_log", () -> new RotatedPillarBlock(BlockBehaviour.Properties.of().sound(SoundType.WOOD).strength(2.0f)));
+    public static final RegistrySupplier<Block> PALM_WOOD = registerWithItem("palm_wood", () -> new RotatedPillarBlock(BlockBehaviour.Properties.of().sound(SoundType.WOOD).strength(2.0f)));
+    public static final RegistrySupplier<Block> STRIPPED_PALM_WOOD = registerWithItem("stripped_palm_wood", () -> new RotatedPillarBlock(BlockBehaviour.Properties.of().sound(SoundType.WOOD).strength(2.0f)));
+    public static final RegistrySupplier<Block> STRIPPED_PALM_LOG = registerWithItem("stripped_palm_log", () -> new RotatedPillarBlock(BlockBehaviour.Properties.of().sound(SoundType.WOOD).strength(2.0f)));
+    public static final RegistrySupplier<Block> PALM_PLANKS = registerWithItem("palm_planks", () -> new Block(BlockBehaviour.Properties.of().sound(SoundType.WOOD).strength(2.0f, 3.0f).mapColor(MapColor.TERRACOTTA_ORANGE)));
+    public static final RegistrySupplier<Block> PALM_STAIRS = registerWithItem("palm_stairs", () -> new StairBlock(PALM_PLANKS.get().defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.OAK_STAIRS)));
+    public static final RegistrySupplier<Block> PALM_SLAB = registerWithItem("palm_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SLAB)));
+    public static final RegistrySupplier<Block> PALM_PRESSURE_PLATE = registerWithItem("palm_pressure_plate", () -> new PressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING, BlockBehaviour.Properties.of().noCollission().strength(0.5f).sound(SoundType.WOOD).mapColor(PALM_PLANKS.get().defaultMapColor()), BlockSetType.OAK));
+    public static final RegistrySupplier<Block> PALM_BUTTON = registerWithItem("palm_button", () -> createWoodenButtonBlock(BlockSetType.OAK, FeatureFlags.VANILLA));
+    public static final RegistrySupplier<Block> PALM_TRAPDOOR = registerWithItem("palm_trapdoor", () -> new TrapDoorBlock(BlockBehaviour.Properties.copy(Blocks.OAK_TRAPDOOR), BlockSetType.OAK));
+    public static final RegistrySupplier<Block> PALM_DOOR = registerWithItem("palm_door", () -> new DoorBlock(BlockBehaviour.Properties.of().strength(3.0f).sound(SoundType.WOOD).noOcclusion().mapColor(PALM_PLANKS.get().defaultMapColor()), BlockSetType.OAK));
+    public static final RegistrySupplier<Block> PALM_FENCE = registerWithItem("palm_fence", () -> new FenceBlock(BlockBehaviour.Properties.of().strength(2.0f, 3.0f).sound(SoundType.WOOD)));
+    public static final RegistrySupplier<Block> PALM_FENCE_GATE = registerWithItem("palm_fence_gate", () -> new FenceGateBlock(BlockBehaviour.Properties.of().strength(2.0f, 3.0f).sound(SoundType.WOOD).mapColor(PALM_PLANKS.get().defaultMapColor()), WoodType.OAK));
+    public static final RegistrySupplier<Block> PALM_WINDOW = registerWithItem("palm_window", () -> new PalmWindowBlock(BlockBehaviour.Properties.of().strength(0.2f).randomTicks().sound(SoundType.GRASS).noOcclusion().isViewBlocking((state, world, pos) -> false).isSuffocating((state, world, pos) -> false)));
+    public static final RegistrySupplier<Block> PALM_LEAVES = registerWithItem("palm_leaves", () -> new PalmLeavesBlock(BlockBehaviour.Properties.of().strength(0.2f).randomTicks().sound(SoundType.GRASS).noOcclusion().isViewBlocking((state, world, pos) -> false).isSuffocating((state, world, pos) -> false)));
+    public static final Supplier<SaplingBlock> PALM_SAPLING = registerWithItem("palm_sapling", PalmSaplingBlock::new);
+
+    public static final RegistrySupplier<Block> FIR_LOG = registerWithItem("fir_log", () -> new RotatedPillarBlock(BlockBehaviour.Properties.of().sound(SoundType.WOOD).strength(2.0f)));
+    public static final RegistrySupplier<Block> FIR_WOOD = registerWithItem("fir_wood", () -> new RotatedPillarBlock(BlockBehaviour.Properties.of().sound(SoundType.WOOD).strength(2.0f)));
+    public static final RegistrySupplier<Block> STRIPPED_FIR_WOOD = registerWithItem("stripped_fir_wood", () -> new RotatedPillarBlock(BlockBehaviour.Properties.of().sound(SoundType.WOOD).strength(2.0f)));
+    public static final RegistrySupplier<Block> STRIPPED_FIR_LOG = registerWithItem("stripped_fir_log", () -> new RotatedPillarBlock(BlockBehaviour.Properties.of().sound(SoundType.WOOD).strength(2.0f)));
+    public static final RegistrySupplier<Block> FIR_PLANKS = registerWithItem("fir_planks", () -> new Block(BlockBehaviour.Properties.of().sound(SoundType.WOOD).strength(2.0f, 3.0f).mapColor(MapColor.TERRACOTTA_ORANGE)));
+    public static final RegistrySupplier<Block> FIR_STAIRS = registerWithItem("fir_stairs", () -> new StairBlock(FIR_PLANKS.get().defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.OAK_STAIRS)));
+    public static final RegistrySupplier<Block> FIR_SLAB = registerWithItem("fir_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SLAB)));
+    public static final RegistrySupplier<Block> FIR_PRESSURE_PLATE = registerWithItem("fir_pressure_plate", () -> new PressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING, BlockBehaviour.Properties.of().noCollission().strength(0.5f).sound(SoundType.WOOD).mapColor(FIR_PLANKS.get().defaultMapColor()), BlockSetType.OAK));
+    public static final RegistrySupplier<Block> FIR_BUTTON = registerWithItem("fir_button", () -> createWoodenButtonBlock(BlockSetType.OAK, FeatureFlags.VANILLA));
+    public static final RegistrySupplier<Block> FIR_TRAPDOOR = registerWithItem("fir_trapdoor", () -> new TrapDoorBlock(BlockBehaviour.Properties.copy(Blocks.OAK_TRAPDOOR), BlockSetType.OAK));
+    public static final RegistrySupplier<Block> FIR_DOOR = registerWithItem("fir_door", () -> new DoorBlock(BlockBehaviour.Properties.of().strength(3.0f).sound(SoundType.WOOD).noOcclusion().mapColor(FIR_PLANKS.get().defaultMapColor()), BlockSetType.OAK));
+    public static final RegistrySupplier<Block> FIR_FENCE = registerWithItem("fir_fence", () -> new FenceBlock(BlockBehaviour.Properties.of().strength(2.0f, 3.0f).sound(SoundType.WOOD)));
+    public static final RegistrySupplier<Block> FIR_FENCE_GATE = registerWithItem("fir_fence_gate", () -> new FenceGateBlock(BlockBehaviour.Properties.of().strength(2.0f, 3.0f).sound(SoundType.WOOD).mapColor(FIR_PLANKS.get().defaultMapColor()), WoodType.OAK));
+    public static final RegistrySupplier<Block> FIR_WINDOW = registerWithItem("fir_window", () -> new SwampOakWindowBlock(BlockBehaviour.Properties.of().strength(0.2f).randomTicks().sound(SoundType.GRASS).noOcclusion().isViewBlocking((state, world, pos) -> false).isSuffocating((state, world, pos) -> false)));
+    public static final RegistrySupplier<Block> FIR_LEAVES = registerWithItem("fir_leaves", () -> new LeavesBlock(BlockBehaviour.Properties.of().strength(0.2f).randomTicks().sound(SoundType.GRASS).noOcclusion().isViewBlocking((state, world, pos) -> false).isSuffocating((state, world, pos) -> false)));
+    public static final RegistrySupplier<Block> FIR_SAPLING = registerWithItem("fir_sapling", () -> new SaplingBlock(new AbstractTreeGrower() {@Override protected @NotNull ResourceKey<ConfiguredFeature<?, ?>> getConfiguredFeature(@NotNull RandomSource random, boolean bees) {return GeneralUtil.configuredFeatureKey("snowy_taiga_fir");}}, BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
 
     public static final RegistrySupplier<Block> RED_BRICKS = registerWithItem("red_bricks", () -> new Block(BlockBehaviour.Properties.copy(Blocks.BRICKS)));
     public static final RegistrySupplier<Block> RED_BRICK_STAIRS = registerWithItem("red_brick_stairs", () -> new StairBlock(RED_BRICKS.get().defaultBlockState(), BlockBehaviour.Properties.copy(RED_BRICKS.get())));
@@ -138,6 +153,7 @@ public class ObjectRegistry {
     public static final RegistrySupplier<Block> CALCITE_BRICK_SLAB = registerWithItem("calcite_brick_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(CALCITE_BRICKS.get())));
     public static final RegistrySupplier<Block> CALCITE_BRICK_WALL = registerWithItem("calcite_brick_wall", () -> new WallBlock(BlockBehaviour.Properties.copy(CALCITE_BRICKS.get())));
 
+    public static final RegistrySupplier<Block> MARSH_BLOCK = registerWithItem("marsh_block", () -> new SinkInBlock(BlockBehaviour.Properties.copy(Blocks.MUD)));
 
     public static final RegistrySupplier<Block> JOE_PYE = registerWithItem("joe_pye", () -> new FlowerBlock(MobEffects.HEAL, 1, BlockBehaviour.Properties.copy(Blocks.DANDELION)));
     public static final RegistrySupplier<Block> HYSSOP = registerWithItem("hyssop", () -> new FlowerBlock(MobEffects.HEAL, 1, BlockBehaviour.Properties.copy(Blocks.DANDELION)));
@@ -166,6 +182,11 @@ public class ObjectRegistry {
     public static final RegistrySupplier<Block> TALL_LUPINE_BLUE = registerWithItem("tall_lupine_blue", () -> new TallFlowerBlock(BlockBehaviour.Properties.copy(Blocks.ROSE_BUSH)));
     public static final RegistrySupplier<Block> LUPINE_PURPLE = registerWithItem("lupine_purple", () -> new FlowerBlock(MobEffects.DIG_SPEED, 1, BlockBehaviour.Properties.copy(Blocks.DANDELION)));
     public static final RegistrySupplier<Block> TALL_LUPINE_PURPLE = registerWithItem("tall_lupine_purple", () -> new TallFlowerBlock(BlockBehaviour.Properties.copy(Blocks.ROSE_BUSH)));
+    public static final RegistrySupplier<Block> BEACH_GRASS = registerWithItem("beach_grass", () -> new DeadBushBlock(BlockBehaviour.Properties.copy(Blocks.ALLIUM)));
+    public static final RegistrySupplier<Block> BEACH_BUSH = registerWithItem("beach_bush", () -> new DeadBushBlock(BlockBehaviour.Properties.copy(Blocks.DANDELION)));
+    public static final RegistrySupplier<Block> BEACH_BUSH_TALL = registerWithItem("beach_bush_tall", () -> new DeadBushTallBlock(BlockBehaviour.Properties.copy(Blocks.ROSE_BUSH)));
+    public static final RegistrySupplier<Block> CATTAIL = registerWithItem("cattail", () -> new CattailBlock(BlockBehaviour.Properties.copy(Blocks.TALL_SEAGRASS)));
+    public static final RegistrySupplier<Block> REED = registerWithItem("reed", () -> new CattailBlock(BlockBehaviour.Properties.copy(Blocks.TALL_SEAGRASS)));
 
 
 
@@ -174,6 +195,7 @@ public class ObjectRegistry {
 
 
     public static final RegistrySupplier<Item> WANDERING_GARDENER_SPAWN_EGG = registerItem("wandering_gardener_spawn_egg", () -> new ArchitecturySpawnEggItem(EntityRegistry.WANDERING_GARDENER, -1, -1, getSettings()));
+    public static final RegistrySupplier<Block> COCONUT_HANGING = registerWithoutItem("coconut_hanging", () -> new HangingCoconutBlock(BlockBehaviour.Properties.copy(Blocks.BAMBOO)));
 
 
 

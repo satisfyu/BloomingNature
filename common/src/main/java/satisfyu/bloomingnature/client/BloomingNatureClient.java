@@ -10,12 +10,18 @@ import net.fabricmc.api.Environment;
 import net.minecraft.client.renderer.BiomeColors;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.world.level.FoliageColor;
-import satisfyu.bloomingnature.client.model.RedWolfModel;
-import satisfyu.bloomingnature.client.model.WanderingGardenerModel;
+import satisfyu.bloomingnature.entities.pelican.PelicanModel;
+import satisfyu.bloomingnature.entities.pelican.PelicanRenderer;
+import satisfyu.bloomingnature.entities.raccoon.RaccoonModel;
+import satisfyu.bloomingnature.entities.raccoon.RaccoonRenderer;
+import satisfyu.bloomingnature.entities.red_wolf.RedWolfModel;
+import satisfyu.bloomingnature.entities.squirrel.SquirrelModel;
+import satisfyu.bloomingnature.entities.squirrel.SquirrelRenderer;
+import satisfyu.bloomingnature.entities.wandering_gardener.WanderingGardenerModel;
 import satisfyu.bloomingnature.client.render.block.FlowerBoxBlockEntityRenderer;
 import satisfyu.bloomingnature.client.render.block.FlowerPotBigBlockEntityRenderer;
-import satisfyu.bloomingnature.client.render.entity.RedWolfRenderer;
-import satisfyu.bloomingnature.client.render.entity.WanderingGardenerRenderer;
+import satisfyu.bloomingnature.entities.red_wolf.RedWolfRenderer;
+import satisfyu.bloomingnature.entities.wandering_gardener.WanderingGardenerRenderer;
 import satisfyu.bloomingnature.registry.BlockEntityRegistry;
 import satisfyu.bloomingnature.registry.EntityRegistry;
 import satisfyu.bloomingnature.registry.ObjectRegistry;
@@ -38,12 +44,17 @@ public class BloomingNatureClient {
                 ObjectRegistry.POTTED_FREESIA_PINK.get(), ObjectRegistry.POTTED_LUPINE_BLUE.get(), ObjectRegistry.POTTED_LUPINE_PURPLE.get(),
                 ObjectRegistry.POTTED_LARCH_SAPLING.get(), ObjectRegistry.LARCH_SAPLING.get(), ObjectRegistry.SWAMP_OAK_TRAPDOOR.get(),
                 ObjectRegistry.SWAMP_OAK_WINDOW.get(), ObjectRegistry.SWAMP_OAK_DOOR.get(), ObjectRegistry.SWAMP_OAK_SAPLING.get(), ObjectRegistry.LARCH_WINDOW.get(),
-                ObjectRegistry.TALL_MOUNTAIN_LAUREL.get(), ObjectRegistry.TALL_LUPINE_BLUE.get(), ObjectRegistry.TALL_LUPINE_PURPLE.get()
+                ObjectRegistry.TALL_MOUNTAIN_LAUREL.get(), ObjectRegistry.TALL_LUPINE_BLUE.get(), ObjectRegistry.TALL_LUPINE_PURPLE.get(), ObjectRegistry.BEACH_BUSH.get(),
+                ObjectRegistry.BEACH_BUSH_TALL.get(), ObjectRegistry.BEACH_GRASS.get(), ObjectRegistry.GOLDEN_ROD.get(), ObjectRegistry.WILD_SUNFLOWER.get(),
+                ObjectRegistry.PALM_SAPLING.get(), ObjectRegistry.PALM_DOOR.get(), ObjectRegistry.PALM_TRAPDOOR.get(), ObjectRegistry.PALM_WINDOW.get(),
+                ObjectRegistry.CATTAIL.get(), ObjectRegistry.REED.get()
+
         );
 
         ColorHandlerRegistry.registerItemColors((stack, tintIndex) -> FoliageColor.get(0.5, 1.0), ObjectRegistry.SWAMP_OAK_LEAVES.get());
         ColorHandlerRegistry.registerBlockColors((state, world, pos, tintIndex) -> { if (world == null || pos == null) {return -1;}return BiomeColors.getAverageFoliageColor(world, pos);},
-                ObjectRegistry.SWAMP_OAK_LEAVES.get()
+                ObjectRegistry.SWAMP_OAK_LEAVES.get(), ObjectRegistry.SWAMP_OAK_LEAVES.get()
+
         );
     }
 
@@ -64,11 +75,19 @@ public class BloomingNatureClient {
         public static void registerEntityRenderers() {
         EntityRendererRegistry.register(EntityRegistry.WANDERING_GARDENER, WanderingGardenerRenderer::new);
         EntityRendererRegistry.register(EntityRegistry.RED_WOLF, RedWolfRenderer::new);
+        EntityRendererRegistry.register(EntityRegistry.PELICAN, PelicanRenderer::new);
+        EntityRendererRegistry.register(EntityRegistry.RACCOON, RaccoonRenderer::new);
+        EntityRendererRegistry.register(EntityRegistry.SQUIRREL, SquirrelRenderer::new);
+
+
         }
 
     public static void registerEntityModelLayer() {
         EntityModelLayerRegistry.register(WanderingGardenerModel.LAYER_LOCATION, WanderingGardenerModel::getTexturedModelData);
         EntityModelLayerRegistry.register(RedWolfModel.LAYER_LOCATION, RedWolfModel::getTexturedModelData);
+        EntityModelLayerRegistry.register(PelicanModel.LAYER_LOCATION, PelicanModel::getTexturedModelData);
+        EntityModelLayerRegistry.register(RaccoonModel.LAYER_LOCATION, RaccoonModel::getTexturedModelData);
+        EntityModelLayerRegistry.register(SquirrelModel.LAYER_LOCATION, SquirrelModel::getTexturedModelData);
 
     }
 

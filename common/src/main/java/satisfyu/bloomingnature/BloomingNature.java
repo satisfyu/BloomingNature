@@ -14,6 +14,7 @@ public class BloomingNature {
         BlockEntityRegistry.init();
         EntityRegistry.init();
         TabRegistry.init();
+        PlacerTypesRegistry.init();
     }
 
     public static void commonInit() {
