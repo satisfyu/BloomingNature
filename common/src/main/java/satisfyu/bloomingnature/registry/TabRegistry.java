@@ -139,11 +139,19 @@ public class TabRegistry {
                 out.accept(ObjectRegistry.RED_BRICK_SLAB.get());
                 out.accept(ObjectRegistry.RED_BRICK_STAIRS.get());
                 out.accept(ObjectRegistry.RED_BRICK_WALL.get());
-                out.accept(ObjectRegistry.CALCITE_BRICKS.get());
-                out.accept(ObjectRegistry.CALCITE_BRICK_SLAB.get());
-                out.accept(ObjectRegistry.CALCITE_BRICK_STAIRS.get());
-                out.accept(ObjectRegistry.CALCITE_BRICK_WALL.get());
+                out.accept(ObjectRegistry.TRAVERTIN.get());
+                out.accept(ObjectRegistry.TRAVERTIN_BRICKS.get());
+                out.accept(ObjectRegistry.TRAVERTIN_BRICK_SLAB.get());
+                out.accept(ObjectRegistry.TRAVERTIN_BRICK_STAIRS.get());
+                out.accept(ObjectRegistry.TRAVERTIN_BRICK_WALL.get());
+                out.accept(ObjectRegistry.RED_TRAVERTIN.get());
+                out.accept(ObjectRegistry.RED_TRAVERTIN_BRICKS.get());
+                out.accept(ObjectRegistry.RED_TRAVERTIN_BRICK_SLAB.get());
+                out.accept(ObjectRegistry.RED_TRAVERTIN_BRICK_STAIRS.get());
+                out.accept(ObjectRegistry.RED_TRAVERTIN_BRICK_WALL.get());
                 out.accept(ObjectRegistry.MARSH_BLOCK.get());
+                out.accept(ObjectRegistry.TERMITE_MOUND.get());
+
 
                 out.accept(ObjectRegistry.REED.get());
                 out.accept(ObjectRegistry.CATTAIL.get());

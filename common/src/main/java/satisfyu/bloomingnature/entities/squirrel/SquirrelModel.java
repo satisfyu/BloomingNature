@@ -10,10 +10,10 @@ import net.minecraft.client.model.geom.PartPose;
 import net.minecraft.client.model.geom.builders.*;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.Mth;
+import org.jetbrains.annotations.NotNull;
 import satisfyu.bloomingnature.BloomingNature;
 
 // Squirrel Animations by SameDifferent: https://github.com/samedifferent/Ecologics/blob/1.19-crossplatform/LICENSE
-
 @Environment(EnvType.CLIENT)
 public class SquirrelModel extends AgeableListModel<SquirrelEntity> {
     public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(new ResourceLocation(BloomingNature.MOD_ID, "squirrel"), "main");
@@ -69,7 +69,7 @@ public class SquirrelModel extends AgeableListModel<SquirrelEntity> {
         this.body.getAllParts().forEach(ModelPart::resetPose);
         this.head.resetPose();
 
-        float swingCorrectionFactor = 0.1F; // 10
+        float swingCorrectionFactor = 0.1F;
         float correctedLimbSwing = entity.isBaby() ? limbSwing / 3 : limbSwing;
 
         this.head.xRot = headPitch * Mth.DEG_TO_RAD;
@@ -78,48 +78,48 @@ public class SquirrelModel extends AgeableListModel<SquirrelEntity> {
         this.head.y += (-1 - Mth.cos(correctedLimbSwing)) * (entity.isBaby() ? 1 : 2) * limbSwingAmount;
         this.head.z += 1 * limbSwingAmount;
 
-        this.body.xRot += (Math.toRadians(10) - Mth.cos((float) Math.toRadians(-30) + correctedLimbSwing)) * (swingCorrectionFactor * 3.5F) * limbSwingAmount;
+        this.body.xRot += (float) ((Math.toRadians(10) - Mth.cos((float) Math.toRadians(-30) + correctedLimbSwing)) * (swingCorrectionFactor * 3.5F) * limbSwingAmount);
         this.body.y += (-1 - Mth.cos(correctedLimbSwing)) * 2.0f * limbSwingAmount;
 
-        this.leftArm.xRot += (Math.toRadians(-15) - Mth.cos((float) Math.toRadians(-35) + correctedLimbSwing)) * (swingCorrectionFactor * 7.5F) * limbSwingAmount;
-        this.leftArm.yRot += Math.toRadians(-5);
-        this.leftArm.zRot += (Math.toRadians(-15) - Mth.cos(correctedLimbSwing)) * (swingCorrectionFactor * 2.0F) * limbSwingAmount;
+        this.leftArm.xRot += (float) ((Math.toRadians(-15) - Mth.cos((float) Math.toRadians(-35) + correctedLimbSwing)) * (swingCorrectionFactor * 7.5F) * limbSwingAmount);
+        this.leftArm.yRot += (float) Math.toRadians(-5);
+        this.leftArm.zRot += (float) ((Math.toRadians(-15) - Mth.cos(correctedLimbSwing)) * (swingCorrectionFactor * 2.0F) * limbSwingAmount);
         leftArm.z += (0.5F + Mth.cos(correctedLimbSwing)) * (swingCorrectionFactor * 0.05F) * limbSwingAmount;
 
-        this.rightArm.xRot += (Math.toRadians(-15) - Mth.cos((float) Math.toRadians(-45) + correctedLimbSwing)) * (swingCorrectionFactor * 7.5F) * limbSwingAmount;
-        this.rightArm.yRot += Math.toRadians(-5);
-        this.rightArm.zRot += (Math.toRadians(15) - Mth.cos(correctedLimbSwing)) * (swingCorrectionFactor * 2.0F) * limbSwingAmount;
+        this.rightArm.xRot += (float) ((Math.toRadians(-15) - Mth.cos((float) Math.toRadians(-45) + correctedLimbSwing)) * (swingCorrectionFactor * 7.5F) * limbSwingAmount);
+        this.rightArm.yRot += (float) Math.toRadians(-5);
+        this.rightArm.zRot += (float) ((Math.toRadians(15) - Mth.cos(correctedLimbSwing)) * (swingCorrectionFactor * 2.0F) * limbSwingAmount);
         rightArm.z += (0.5F + Mth.cos((float) Math.toRadians(-25) + correctedLimbSwing)) * (swingCorrectionFactor * 0.05F) * limbSwingAmount;
 
-        this.leftThigh.xRot += (Math.toRadians(45) - Mth.cos((float) Math.toRadians(-45) + correctedLimbSwing)) * (swingCorrectionFactor * 6.5F) * limbSwingAmount;
+        this.leftThigh.xRot += (float) ((Math.toRadians(45) - Mth.cos((float) Math.toRadians(-45) + correctedLimbSwing)) * (swingCorrectionFactor * 6.5F) * limbSwingAmount);
         this.leftThigh.y += -3 * (swingCorrectionFactor * 7) * limbSwingAmount;
         this.leftThigh.z += Mth.cos((float) Math.toRadians(-35) + correctedLimbSwing) * (swingCorrectionFactor * 0.1F) * limbSwingAmount;
 
-        this.leftFoot.xRot += (Math.toRadians(25) + Mth.cos((float) Math.toRadians(-125) + correctedLimbSwing)) * (swingCorrectionFactor * 6.0F) * limbSwingAmount;
+        this.leftFoot.xRot += (float) ((Math.toRadians(25) + Mth.cos((float) Math.toRadians(-125) + correctedLimbSwing)) * (swingCorrectionFactor * 6.0F) * limbSwingAmount);
         this.leftFoot.y += -1 * (swingCorrectionFactor * 2.0F) * limbSwingAmount;
         this.leftFoot.z += (-0.5F + Mth.cos(correctedLimbSwing)) * (swingCorrectionFactor * 0.025F) * limbSwingAmount;
 
         this.rightLeg.y += -1 * swingCorrectionFactor * limbSwingAmount;
 
-        this.rightThigh.xRot += (Math.toRadians(45) - Mth.cos((float) Math.toRadians(-25) + correctedLimbSwing)) * (swingCorrectionFactor * 6.5F) * limbSwingAmount;
+        this.rightThigh.xRot += (float) ((Math.toRadians(45) - Mth.cos((float) Math.toRadians(-25) + correctedLimbSwing)) * (swingCorrectionFactor * 6.5F) * limbSwingAmount);
         this.rightThigh.y += -2 * (swingCorrectionFactor * 7) * limbSwingAmount;
         this.rightThigh.z += Mth.cos((float) Math.toRadians(-35) + correctedLimbSwing) * (swingCorrectionFactor * 0.1F) * limbSwingAmount;
 
-        this.rightFoot.xRot += (Math.toRadians(15) + Mth.cos((float) Math.toRadians(-85) + correctedLimbSwing)) * (swingCorrectionFactor * 6.0F) * limbSwingAmount;
+        this.rightFoot.xRot += (float) ((Math.toRadians(15) + Mth.cos((float) Math.toRadians(-85) + correctedLimbSwing)) * (swingCorrectionFactor * 6.0F) * limbSwingAmount);
         this.rightFoot.y += -1 * (swingCorrectionFactor * 2.0F) * limbSwingAmount;
         this.rightFoot.z += (-0.5F + Mth.cos(correctedLimbSwing)) * (swingCorrectionFactor * 0.025F) * limbSwingAmount;
 
-        this.tail.xRot += (Math.toRadians(-40) - Mth.cos((float) Math.toRadians(-120) + correctedLimbSwing)) * (swingCorrectionFactor * 1.8F) * limbSwingAmount;
+        this.tail.xRot += (float) ((Math.toRadians(-40) - Mth.cos((float) Math.toRadians(-120) + correctedLimbSwing)) * (swingCorrectionFactor * 1.8F) * limbSwingAmount);
         this.tail.z += Mth.cos((float) Math.toRadians(-100) + correctedLimbSwing) * (swingCorrectionFactor * 0.03F) * limbSwingAmount;
     }
 
     @Override
-    protected Iterable<ModelPart> headParts() {
+    protected @NotNull Iterable<ModelPart> headParts() {
         return ImmutableList.of(this.head);
     }
 
     @Override
-    protected Iterable<ModelPart> bodyParts() {
+    protected @NotNull Iterable<ModelPart> bodyParts() {
         return ImmutableList.of(this.body);
     }
 }

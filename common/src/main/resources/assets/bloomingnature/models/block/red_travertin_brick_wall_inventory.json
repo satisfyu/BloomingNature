@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/wall_inventory",
+  "textures": {
+    "wall": "bloomingnature:block/red_travertin_bricks_3"
+  }
+}

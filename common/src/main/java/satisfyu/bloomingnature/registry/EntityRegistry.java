@@ -4,10 +4,15 @@ import dev.architectury.registry.level.entity.EntityAttributeRegistry;
 import dev.architectury.registry.registries.DeferredRegister;
 import dev.architectury.registry.registries.RegistrySupplier;
 import net.minecraft.core.registries.Registries;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.entity.animal.Animal;
 import satisfyu.bloomingnature.BloomingNature;
+import satisfyu.bloomingnature.entities.deer.DeerEntity;
+import satisfyu.bloomingnature.entities.mossy_sheep.MossySheepEntity;
+import satisfyu.bloomingnature.entities.mossy_sheep.SheepEntity;
+import satisfyu.bloomingnature.entities.muddy_pig.MuddyPigEntity;
 import satisfyu.bloomingnature.entities.pelican.PelicanEntity;
 import satisfyu.bloomingnature.entities.raccoon.RaccoonEntity;
 import satisfyu.bloomingnature.entities.red_wolf.RedWolfEntity;
@@ -45,11 +50,30 @@ public class EntityRegistry {
                     .build(new BloomingNatureIdentifier("raccoon").toString())
     );
 
+    public static final RegistrySupplier<EntityType<MossySheepEntity>> MOSSY_SHEEP = create("mossy_sheep",
+            () -> EntityType.Builder.of(MossySheepEntity::new, MobCategory.CREATURE)
+                    .sized(0.9f, 1.3f)
+                    .build(new ResourceLocation(BloomingNature.MOD_ID, "mossy_sheep").toString())
+    );
+
     public static final RegistrySupplier<EntityType<SquirrelEntity>> SQUIRREL = create("squirrel",
             () -> EntityType.Builder.of(SquirrelEntity::new, MobCategory.CREATURE)
                     .sized(0.9f, 1.3f)
                     .build(new BloomingNatureIdentifier("raccoon").toString())
     );
+
+    public static final RegistrySupplier<EntityType<MuddyPigEntity>> MUDDY_PIG = create("muddy_pig",
+            () -> EntityType.Builder.of(MuddyPigEntity::new, MobCategory.CREATURE)
+                    .sized(0.9f, 1.3f)
+                    .build(new BloomingNatureIdentifier("muddy_pig").toString())
+    );
+
+    public static final RegistrySupplier<EntityType<DeerEntity>> DEER = create("deer",
+            () -> EntityType.Builder.of(DeerEntity::new, MobCategory.CREATURE)
+                    .sized(0.9f, 1.3f)
+                    .build(new BloomingNatureIdentifier("deer").toString())
+    );
+
 
 
 
@@ -61,16 +85,18 @@ public class EntityRegistry {
         BloomingNature.LOGGER.debug("Registering Entities for " + BloomingNature.MOD_ID);
         ENTITY_TYPES.register();
         EntityAttributeRegistry.register(WANDERING_GARDENER, WanderingGardenerEntity::createMobAttributes);
-        registerRedWolf(RED_WOLF);
-        registerPelican(PELICAN);
-        registerRaccoon(RACCOON);
-        registerSquirrel(SQUIRREL);
-
+        EntityAttributeRegistry.register(MOSSY_SHEEP, SheepEntity::createMobAttributes);
+        EntityAttributeRegistry.register(DEER, DeerEntity::createMobAttributes);
     }
 
     public static void registerPelican(Supplier<? extends EntityType<? extends Animal>> typeSupplier) {
         EntityAttributeRegistry.register(typeSupplier, PelicanEntity::registerAttributes);
     }
+
+    public static void registerMuddyPig(Supplier<? extends EntityType<? extends Animal>> typeSupplier) {
+        EntityAttributeRegistry.register(typeSupplier, MuddyPigEntity::createAttributes);
+    }
+
 
     public static void registerRedWolf(Supplier<? extends EntityType<? extends Animal>> typeSupplier) {
         EntityAttributeRegistry.register(typeSupplier, RedWolfEntity::createAttributes);
@@ -83,4 +109,5 @@ public class EntityRegistry {
     public static void registerSquirrel(Supplier<? extends EntityType<? extends Animal>> typeSupplier) {
         EntityAttributeRegistry.register(typeSupplier, SquirrelEntity::createAttributes);
     }
+
 }

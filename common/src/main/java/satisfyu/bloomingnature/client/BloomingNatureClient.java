@@ -7,9 +7,19 @@ import dev.architectury.registry.client.rendering.ColorHandlerRegistry;
 import dev.architectury.registry.client.rendering.RenderTypeRegistry;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
+import net.minecraft.client.model.SheepFurModel;
+import net.minecraft.client.model.SheepModel;
+import net.minecraft.client.model.geom.ModelLayerLocation;
 import net.minecraft.client.renderer.BiomeColors;
 import net.minecraft.client.renderer.RenderType;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.FoliageColor;
+import satisfyu.bloomingnature.BloomingNature;
+import satisfyu.bloomingnature.entities.deer.DeerModel;
+import satisfyu.bloomingnature.entities.deer.DeerRenderer;
+import satisfyu.bloomingnature.entities.mossy_sheep.MossySheepRenderer;
+import satisfyu.bloomingnature.entities.muddy_pig.MuddyPigModel;
+import satisfyu.bloomingnature.entities.muddy_pig.MuddyPigRenderer;
 import satisfyu.bloomingnature.entities.pelican.PelicanModel;
 import satisfyu.bloomingnature.entities.pelican.PelicanRenderer;
 import satisfyu.bloomingnature.entities.raccoon.RaccoonModel;
@@ -58,6 +68,9 @@ public class BloomingNatureClient {
         );
     }
 
+    public static final ModelLayerLocation MOSSY_SHEEP_FUR = new ModelLayerLocation(new ResourceLocation(BloomingNature.MOD_ID, "mossy_sheep_"), "fur");
+    public static final ModelLayerLocation MOSSY_SHEEP_MODEL_LAYER = new ModelLayerLocation(new ResourceLocation(BloomingNature.MOD_ID, "mossy_sheep"), "main");
+
 
     public static void preInitClient() {
         registerEntityRenderers();
@@ -78,6 +91,9 @@ public class BloomingNatureClient {
         EntityRendererRegistry.register(EntityRegistry.PELICAN, PelicanRenderer::new);
         EntityRendererRegistry.register(EntityRegistry.RACCOON, RaccoonRenderer::new);
         EntityRendererRegistry.register(EntityRegistry.SQUIRREL, SquirrelRenderer::new);
+        EntityRendererRegistry.register(EntityRegistry.MUDDY_PIG, MuddyPigRenderer::new);
+        EntityRendererRegistry.register(EntityRegistry.MOSSY_SHEEP, MossySheepRenderer::new);
+        EntityRendererRegistry.register(EntityRegistry.DEER, DeerRenderer::new);
 
 
         }
@@ -88,7 +104,10 @@ public class BloomingNatureClient {
         EntityModelLayerRegistry.register(PelicanModel.LAYER_LOCATION, PelicanModel::getTexturedModelData);
         EntityModelLayerRegistry.register(RaccoonModel.LAYER_LOCATION, RaccoonModel::getTexturedModelData);
         EntityModelLayerRegistry.register(SquirrelModel.LAYER_LOCATION, SquirrelModel::getTexturedModelData);
-
+        EntityModelLayerRegistry.register(MuddyPigModel.LAYER_LOCATION, MuddyPigModel::getTexturedModelData);
+        EntityModelLayerRegistry.register(DeerModel.LAYER_LOCATION, DeerModel::getTexturedModelData);
+        EntityModelLayerRegistry.register(MOSSY_SHEEP_MODEL_LAYER, SheepModel::createBodyLayer);
+        EntityModelLayerRegistry.register(MOSSY_SHEEP_FUR, SheepFurModel::createFurLayer);
     }
 
 }
