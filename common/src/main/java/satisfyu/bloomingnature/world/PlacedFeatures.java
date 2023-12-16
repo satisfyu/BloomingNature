@@ -17,9 +17,6 @@ public class PlacedFeatures {
     public static final ResourceKey<PlacedFeature> COBBLESTONE_BEACH_MOSSY_KEY = registerKey("terrain/cobblestone_beach_mossy");
 
 
-
-
-
     public static ResourceKey<PlacedFeature> registerKey(String name) {
         return ResourceKey.create(Registries.PLACED_FEATURE, new BloomingNatureIdentifier(name));
     }

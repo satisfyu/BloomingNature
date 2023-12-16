@@ -73,16 +73,15 @@ public class DeerModel<T extends Entity> extends HierarchicalModel<T> {
 
     @Override
     public void setupAnim(T entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
-        // Reset the pose to default
         this.root().getAllParts().forEach(ModelPart::resetPose);
 
         this.head.yRot = netHeadYaw * 0.0089453292F;
         this.head.xRot = headPitch * 0.0047453292F;
 
-        this.rightHindLeg.xRot = Mth.cos(limbSwing * 0.6662F) * 1.0F * limbSwingAmount;
-        this.leftHindLeg.xRot = Mth.cos(limbSwing * 0.6662F + 3.1415927F) * 1.0F * limbSwingAmount;
-        this.rightFrontLeg.xRot = Mth.cos(limbSwing * 0.6662F + 3.1415927F) * 1.0F * limbSwingAmount;
-        this.leftFrontLeg.xRot = Mth.cos(limbSwing * 0.6662F) * 1.0F * limbSwingAmount;
+        this.rightHindLeg.xRot = Mth.cos(limbSwing * 0.6662F) * 0.5F * limbSwingAmount;
+        this.leftHindLeg.xRot = Mth.cos(limbSwing * 0.6662F + 3.1415927F) * 0.5F * limbSwingAmount;
+        this.rightFrontLeg.xRot = Mth.cos(limbSwing * 0.6662F + 3.1415927F) * 0.5F * limbSwingAmount;
+        this.leftFrontLeg.xRot = Mth.cos(limbSwing * 0.6662F) * 0.5F * limbSwingAmount;
     }
 
     @Override

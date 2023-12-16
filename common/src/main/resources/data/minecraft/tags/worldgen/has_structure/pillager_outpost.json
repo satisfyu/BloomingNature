@@ -1,0 +1,17 @@
+{
+  "values": [
+    "minecraft:desert",
+    "minecraft:plains",
+    "minecraft:savanna",
+    "minecraft:snowy_plains",
+    "minecraft:taiga",
+    "#minecraft:is_mountain",
+    "minecraft:grove",
+    "bloomingnature:desert",
+    "bloomingnature:plains",
+    "bloomingnature:savanna",
+    "bloomingnature:snowy_plains",
+    "bloomingnature:taiga",
+    "bloomingnature:grove"
+  ]
+}

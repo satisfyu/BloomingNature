@@ -35,7 +35,6 @@ public class TabRegistry {
                 out.accept(ObjectRegistry.LARCH_SAPLING.get());
                 out.accept(BoatsAndSignsRegistry.LARCH_SIGN_ITEM.get());
                 out.accept(BoatsAndSignsRegistry.LARCH_HANGING_SIGN_ITEM.get());
-
                 out.accept(ObjectRegistry.BAOBAB_LOG.get());
                 out.accept(ObjectRegistry.BAOBAB_WOOD.get());
                 out.accept(ObjectRegistry.STRIPPED_BAOBAB_WOOD.get());
@@ -54,7 +53,6 @@ public class TabRegistry {
                 out.accept(ObjectRegistry.BAOBAB_SAPLING.get());
                 out.accept(BoatsAndSignsRegistry.BAOBAB_SIGN_ITEM.get());
                 out.accept(BoatsAndSignsRegistry.BAOBAB_HANGING_SIGN_ITEM.get());
-
                 out.accept(ObjectRegistry.ASPEN_LOG.get());
                 out.accept(ObjectRegistry.ASPEN_WOOD.get());
                 out.accept(ObjectRegistry.STRIPPED_ASPEN_WOOD.get());
@@ -73,8 +71,6 @@ public class TabRegistry {
                 out.accept(ObjectRegistry.ASPEN_SAPLING.get());
                 out.accept(BoatsAndSignsRegistry.ASPEN_SIGN_ITEM.get());
                 out.accept(BoatsAndSignsRegistry.ASPEN_HANGING_SIGN_ITEM.get());
-
-
                 out.accept(ObjectRegistry.SWAMP_OAK_LOG.get());
                 out.accept(ObjectRegistry.SWAMP_OAK_WOOD.get());
                 out.accept(ObjectRegistry.STRIPPED_SWAMP_OAK_WOOD.get());
@@ -93,7 +89,24 @@ public class TabRegistry {
                 out.accept(ObjectRegistry.SWAMP_OAK_SAPLING.get());
                 out.accept(BoatsAndSignsRegistry.SWAMP_OAK_SIGN_ITEM.get());
                 out.accept(BoatsAndSignsRegistry.SWAMP_OAK_HANGING_SIGN_ITEM.get());
-
+                out.accept(ObjectRegistry.SWAMP_CYPRESS_LOG.get());
+                out.accept(ObjectRegistry.SWAMP_CYPRESS_WOOD.get());
+                out.accept(ObjectRegistry.STRIPPED_SWAMP_CYPRESS_WOOD.get());
+                out.accept(ObjectRegistry.STRIPPED_SWAMP_CYPRESS_LOG.get());
+                out.accept(ObjectRegistry.SWAMP_CYPRESS_PLANKS.get());
+                out.accept(ObjectRegistry.SWAMP_CYPRESS_STAIRS.get());
+                out.accept(ObjectRegistry.SWAMP_CYPRESS_SLAB.get());
+                out.accept(ObjectRegistry.SWAMP_CYPRESS_PRESSURE_PLATE.get());
+                out.accept(ObjectRegistry.SWAMP_CYPRESS_BUTTON.get());
+                out.accept(ObjectRegistry.SWAMP_CYPRESS_TRAPDOOR.get());
+                out.accept(ObjectRegistry.SWAMP_CYPRESS_DOOR.get());
+                out.accept(ObjectRegistry.SWAMP_CYPRESS_WINDOW.get());
+                out.accept(ObjectRegistry.SWAMP_CYPRESS_FENCE.get());
+                out.accept(ObjectRegistry.SWAMP_CYPRESS_FENCE_GATE.get());
+                out.accept(ObjectRegistry.SWAMP_CYPRESS_LEAVES.get());
+                out.accept(ObjectRegistry.SWAMP_CYPRESS_SAPLING.get());
+                out.accept(BoatsAndSignsRegistry.SWAMP_CYPRESS_SIGN_ITEM.get());
+                out.accept(BoatsAndSignsRegistry.SWAMP_CYPRESS_HANGING_SIGN_ITEM.get());
                 out.accept(ObjectRegistry.PALM_LOG.get());
                 out.accept(ObjectRegistry.PALM_WOOD.get());
                 out.accept(ObjectRegistry.STRIPPED_PALM_WOOD.get());
@@ -133,8 +146,7 @@ public class TabRegistry {
                 out.accept(BoatsAndSignsRegistry.FIR_HANGING_SIGN_ITEM.get());
 
 
-                out.accept(ObjectRegistry.FLOWER_POT_BIG.get());
-                out.accept(ObjectRegistry.FLOWER_BOX.get());
+
                 out.accept(ObjectRegistry.RED_BRICKS.get());
                 out.accept(ObjectRegistry.RED_BRICK_SLAB.get());
                 out.accept(ObjectRegistry.RED_BRICK_STAIRS.get());
@@ -149,9 +161,10 @@ public class TabRegistry {
                 out.accept(ObjectRegistry.RED_TRAVERTIN_BRICK_SLAB.get());
                 out.accept(ObjectRegistry.RED_TRAVERTIN_BRICK_STAIRS.get());
                 out.accept(ObjectRegistry.RED_TRAVERTIN_BRICK_WALL.get());
+                out.accept(ObjectRegistry.FOREST_MOSS.get());
                 out.accept(ObjectRegistry.MARSH_BLOCK.get());
                 out.accept(ObjectRegistry.TERMITE_MOUND.get());
-
+                out.accept(ObjectRegistry.QUICKSAND.get());
 
                 out.accept(ObjectRegistry.REED.get());
                 out.accept(ObjectRegistry.CATTAIL.get());
@@ -183,12 +196,22 @@ public class TabRegistry {
                 out.accept(ObjectRegistry.BEACH_BUSH.get());
                 out.accept(ObjectRegistry.BEACH_BUSH_TALL.get());
                 out.accept(ObjectRegistry.BEACH_GRASS.get());
+                out.accept(ObjectRegistry.FLOWER_POT_BIG.get());
+                out.accept(ObjectRegistry.FLOWER_BOX.get());
                 out.accept(BoatsAndSignsRegistry.LARCH_CHEST_BOAT.get());
                 out.accept(BoatsAndSignsRegistry.LARCH_BOAT.get());
+                out.accept(BoatsAndSignsRegistry.BAOBAB_CHEST_BOAT.get());
+                out.accept(BoatsAndSignsRegistry.BAOBAB_BOAT.get());
                 out.accept(BoatsAndSignsRegistry.ASPEN_CHEST_BOAT.get());
                 out.accept(BoatsAndSignsRegistry.ASPEN_BOAT.get());
                 out.accept(BoatsAndSignsRegistry.SWAMP_OAK_CHEST_BOAT.get());
                 out.accept(BoatsAndSignsRegistry.SWAMP_OAK_BOAT.get());
+                out.accept(BoatsAndSignsRegistry.SWAMP_CYPRESS_CHEST_BOAT.get());
+                out.accept(BoatsAndSignsRegistry.SWAMP_CYPRESS_BOAT.get());
+                out.accept(BoatsAndSignsRegistry.PALM_CHEST_BOAT.get());
+                out.accept(BoatsAndSignsRegistry.PALM_BOAT.get());
+                out.accept(BoatsAndSignsRegistry.FIR_BOAT.get());
+                out.accept(BoatsAndSignsRegistry.FIR_CHEST_BOAT.get());
                 out.accept(ObjectRegistry.WANDERING_GARDENER_SPAWN_EGG.get());
 
 

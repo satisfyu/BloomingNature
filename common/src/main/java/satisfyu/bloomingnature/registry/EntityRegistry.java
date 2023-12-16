@@ -7,7 +7,6 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
-import net.minecraft.world.entity.animal.Animal;
 import satisfyu.bloomingnature.BloomingNature;
 import satisfyu.bloomingnature.entities.deer.DeerEntity;
 import satisfyu.bloomingnature.entities.mossy_sheep.MossySheepEntity;
@@ -75,8 +74,6 @@ public class EntityRegistry {
     );
 
 
-
-
     public static <T extends EntityType<?>> RegistrySupplier<T> create(final String path, final Supplier<T> type) {
         return ENTITY_TYPES.register(new BloomingNatureIdentifier(path), type);
     }
@@ -87,27 +84,10 @@ public class EntityRegistry {
         EntityAttributeRegistry.register(WANDERING_GARDENER, WanderingGardenerEntity::createMobAttributes);
         EntityAttributeRegistry.register(MOSSY_SHEEP, SheepEntity::createMobAttributes);
         EntityAttributeRegistry.register(DEER, DeerEntity::createMobAttributes);
+        EntityAttributeRegistry.register(PELICAN, PelicanEntity::createMobAttributes);
+        EntityAttributeRegistry.register(RED_WOLF, RedWolfEntity::createMobAttributes);
+        EntityAttributeRegistry.register(RACCOON, RaccoonEntity::createMobAttributes);
+        EntityAttributeRegistry.register(SQUIRREL, SquirrelEntity::createMobAttributes);
+        EntityAttributeRegistry.register(MUDDY_PIG, MuddyPigEntity::createMobAttributes);
     }
-
-    public static void registerPelican(Supplier<? extends EntityType<? extends Animal>> typeSupplier) {
-        EntityAttributeRegistry.register(typeSupplier, PelicanEntity::registerAttributes);
-    }
-
-    public static void registerMuddyPig(Supplier<? extends EntityType<? extends Animal>> typeSupplier) {
-        EntityAttributeRegistry.register(typeSupplier, MuddyPigEntity::createAttributes);
-    }
-
-
-    public static void registerRedWolf(Supplier<? extends EntityType<? extends Animal>> typeSupplier) {
-        EntityAttributeRegistry.register(typeSupplier, RedWolfEntity::createAttributes);
-    }
-
-    public static void registerRaccoon(Supplier<? extends EntityType<? extends Animal>> typeSupplier) {
-        EntityAttributeRegistry.register(typeSupplier, RaccoonEntity::createAttributes);
-    }
-
-    public static void registerSquirrel(Supplier<? extends EntityType<? extends Animal>> typeSupplier) {
-        EntityAttributeRegistry.register(typeSupplier, SquirrelEntity::createAttributes);
-    }
-
 }

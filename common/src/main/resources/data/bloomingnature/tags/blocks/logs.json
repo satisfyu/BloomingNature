@@ -24,6 +24,10 @@
     "bloomingnature:palm_log",
     "bloomingnature:palm_wood",
     "bloomingnature:stripped_palm_log",
-    "bloomingnature:stripped_palm_wood"
+    "bloomingnature:stripped_palm_wood",
+    "bloomingnature:swamp_cypress_log",
+    "bloomingnature:swamp_cypress_wood",
+    "bloomingnature:stripped_swamp_cypress_log",
+    "bloomingnature:stripped_swamp_cypress_wood"
   ]
 }

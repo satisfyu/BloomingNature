@@ -1,0 +1,12 @@
+{
+  "values": [
+    "minecraft:taiga",
+    "minecraft:snowy_taiga",
+    "minecraft:old_growth_pine_taiga",
+    "minecraft:old_growth_spruce_taiga",
+    "bloomingnature:taiga",
+    "bloomingnature:snowy_taiga",
+    "bloomingnature:larch_forest",
+    "bloomingnature:old_growth_spruce_taiga"
+  ]
+}

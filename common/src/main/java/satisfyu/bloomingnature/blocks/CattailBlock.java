@@ -1,4 +1,4 @@
-package party.lemons.biomemakeover.block;
+package satisfyu.bloomingnature.blocks;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;

@@ -26,7 +26,7 @@ public class RaccoonEntity extends Fox {
     private static final Ingredient FOOD_ITEMS;
 
 
-    public static AttributeSupplier.Builder createAttributes() {
+    public static AttributeSupplier.Builder createMobAttributes() {
         return Mob.createMobAttributes().add(Attributes.MOVEMENT_SPEED, 0.20000001192092896).add(Attributes.MAX_HEALTH, 10.0).add(Attributes.ATTACK_DAMAGE, 1.5);
     }
 

@@ -16,8 +16,6 @@ public class DeerRenderer extends MobRenderer<DeerEntity, DeerModel<DeerEntity>>
         super(context, new DeerModel(context.bakeLayer(DeerModel.LAYER_LOCATION)), 0.7f);
     }
 
-
-
     @Override
     public ResourceLocation getTextureLocation(DeerEntity entity) {
         return TEXTURE;

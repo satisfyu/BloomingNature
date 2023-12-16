@@ -22,9 +22,6 @@
     ],
     "terrablender":  [
       "satisfyu.bloomingnature.fabric.terrablender.TerrablenderFabric"
-    ],
-    "doapi": [
-      "satisfyu.bloomingnature.util.DoApiImpl"
     ]
   },
   "depends": {

@@ -20,13 +20,15 @@ public class BoatsAndSignsRegistry {
     public static ResourceLocation BAOBAB_BOAT_TYPE = new BloomingNatureIdentifier("baobab");
     public static ResourceLocation PALM_BOAT_TYPE = new BloomingNatureIdentifier("palm");
     public static ResourceLocation FIR_BOAT_TYPE = new BloomingNatureIdentifier("fir");
+    public static ResourceLocation SWAMP_CYPRESS_BOAT_TYPE = new BloomingNatureIdentifier("swamp_cypress");
 
     public static final ResourceLocation ASPEN_SIGN_TEXTURE = new BloomingNatureIdentifier("entity/signs/aspen");
     public static final ResourceLocation LARCH_SIGN_TEXTURE = new BloomingNatureIdentifier("entity/signs/larch");
     public static final ResourceLocation SWAMP_OAK_SIGN_TEXTURE = new BloomingNatureIdentifier("entity/signs/swamp_oak");
     public static final ResourceLocation BAOBAB_SIGN_TEXTURE = new BloomingNatureIdentifier("entity/signs/baobab");
     public static final ResourceLocation PALM_SIGN_TEXTURE = new BloomingNatureIdentifier("entity/signs/palm");
-    public static final ResourceLocation FIR_SIGN_TEXTURE = new BloomingNatureIdentifier("entity/signs/palm");
+    public static final ResourceLocation FIR_SIGN_TEXTURE = new BloomingNatureIdentifier("entity/signs/fir");
+    public static final ResourceLocation SWAMP_CYPRESS_SIGN_TEXTURE = new BloomingNatureIdentifier("entity/signs/swamp_cypress");
 
     public static final RegistrySupplier<Block> ASPEN_SIGN = ObjectRegistry.registerWithoutItem("aspen_sign", () -> TerraformSignHelper.getSign(ASPEN_SIGN_TEXTURE));
     public static final RegistrySupplier<Block> ASPEN_WALL_SIGN = ObjectRegistry.registerWithoutItem("aspen_wall_sign", () -> TerraformSignHelper.getWallSign(ASPEN_SIGN_TEXTURE));
@@ -43,9 +45,13 @@ public class BoatsAndSignsRegistry {
     public static final RegistrySupplier<Block> PALM_SIGN = ObjectRegistry.registerWithoutItem("palm_sign", () -> TerraformSignHelper.getSign(PALM_SIGN_TEXTURE));
     public static final RegistrySupplier<Block> PALM_WALL_SIGN = ObjectRegistry.registerWithoutItem("palm_wall_sign", () -> TerraformSignHelper.getWallSign(PALM_SIGN_TEXTURE));
     public static final RegistrySupplier<Item> PALM_SIGN_ITEM = ObjectRegistry.registerItem("palm_sign", () -> new SignItem(ObjectRegistry.getSettings().stacksTo(16), PALM_SIGN.get(), PALM_WALL_SIGN.get()));
-    public static final RegistrySupplier<Block> FIR_SIGN = ObjectRegistry.registerWithoutItem("fir_sign", () -> TerraformSignHelper.getSign(PALM_SIGN_TEXTURE));
-    public static final RegistrySupplier<Block> FIR_WALL_SIGN = ObjectRegistry.registerWithoutItem("fir_wall_sign", () -> TerraformSignHelper.getWallSign(PALM_SIGN_TEXTURE));
-    public static final RegistrySupplier<Item> FIR_SIGN_ITEM = ObjectRegistry.registerItem("fir_sign", () -> new SignItem(ObjectRegistry.getSettings().stacksTo(16), PALM_SIGN.get(), PALM_WALL_SIGN.get()));
+    public static final RegistrySupplier<Block> FIR_SIGN = ObjectRegistry.registerWithoutItem("fir_sign", () -> TerraformSignHelper.getSign(FIR_SIGN_TEXTURE));
+    public static final RegistrySupplier<Block> FIR_WALL_SIGN = ObjectRegistry.registerWithoutItem("fir_wall_sign", () -> TerraformSignHelper.getWallSign(FIR_SIGN_TEXTURE));
+    public static final RegistrySupplier<Item> FIR_SIGN_ITEM = ObjectRegistry.registerItem("fir_sign", () -> new SignItem(ObjectRegistry.getSettings().stacksTo(16), FIR_SIGN.get(), FIR_WALL_SIGN.get()));
+    public static final RegistrySupplier<Block> SWAMP_CYPRESS_SIGN = ObjectRegistry.registerWithoutItem("swamp_cypress_sign", () -> TerraformSignHelper.getSign(SWAMP_CYPRESS_SIGN_TEXTURE));
+    public static final RegistrySupplier<Block> SWAMP_CYPRESS_WALL_SIGN = ObjectRegistry.registerWithoutItem("swamp_cypress_wall_sign", () -> TerraformSignHelper.getWallSign(SWAMP_CYPRESS_SIGN_TEXTURE));
+    public static final RegistrySupplier<Item> SWAMP_CYPRESS_SIGN_ITEM = ObjectRegistry.registerItem("swamp_cypress_sign", () -> new SignItem(ObjectRegistry.getSettings().stacksTo(16), SWAMP_CYPRESS_SIGN.get(), SWAMP_CYPRESS_WALL_SIGN.get()));
+
 
 
 
@@ -61,6 +67,9 @@ public class BoatsAndSignsRegistry {
     public static final ResourceLocation PALM_HANGING_SIGN_GUI_TEXTURE = new BloomingNatureIdentifier("textures/gui/hanging_signs/palm");
     public static final ResourceLocation FIR_HANGING_SIGN_TEXTURE = new BloomingNatureIdentifier("entity/signs/hanging/fir");
     public static final ResourceLocation FIR_HANGING_SIGN_GUI_TEXTURE = new BloomingNatureIdentifier("textures/gui/hanging_signs/fir");
+    public static final ResourceLocation SWAMP_CYPRESS_HANGING_SIGN_TEXTURE = new BloomingNatureIdentifier("entity/signs/hanging/swamp_cypress");
+    public static final ResourceLocation SWAMP_CYPRESS_HANGING_SIGN_GUI_TEXTURE = new BloomingNatureIdentifier("textures/gui/hanging_signs/swamp_cypress");
+
 
 
 
@@ -79,14 +88,12 @@ public class BoatsAndSignsRegistry {
     public static final RegistrySupplier<Block> PALM_HANGING_SIGN = ObjectRegistry.registerWithoutItem("palm_hanging_sign", () -> TerraformSignHelper.getHangingSign(PALM_HANGING_SIGN_TEXTURE, PALM_HANGING_SIGN_GUI_TEXTURE));
     public static final RegistrySupplier<Block> PALM_WALL_HANGING_SIGN = ObjectRegistry.registerWithoutItem("palm_wall_hanging_sign", () -> TerraformSignHelper.getWallHangingSign(PALM_HANGING_SIGN_TEXTURE, PALM_HANGING_SIGN_GUI_TEXTURE));
     public static final RegistrySupplier<Item> PALM_HANGING_SIGN_ITEM = ObjectRegistry.registerItem("palm_hanging_sign", () -> new HangingSignItem(PALM_HANGING_SIGN.get(), PALM_WALL_HANGING_SIGN.get(), ObjectRegistry.getSettings().stacksTo(16)));
-    public static final RegistrySupplier<Block> FIR_HANGING_SIGN = ObjectRegistry.registerWithoutItem("fir_hanging_sign", () -> TerraformSignHelper.getHangingSign(PALM_HANGING_SIGN_TEXTURE, PALM_HANGING_SIGN_GUI_TEXTURE));
-    public static final RegistrySupplier<Block> FIR_WALL_HANGING_SIGN = ObjectRegistry.registerWithoutItem("fir_wall_hanging_sign", () -> TerraformSignHelper.getWallHangingSign(PALM_HANGING_SIGN_TEXTURE, PALM_HANGING_SIGN_GUI_TEXTURE));
-    public static final RegistrySupplier<Item> FIR_HANGING_SIGN_ITEM = ObjectRegistry.registerItem("fir_hanging_sign", () -> new HangingSignItem(PALM_HANGING_SIGN.get(), PALM_WALL_HANGING_SIGN.get(), ObjectRegistry.getSettings().stacksTo(16)));
-
-
-
-
-
+    public static final RegistrySupplier<Block> FIR_HANGING_SIGN = ObjectRegistry.registerWithoutItem("fir_hanging_sign", () -> TerraformSignHelper.getHangingSign(FIR_HANGING_SIGN_TEXTURE, FIR_HANGING_SIGN_GUI_TEXTURE));
+    public static final RegistrySupplier<Block> FIR_WALL_HANGING_SIGN = ObjectRegistry.registerWithoutItem("fir_wall_hanging_sign", () -> TerraformSignHelper.getWallHangingSign(FIR_HANGING_SIGN_TEXTURE, FIR_HANGING_SIGN_GUI_TEXTURE));
+    public static final RegistrySupplier<Item> FIR_HANGING_SIGN_ITEM = ObjectRegistry.registerItem("fir_hanging_sign", () -> new HangingSignItem(FIR_HANGING_SIGN.get(), FIR_WALL_HANGING_SIGN.get(), ObjectRegistry.getSettings().stacksTo(16)));
+    public static final RegistrySupplier<Block> SWAMP_CYPRESS_HANGING_SIGN = ObjectRegistry.registerWithoutItem("swamp_cypress_hanging_sign", () -> TerraformSignHelper.getHangingSign(SWAMP_CYPRESS_SIGN_TEXTURE, SWAMP_CYPRESS_HANGING_SIGN_TEXTURE));
+    public static final RegistrySupplier<Block> SWAMP_CYPRESS_WALL_HANGING_SIGN = ObjectRegistry.registerWithoutItem("swamp_cypress_wall_hanging_sign", () -> TerraformSignHelper.getWallHangingSign(SWAMP_CYPRESS_HANGING_SIGN_TEXTURE, SWAMP_CYPRESS_HANGING_SIGN_GUI_TEXTURE));
+    public static final RegistrySupplier<Item> SWAMP_CYPRESS_HANGING_SIGN_ITEM = ObjectRegistry.registerItem("swamp_cypress_hanging_sign", () -> new HangingSignItem(SWAMP_CYPRESS_HANGING_SIGN.get(), SWAMP_CYPRESS_WALL_HANGING_SIGN.get(), ObjectRegistry.getSettings().stacksTo(16)));
 
 
     public static RegistrySupplier<Item> ASPEN_BOAT = TerraformBoatItemHelper.registerBoatItem(ObjectRegistry.ITEMS, "aspen_boat", ASPEN_BOAT_TYPE, false);
@@ -101,9 +108,18 @@ public class BoatsAndSignsRegistry {
     public static RegistrySupplier<Item> PALM_CHEST_BOAT = TerraformBoatItemHelper.registerBoatItem(ObjectRegistry.ITEMS, "palm_chest_boat", PALM_BOAT_TYPE, true);
     public static RegistrySupplier<Item> FIR_BOAT = TerraformBoatItemHelper.registerBoatItem(ObjectRegistry.ITEMS, "fir_boat", FIR_BOAT_TYPE, false);
     public static RegistrySupplier<Item> FIR_CHEST_BOAT = TerraformBoatItemHelper.registerBoatItem(ObjectRegistry.ITEMS, "fir_chest_boat", FIR_BOAT_TYPE, true);
+    public static RegistrySupplier<Item> SWAMP_CYPRESS_BOAT = TerraformBoatItemHelper.registerBoatItem(ObjectRegistry.ITEMS, "swamp_cypress_boat", SWAMP_CYPRESS_BOAT_TYPE, false);
+    public static RegistrySupplier<Item> SWAMP_CYPRESS_CHEST_BOAT = TerraformBoatItemHelper.registerBoatItem(ObjectRegistry.ITEMS, "swamp_cypress_chest_boat", SWAMP_CYPRESS_BOAT_TYPE, true);
 
 
     public static void init() {
         DoApiExpectPlatform.registerBoatType(LARCH_BOAT_TYPE, new TerraformBoatType.Builder().item(LARCH_BOAT).chestItem(LARCH_CHEST_BOAT).build());
+        DoApiExpectPlatform.registerBoatType(ASPEN_BOAT_TYPE, new TerraformBoatType.Builder().item(ASPEN_BOAT).chestItem(ASPEN_CHEST_BOAT).build());
+        DoApiExpectPlatform.registerBoatType(SWAMP_CYPRESS_BOAT_TYPE, new TerraformBoatType.Builder().item(SWAMP_CYPRESS_BOAT).chestItem(SWAMP_CYPRESS_CHEST_BOAT).build());
+        DoApiExpectPlatform.registerBoatType(SWAMP_OAK_BOAT_TYPE, new TerraformBoatType.Builder().item(SWAMP_OAK_BOAT).chestItem(SWAMP_OAK_CHEST_BOAT).build());
+        DoApiExpectPlatform.registerBoatType(FIR_BOAT_TYPE, new TerraformBoatType.Builder().item(FIR_BOAT).chestItem(FIR_CHEST_BOAT).build());
+        DoApiExpectPlatform.registerBoatType(BAOBAB_BOAT_TYPE, new TerraformBoatType.Builder().item(BAOBAB_BOAT).chestItem(BAOBAB_CHEST_BOAT).build());
+        DoApiExpectPlatform.registerBoatType(PALM_BOAT_TYPE, new TerraformBoatType.Builder().item(PALM_BOAT).chestItem(PALM_CHEST_BOAT).build());
+
     }
 }

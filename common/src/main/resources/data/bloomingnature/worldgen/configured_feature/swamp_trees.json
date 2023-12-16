@@ -9,6 +9,10 @@
       {
         "chance": 0.1,
         "feature": "bloomingnature:swamp_willow_checked"
+      },
+      {
+        "chance": 0.1,
+        "feature": "bloomingnature:swamp_cypress_checked"
       }
     ],
     "default": "bloomingnature:swamp_oak_checked"

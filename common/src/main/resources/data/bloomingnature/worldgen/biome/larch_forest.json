@@ -15,7 +15,7 @@
       "offset": 2
     },
     "music": {
-      "sound": "minecraft:music.overworld.bloomingnature",
+      "sound": "minecraft:music.overworld.forest",
       "min_delay": 12000,
       "max_delay": 24000,
       "replace_current_music": false
@@ -148,7 +148,6 @@
   "features": [
     [],
     [
-      "minecraft:lake_lava_underground"
     ],
     [
       "minecraft:amethyst_geode",
@@ -190,7 +189,8 @@
       "minecraft:disk_sand",
       "minecraft:disk_clay",
       "minecraft:disk_gravel",
-      "minecraft:ore_emerald"
+      "minecraft:ore_emerald",
+      "bloomingnature:terrain/forest_moss"
     ],
     [
       "minecraft:ore_infested"

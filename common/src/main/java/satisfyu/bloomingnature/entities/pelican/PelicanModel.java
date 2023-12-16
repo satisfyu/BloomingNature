@@ -11,7 +11,6 @@ import net.minecraft.client.model.geom.builders.*;
 import net.minecraft.util.Mth;
 import satisfyu.bloomingnature.util.BloomingNatureIdentifier;
 
-
 public class PelicanModel<T extends PelicanEntity> extends AgeableListModel<T> {
 
     public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(new BloomingNatureIdentifier("pelican"), "main");
@@ -22,6 +21,8 @@ public class PelicanModel<T extends PelicanEntity> extends AgeableListModel<T> {
     private final ModelPart leg1;
     private final ModelPart wing0;
     private final ModelPart wing1;
+    private final ModelPart beak;
+
     public PelicanModel(ModelPart root) {
         this.body = root.getChild("body");
         this.head = root.getChild("head");
@@ -29,7 +30,10 @@ public class PelicanModel<T extends PelicanEntity> extends AgeableListModel<T> {
         this.leg1 = root.getChild("leg1");
         this.wing0 = root.getChild("wing0");
         this.wing1 = root.getChild("wing1");
+        this.beak = root.getChild("beak");
     }
+
+
     public static LayerDefinition getTexturedModelData() {
         MeshDefinition modelData = new MeshDefinition();
         PartDefinition modelPartData = modelData.getRoot();
@@ -47,6 +51,9 @@ public class PelicanModel<T extends PelicanEntity> extends AgeableListModel<T> {
         PartDefinition wing0 = modelPartData.addOrReplaceChild("wing0", CubeListBuilder.create().texOffs(26, 21).addBox(-1.0F, -1.0F, -3.0F, 1.0F, 7.0F, 9.0F, new CubeDeformation(0.0F)), PartPose.offset(-3.0F, 13.0F, 0.0F));
 
         PartDefinition wing1 = modelPartData.addOrReplaceChild("wing1", CubeListBuilder.create().texOffs(26, 21).addBox(0.0F, -1.0F, -3.0F, 1.0F, 7.0F, 9.0F, new CubeDeformation(0.0F)), PartPose.offset(3.0F, 13.0F, 0.0F));
+
+        PartDefinition beak = modelPartData.addOrReplaceChild("beak", CubeListBuilder.create().texOffs(0, 14).addBox(-1.0F, -7.0F, -6.0F, 2.0F, 4.0F, 4.0F, new CubeDeformation(0.0F)), PartPose.offset(0.0F, 15.0F, -4.0F));
+
         return LayerDefinition.create(modelData, 64, 64);
     }
 
@@ -58,11 +65,12 @@ public class PelicanModel<T extends PelicanEntity> extends AgeableListModel<T> {
         leg1.render(matrices, vertexConsumer, light, overlay, red, green, blue, alpha);
         wing0.render(matrices, vertexConsumer, light, overlay, red, green, blue, alpha);
         wing1.render(matrices, vertexConsumer, light, overlay, red, green, blue, alpha);
+        beak.render(matrices, vertexConsumer, light, overlay, red, green, blue, alpha);
     }
 
     @Override
     protected Iterable<ModelPart> headParts() {
-        return ImmutableList.of(this.head);
+        return ImmutableList.of(this.head, this.beak);
     }
 
     @Override
@@ -77,5 +85,13 @@ public class PelicanModel<T extends PelicanEntity> extends AgeableListModel<T> {
 
         this.leg0.xRot = Mth.cos(limbAngle * 0.6662f) * 1.4f * limbDistance;
         this.leg1.xRot = Mth.cos(limbAngle * 0.6662f + (float)Math.PI) * 1.4f * limbDistance;
+
+        float wingFlapAngle = Mth.sin(animationProgress * 0.3f) * 0.5f;
+        this.wing0.yRot = wingFlapAngle;
+        this.wing1.yRot = -wingFlapAngle;
+
+
+        float beakMovement = Mth.sin(animationProgress * 0.2f) * 0.2f;
+        this.beak.xRot = Mth.clamp(beakMovement, -0.5f, 0.5f);
     }
 }

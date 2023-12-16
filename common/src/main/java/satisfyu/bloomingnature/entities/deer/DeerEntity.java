@@ -29,9 +29,6 @@ public class DeerEntity extends Animal {
 
     public final AnimationState idleAnimationState = new AnimationState();
     private int idleAnimationTimeout = 0;
-    private int eatAnimationTick;
-    private EatBlockGoal eatBlockGoal;
-    private static final int EAT_ANIMATION_TICKS = 60;
 
     @Override
     public void tick() {
@@ -65,7 +62,6 @@ public class DeerEntity extends Animal {
 
     @Override
     protected void registerGoals() {
-        this.eatBlockGoal = new EatBlockGoal(this);
         this.goalSelector.addGoal(0, new FloatGoal(this));
         this.goalSelector.addGoal(1, new BreedGoal(this, 1.15D));
         this.goalSelector.addGoal(2, new TemptGoal(this, 1.2D, Ingredient.of(Items.GRASS), false));
@@ -76,48 +72,6 @@ public class DeerEntity extends Animal {
         this.goalSelector.addGoal(7, new PanicGoal(this, 2.0D));
         this.goalSelector.addGoal(8, new WaterAvoidingRandomStrollGoal(this, 2.0D));
         this.targetSelector.addGoal(9, new HurtByTargetGoal(this));
-        this.goalSelector.addGoal(10, this.eatBlockGoal);
-    }
-
-    protected void customServerAiStep() {
-        this.eatAnimationTick = this.eatBlockGoal.getEatAnimationTick();
-        super.customServerAiStep();
-    }
-
-    public void aiStep() {
-        if (this.level().isClientSide) {
-            this.eatAnimationTick = Math.max(0, this.eatAnimationTick - 1);
-        }
-
-        super.aiStep();
-    }
-
-    public void handleEntityEvent(byte b) {
-        if (b == 10) {
-            this.eatAnimationTick = 40;
-        } else {
-            super.handleEntityEvent(b);
-        }
-
-    }
-
-    public float getHeadEatPositionScale(float f) {
-        if (this.eatAnimationTick <= 0) {
-            return 0.0F;
-        } else if (this.eatAnimationTick >= 4 && this.eatAnimationTick <= 36) {
-            return 1.0F;
-        } else {
-            return this.eatAnimationTick < 4 ? ((float)this.eatAnimationTick - f) / 4.0F : -((float)(this.eatAnimationTick - 40) - f) / 4.0F;
-        }
-    }
-
-    public float getHeadEatAngleScale(float f) {
-        if (this.eatAnimationTick > 4 && this.eatAnimationTick <= 36) {
-            float g = ((float)(this.eatAnimationTick - 4) - f) / 32.0F;
-            return 0.62831855F + 0.21991149F * Mth.sin(g * 28.7F);
-        } else {
-            return this.eatAnimationTick > 0 ? 0.62831855F : this.getXRot() * 0.017453292F;
-        }
     }
 
     public static AttributeSupplier.Builder createMobAttributes() {

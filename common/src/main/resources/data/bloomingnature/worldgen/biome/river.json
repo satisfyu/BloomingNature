@@ -22,11 +22,10 @@
   "features": [
     [],
     [
-      "minecraft:lake_lava_underground"
     ],
     [
       "minecraft:amethyst_geode",
-      "bloomingnature:terrain/stone_boulder",
+      "bloomingnature:terrain/travertin_boulder",
       "bloomingnature:terrain/stone_mound",
       "bloomingnature:terrain/gravel_beach",
       "bloomingnature:terrain/stone_slabs"
@@ -65,7 +64,8 @@
       "minecraft:underwater_magma",
       "minecraft:disk_sand",
       "minecraft:disk_clay",
-      "minecraft:disk_gravel"
+      "minecraft:disk_gravel",
+      "bloomingnature:terrain/ore_travertin"
     ],
     [],
     [
