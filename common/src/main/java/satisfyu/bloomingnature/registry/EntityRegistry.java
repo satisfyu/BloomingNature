@@ -12,6 +12,7 @@ import satisfyu.bloomingnature.entities.deer.DeerEntity;
 import satisfyu.bloomingnature.entities.mossy_sheep.MossySheepEntity;
 import satisfyu.bloomingnature.entities.mossy_sheep.SheepEntity;
 import satisfyu.bloomingnature.entities.muddy_pig.MuddyPigEntity;
+import satisfyu.bloomingnature.entities.owl.OwlEntity;
 import satisfyu.bloomingnature.entities.pelican.PelicanEntity;
 import satisfyu.bloomingnature.entities.raccoon.RaccoonEntity;
 import satisfyu.bloomingnature.entities.red_wolf.RedWolfEntity;
@@ -73,6 +74,13 @@ public class EntityRegistry {
                     .build(new BloomingNatureIdentifier("deer").toString())
     );
 
+    public static final RegistrySupplier<EntityType<OwlEntity>> OWL = create("owl",
+            () -> EntityType.Builder.of(OwlEntity::new, MobCategory.CREATURE)
+                    .sized(0.9f, 1.3f)
+                    .build(new BloomingNatureIdentifier("owl").toString())
+    );
+
+
 
     public static <T extends EntityType<?>> RegistrySupplier<T> create(final String path, final Supplier<T> type) {
         return ENTITY_TYPES.register(new BloomingNatureIdentifier(path), type);
@@ -89,5 +97,7 @@ public class EntityRegistry {
         EntityAttributeRegistry.register(RACCOON, RaccoonEntity::createMobAttributes);
         EntityAttributeRegistry.register(SQUIRREL, SquirrelEntity::createMobAttributes);
         EntityAttributeRegistry.register(MUDDY_PIG, MuddyPigEntity::createMobAttributes);
+        EntityAttributeRegistry.register(OWL, OwlEntity::createMobAttributes);
+
     }
 }

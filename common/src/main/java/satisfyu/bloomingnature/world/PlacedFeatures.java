@@ -15,6 +15,8 @@ public class PlacedFeatures {
     public static final ResourceKey<PlacedFeature> STONE_BOULDER_KEY = registerKey("terrain/stone_boulder");
     public static final ResourceKey<PlacedFeature> COBBLESTONE_BEACH_KEY = registerKey("terrain/cobblestone_beach");
     public static final ResourceKey<PlacedFeature> COBBLESTONE_BEACH_MOSSY_KEY = registerKey("terrain/cobblestone_beach_mossy");
+    public static final ResourceKey<PlacedFeature> FLOATING_LEAVES_KEY = registerKey("terrain/swamp_floating_leaves");
+    public static final ResourceKey<PlacedFeature> JUNGLE_FLOWERS_KEY = registerKey("jungle_flowers");
 
 
     public static ResourceKey<PlacedFeature> registerKey(String name) {

@@ -13,7 +13,7 @@
           "type": "minecraft:item",
           "conditions": [
             {
-              "block": "minecraft:rose_bush",
+              "block": "bloomingnature:tall_mountain_laurel",
               "condition": "minecraft:block_state_property",
               "properties": {
                 "half": "lower"
@@ -25,6 +25,5 @@
       ],
       "rolls": 1.0
     }
-  ],
-  "random_sequence": "minecraft:blocks/rose_bush"
+  ]
 }

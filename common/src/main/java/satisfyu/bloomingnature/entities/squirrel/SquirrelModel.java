@@ -13,7 +13,7 @@ import net.minecraft.util.Mth;
 import org.jetbrains.annotations.NotNull;
 import satisfyu.bloomingnature.BloomingNature;
 
-// Squirrel Animations by SameDifferent: https://github.com/samedifferent/Ecologics/blob/1.19-crossplatform/LICENSE
+// Squirrel by SameDifferent: https://github.com/samedifferent/Ecologics/blob/1.19-crossplatform/LICENSE
 @Environment(EnvType.CLIENT)
 public class SquirrelModel extends AgeableListModel<SquirrelEntity> {
     public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(new ResourceLocation(BloomingNature.MOD_ID, "squirrel"), "main");

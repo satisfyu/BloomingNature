@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "bloomingnature:red_travertin_bricks"
+    ]
+  },
+  "criteria": {
+    "has_red_travertin": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "bloomingnature:red_travertin"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "bloomingnature:red_travertin_bricks"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_red_travertin",
+      "has_the_recipe"
+    ]
+  ]
+}

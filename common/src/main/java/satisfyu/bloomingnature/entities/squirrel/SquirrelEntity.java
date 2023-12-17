@@ -40,7 +40,7 @@ import satisfyu.bloomingnature.util.BetterWallClimberNavigation;
 import java.util.EnumSet;
 import java.util.List;
 
-// Squirrel Animations by SameDifferent: https://github.com/samedifferent/Ecologics/blob/1.19-crossplatform/LICENSE
+// Squirrel by SameDifferent: https://github.com/samedifferent/Ecologics/blob/1.19-crossplatform/LICENSE
 
 public class SquirrelEntity extends Animal {
     private static final EntityDataAccessor<Byte> DATA_FLAGS_ID = SynchedEntityData.defineId(SquirrelEntity.class, EntityDataSerializers.BYTE);

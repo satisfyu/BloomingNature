@@ -16,6 +16,7 @@ public class BloomingNatureBiomeModification {
         BiomeModification world = BiomeModifications.create(new BloomingNatureIdentifier("world_features"));
         Predicate<BiomeSelectionContext> beachBiomes = getBloomingNatureSelector("beach_biomes");
         Predicate<BiomeSelectionContext> stonyBiomes = getBloomingNatureSelector("stony_biomes");
+        Predicate<BiomeSelectionContext> jungleBiomes = getBloomingNatureSelector("jungle_biomes");
         world.add(ModificationPhase.ADDITIONS, beachBiomes, ctx -> ctx.getGenerationSettings().addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, PlacedFeatures.PALM_TREE_KEY));
         world.add(ModificationPhase.ADDITIONS, beachBiomes, ctx -> ctx.getGenerationSettings().addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, PlacedFeatures.BEACH_FLOWERS_KEY));
         world.add(ModificationPhase.ADDITIONS, stonyBiomes, ctx -> ctx.getGenerationSettings().addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, PlacedFeatures.STONE_MOUND_KEY));
@@ -24,6 +25,8 @@ public class BloomingNatureBiomeModification {
         world.add(ModificationPhase.ADDITIONS, stonyBiomes, ctx -> ctx.getGenerationSettings().addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, PlacedFeatures.STONE_BOULDER_KEY));
         world.add(ModificationPhase.ADDITIONS, stonyBiomes, ctx -> ctx.getGenerationSettings().addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, PlacedFeatures.COBBLESTONE_BEACH_KEY));
         world.add(ModificationPhase.ADDITIONS, stonyBiomes, ctx -> ctx.getGenerationSettings().addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, PlacedFeatures.COBBLESTONE_BEACH_MOSSY_KEY));
+        world.add(ModificationPhase.ADDITIONS, jungleBiomes, ctx -> ctx.getGenerationSettings().addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, PlacedFeatures.FLOATING_LEAVES_KEY));
+        world.add(ModificationPhase.ADDITIONS, jungleBiomes, ctx -> ctx.getGenerationSettings().addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, PlacedFeatures.JUNGLE_FLOWERS_KEY));
 
     }
 

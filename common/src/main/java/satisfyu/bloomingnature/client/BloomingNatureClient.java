@@ -20,6 +20,8 @@ import satisfyu.bloomingnature.entities.deer.DeerRenderer;
 import satisfyu.bloomingnature.entities.mossy_sheep.MossySheepRenderer;
 import satisfyu.bloomingnature.entities.muddy_pig.MuddyPigModel;
 import satisfyu.bloomingnature.entities.muddy_pig.MuddyPigRenderer;
+import satisfyu.bloomingnature.entities.owl.OwlModel;
+import satisfyu.bloomingnature.entities.owl.OwlRenderer;
 import satisfyu.bloomingnature.entities.pelican.PelicanModel;
 import satisfyu.bloomingnature.entities.pelican.PelicanRenderer;
 import satisfyu.bloomingnature.entities.raccoon.RaccoonModel;
@@ -62,7 +64,8 @@ public class BloomingNatureClient {
                 ObjectRegistry.POTTED_ASPEN_SAPLING.get(), ObjectRegistry.POTTED_BAOBAB_SAPLING.get(), ObjectRegistry.POTTED_GOLDEN_ROD.get(),
                 ObjectRegistry.POTTED_BEACH_BUSH.get(), ObjectRegistry.BAOBAB_WINDOW.get(), ObjectRegistry.ASPEN_WINDOW.get(), ObjectRegistry.SWAMP_CYPRESS_WINDOW.get(),
                 ObjectRegistry.FIR_WINDOW.get(), ObjectRegistry.BAOBAB_DOOR.get(), ObjectRegistry.ASPEN_DOOR.get(), ObjectRegistry.SWAMP_CYPRESS_DOOR.get(),
-                ObjectRegistry.ASPEN_TRAPDOOR.get(), ObjectRegistry.SWAMP_CYPRESS_TRAPDOOR.get()
+                ObjectRegistry.ASPEN_TRAPDOOR.get(), ObjectRegistry.SWAMP_CYPRESS_TRAPDOOR.get(), ObjectRegistry.BAOBAB_SAPLING.get(),  ObjectRegistry.ASPEN_SAPLING.get(),
+                ObjectRegistry.SWAMP_CYPRESS_SAPLING.get(), ObjectRegistry.FIR_SAPLING.get()
 
                 );
 
@@ -99,6 +102,7 @@ public class BloomingNatureClient {
         EntityRendererRegistry.register(EntityRegistry.MUDDY_PIG, MuddyPigRenderer::new);
         EntityRendererRegistry.register(EntityRegistry.MOSSY_SHEEP, MossySheepRenderer::new);
         EntityRendererRegistry.register(EntityRegistry.DEER, DeerRenderer::new);
+        EntityRendererRegistry.register(EntityRegistry.OWL, OwlRenderer::new);
 
 
         }
@@ -113,6 +117,8 @@ public class BloomingNatureClient {
         EntityModelLayerRegistry.register(DeerModel.LAYER_LOCATION, DeerModel::getTexturedModelData);
         EntityModelLayerRegistry.register(MOSSY_SHEEP_MODEL_LAYER, SheepModel::createBodyLayer);
         EntityModelLayerRegistry.register(MOSSY_SHEEP_FUR, SheepFurModel::createFurLayer);
+        EntityModelLayerRegistry.register(OwlModel.LAYER_LOCATION, OwlModel::getTexturedModelData);
+
     }
 
 }
