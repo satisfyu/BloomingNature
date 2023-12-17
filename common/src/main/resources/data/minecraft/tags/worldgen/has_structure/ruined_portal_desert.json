@@ -1,6 +1,6 @@
 {
+  "replace": false,
   "values": [
-    "bloomingnature:desert",
-    "minecraft:desert"
+    "bloomingnature:desert"
   ]
 }

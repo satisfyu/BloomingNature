@@ -1,6 +1,11 @@
 {
   "replace": false,
   "values": [
-    "bloomingnature:larch_button"
-  ]
+    "bloomingnature:larch_button",
+    "bloomingnature:aspen_button",
+    "bloomingnature:swamp_oak_button",
+    "bloomingnature:swamp_cypress_button",
+    "bloomingnature:fir_button",
+    "bloomingnature:baobab_button",
+    "bloomingnature:larch_button"  ]
 }

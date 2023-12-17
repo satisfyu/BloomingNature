@@ -168,7 +168,6 @@ public class TabRegistry {
 
                 out.accept(ObjectRegistry.REED.get());
                 out.accept(ObjectRegistry.CATTAIL.get());
-
                 out.accept(ObjectRegistry.BEGONIE.get());
                 out.accept(ObjectRegistry.JOE_PYE.get());
                 out.accept(ObjectRegistry.MOUNTAIN_LAUREL.get());
@@ -213,8 +212,13 @@ public class TabRegistry {
                 out.accept(BoatsAndSignsRegistry.FIR_BOAT.get());
                 out.accept(BoatsAndSignsRegistry.FIR_CHEST_BOAT.get());
                 out.accept(ObjectRegistry.WANDERING_GARDENER_SPAWN_EGG.get());
-
-
+                out.accept(ObjectRegistry.DEER_SPAWN_EGG.get());
+                out.accept(ObjectRegistry.RED_WOLF_SPAWN_EGG.get());
+                out.accept(ObjectRegistry.RACCOON_SPAWN_EGG.get());
+                out.accept(ObjectRegistry.SQUIRREL_SPAWN_EGG.get());
+                out.accept(ObjectRegistry.MOSSY_SHEEP_SPAWN_EGG.get());
+                out.accept(ObjectRegistry.MUDDY_PIG_SPAWN_EGG.get());
+                out.accept(ObjectRegistry.PELICAN_SPAWN_EGG.get());
             })
             .build());
 

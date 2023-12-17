@@ -3,7 +3,11 @@
   "values": [
     "bloomingnature:larch_planks",
     "bloomingnature:aspen_planks",
-    "bloomingnature:swamp_oak_planks"
+    "bloomingnature:swamp_oak_planks",
+    "bloomingnature:swamp_cypress_planks",
+    "bloomingnature:fir_planks",
+    "bloomingnature:baobab_planks",
+    "bloomingnature:larch_planks"
 
   ]
 }

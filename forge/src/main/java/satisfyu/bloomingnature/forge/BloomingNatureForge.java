@@ -9,6 +9,7 @@ import satisfyu.bloomingnature.BloomingNature;
 public class BloomingNatureForge {
     public BloomingNatureForge() {
         EventBuses.registerModEventBus(BloomingNature.MOD_ID, FMLJavaModLoadingContext.get().getModEventBus());
-        BloomingNature  .init();
+        BloomingNature.init();
+        BloomingNature.commonInit();
     }
 }

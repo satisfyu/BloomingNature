@@ -1,6 +1,6 @@
 {
+  "replace": false,
   "values": [
-    "bloomingnature:swamp",
-    "minecraft:swamp"
+    "bloomingnature:swamp"
   ]
 }

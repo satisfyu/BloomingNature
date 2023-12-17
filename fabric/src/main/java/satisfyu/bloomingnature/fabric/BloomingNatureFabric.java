@@ -9,6 +9,7 @@ public class BloomingNatureFabric implements ModInitializer {
     @Override
     public void onInitialize() {
         BloomingNature.init();
+        BloomingNature.commonInit();
         BloomingNatureBiomeModification.init();
         EntitySpawnFabric.addEntitySpawn();
     }

@@ -57,9 +57,14 @@ public class BloomingNatureClient {
                 ObjectRegistry.TALL_MOUNTAIN_LAUREL.get(), ObjectRegistry.TALL_LUPINE_BLUE.get(), ObjectRegistry.TALL_LUPINE_PURPLE.get(), ObjectRegistry.BEACH_BUSH.get(),
                 ObjectRegistry.BEACH_BUSH_TALL.get(), ObjectRegistry.BEACH_GRASS.get(), ObjectRegistry.GOLDEN_ROD.get(), ObjectRegistry.WILD_SUNFLOWER.get(),
                 ObjectRegistry.PALM_SAPLING.get(), ObjectRegistry.PALM_DOOR.get(), ObjectRegistry.PALM_TRAPDOOR.get(), ObjectRegistry.PALM_WINDOW.get(),
-                ObjectRegistry.CATTAIL.get(), ObjectRegistry.REED.get()
+                ObjectRegistry.CATTAIL.get(), ObjectRegistry.REED.get(), ObjectRegistry.POTTED_LARCH_SAPLING.get(), ObjectRegistry.POTTED_FIR_SAPLING.get(),
+                ObjectRegistry.POTTED_SWAMP_CYPRESS_SAPLING.get(), ObjectRegistry.POTTED_SWAMP_OAK_SAPLING.get(), ObjectRegistry.POTTED_PALM_SAPLING.get(),
+                ObjectRegistry.POTTED_ASPEN_SAPLING.get(), ObjectRegistry.POTTED_BAOBAB_SAPLING.get(), ObjectRegistry.POTTED_GOLDEN_ROD.get(),
+                ObjectRegistry.POTTED_BEACH_BUSH.get(), ObjectRegistry.BAOBAB_WINDOW.get(), ObjectRegistry.ASPEN_WINDOW.get(), ObjectRegistry.SWAMP_CYPRESS_WINDOW.get(),
+                ObjectRegistry.FIR_WINDOW.get(), ObjectRegistry.BAOBAB_DOOR.get(), ObjectRegistry.ASPEN_DOOR.get(), ObjectRegistry.SWAMP_CYPRESS_DOOR.get(),
+                ObjectRegistry.ASPEN_TRAPDOOR.get(), ObjectRegistry.SWAMP_CYPRESS_TRAPDOOR.get()
 
-        );
+                );
 
         ColorHandlerRegistry.registerItemColors((stack, tintIndex) -> FoliageColor.get(0.5, 1.0), ObjectRegistry.SWAMP_OAK_LEAVES.get());
         ColorHandlerRegistry.registerBlockColors((state, world, pos, tintIndex) -> { if (world == null || pos == null) {return -1;}return BiomeColors.getAverageFoliageColor(world, pos);},
