@@ -15,8 +15,6 @@ public class TabRegistry {
             .icon(() -> new ItemStack(ObjectRegistry.BLUEBELL.get()))
             .title(Component.translatable("creative_tab.bloomingnature"))
             .displayItems((parameters, out) -> {
-
-
                 out.accept(ObjectRegistry.LARCH_LOG.get());
                 out.accept(ObjectRegistry.LARCH_WOOD.get());
                 out.accept(ObjectRegistry.STRIPPED_LARCH_WOOD.get());
@@ -125,7 +123,6 @@ public class TabRegistry {
                 out.accept(ObjectRegistry.PALM_SAPLING.get());
                 out.accept(BoatsAndSignsRegistry.PALM_SIGN_ITEM.get());
                 out.accept(BoatsAndSignsRegistry.PALM_HANGING_SIGN_ITEM.get());
-
                 out.accept(ObjectRegistry.FIR_LOG.get());
                 out.accept(ObjectRegistry.FIR_WOOD.get());
                 out.accept(ObjectRegistry.STRIPPED_FIR_WOOD.get());
@@ -144,9 +141,6 @@ public class TabRegistry {
                 out.accept(ObjectRegistry.FIR_SAPLING.get());
                 out.accept(BoatsAndSignsRegistry.FIR_SIGN_ITEM.get());
                 out.accept(BoatsAndSignsRegistry.FIR_HANGING_SIGN_ITEM.get());
-
-
-
                 out.accept(ObjectRegistry.RED_BRICKS.get());
                 out.accept(ObjectRegistry.RED_BRICK_SLAB.get());
                 out.accept(ObjectRegistry.RED_BRICK_STAIRS.get());
@@ -156,16 +150,15 @@ public class TabRegistry {
                 out.accept(ObjectRegistry.TRAVERTIN_BRICK_SLAB.get());
                 out.accept(ObjectRegistry.TRAVERTIN_BRICK_STAIRS.get());
                 out.accept(ObjectRegistry.TRAVERTIN_BRICK_WALL.get());
-                out.accept(ObjectRegistry.RED_TRAVERTIN.get());
                 out.accept(ObjectRegistry.RED_TRAVERTIN_BRICKS.get());
                 out.accept(ObjectRegistry.RED_TRAVERTIN_BRICK_SLAB.get());
                 out.accept(ObjectRegistry.RED_TRAVERTIN_BRICK_STAIRS.get());
                 out.accept(ObjectRegistry.RED_TRAVERTIN_BRICK_WALL.get());
+                out.accept(ObjectRegistry.RED_TRAVERTIN.get());
                 out.accept(ObjectRegistry.FOREST_MOSS.get());
                 out.accept(ObjectRegistry.MARSH_BLOCK.get());
                 out.accept(ObjectRegistry.TERMITE_MOUND.get());
                 out.accept(ObjectRegistry.QUICKSAND.get());
-
                 out.accept(ObjectRegistry.REED.get());
                 out.accept(ObjectRegistry.CATTAIL.get());
                 out.accept(ObjectRegistry.BEGONIE.get());
@@ -219,6 +212,8 @@ public class TabRegistry {
                 out.accept(ObjectRegistry.MOSSY_SHEEP_SPAWN_EGG.get());
                 out.accept(ObjectRegistry.MUDDY_PIG_SPAWN_EGG.get());
                 out.accept(ObjectRegistry.PELICAN_SPAWN_EGG.get());
+                out.accept(ObjectRegistry.BOAR_SPAWN_EGG.get());
+                out.accept(ObjectRegistry.OWL_SPAWN_EGG.get());
             })
             .build());
 

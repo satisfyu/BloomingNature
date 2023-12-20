@@ -8,7 +8,7 @@ import net.minecraft.client.renderer.blockentity.BlockEntityRendererProvider;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.level.block.state.BlockState;
 import satisfyu.bloomingnature.blocks.FlowerBoxBlock;
-import satisfyu.bloomingnature.entities.FlowerBoxBlockEntity;
+import satisfyu.bloomingnature.entity.FlowerBoxBlockEntity;
 
 import static satisfyu.bloomingnature.util.GeneralUtil.renderBlock;
 

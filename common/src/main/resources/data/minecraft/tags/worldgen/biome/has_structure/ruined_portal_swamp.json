@@ -1,0 +1,12 @@
+{
+  "values": [
+    {
+      "id": "bloomingnature:swamp",
+      "required": false
+    },
+    {
+      "id": "bloomingnature:mangrove_swamp",
+      "required": false
+    }
+  ]
+}

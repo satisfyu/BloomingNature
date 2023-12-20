@@ -10,7 +10,7 @@
             "item": "minecraft:glass_pane"
         },
         "G": {
-            "item": "bloomingnature:palm_planks"
+            "tag": "bloomingnature:palm_planks"
         }
     },
     "result": {

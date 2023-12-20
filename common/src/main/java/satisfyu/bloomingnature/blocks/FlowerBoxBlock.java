@@ -29,7 +29,7 @@ import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import org.jetbrains.annotations.Nullable;
-import satisfyu.bloomingnature.entities.FlowerBoxBlockEntity;
+import satisfyu.bloomingnature.entity.FlowerBoxBlockEntity;
 import satisfyu.bloomingnature.registry.TagsRegistry;
 import satisfyu.bloomingnature.util.GeneralUtil;
 

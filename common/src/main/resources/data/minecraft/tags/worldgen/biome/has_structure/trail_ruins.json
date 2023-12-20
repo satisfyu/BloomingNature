@@ -1,0 +1,24 @@
+{
+  "values": [
+    {
+      "id": "bloomingnature:aspen_forest",
+      "required": false
+    },
+    {
+      "id": "bloomingnature:old_growth_spruce_taiga",
+      "required": false
+    },
+    {
+      "id": "bloomingnature:larch_forest",
+      "required": false
+    },
+    {
+      "id": "bloomingnature:snowy_taiga",
+      "required": false
+    },
+    {
+      "id": "bloomingnature:taiga",
+      "required": false
+    }
+  ]
+}

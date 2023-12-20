@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "bloomingnature:plains",
+    "bloomingnature:savanna",
+    "bloomingnature:snowy_plains",
+    "bloomingnature:taiga",
+    "bloomingnature:grove"
+  ]
+}

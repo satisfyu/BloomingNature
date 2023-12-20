@@ -5,8 +5,8 @@ import dev.architectury.registry.registries.RegistrySupplier;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import satisfyu.bloomingnature.BloomingNature;
-import satisfyu.bloomingnature.entities.FlowerPotBigBlockEntity;
-import satisfyu.bloomingnature.entities.FlowerBoxBlockEntity;
+import satisfyu.bloomingnature.entity.FlowerPotBigBlockEntity;
+import satisfyu.bloomingnature.entity.FlowerBoxBlockEntity;
 
 import java.util.function.Supplier;
 

@@ -1,7 +1,5 @@
 {
   "variants": {
-    "": [ { "model": "bloomingnature:block/larch_planks_1", "weight":1 }
-    ,{ "model": "bloomingnature:block/larch_planks_2", "weight":1 }
-    ,{ "model": "bloomingnature:block/larch_planks_3", "weight":1 }
+    "": [ { "model": "bloomingnature:block/larch_planks", "weight":1 }
     ]   }
 }

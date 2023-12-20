@@ -1,7 +1,7 @@
 {
   "variants": {
     "half=lower": {
-      "model": "bloomingnature:block/cattail_bottom"
+      "model": "bloomingnature:block/reed_bottom"
     },
     "half=upper": {
       "model": "bloomingnature:block/reed_top"

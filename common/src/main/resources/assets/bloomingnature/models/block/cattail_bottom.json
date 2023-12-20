@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cross",
   "textures": {
-    "cross": "bloomingnature:block/cattails_bottom"
+    "cross": "bloomingnature:block/cattail_bottom"
   }
 }

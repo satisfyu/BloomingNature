@@ -1,8 +1,8 @@
 {
   "parent": "minecraft:block/slab",
   "textures": {
-    "bottom": "bloomingnature:block/larch_planks_0",
-    "top": "bloomingnature:block/larch_planks_0",
-    "side": "bloomingnature:block/larch_planks_0"
+    "bottom": "bloomingnature:block/larch_planks",
+    "top": "bloomingnature:block/larch_planks",
+    "side": "bloomingnature:block/larch_planks"
   }
 }

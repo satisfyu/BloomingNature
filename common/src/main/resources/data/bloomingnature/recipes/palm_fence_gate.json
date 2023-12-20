@@ -7,7 +7,7 @@
       "item": "minecraft:stick"
     },
     "W": {
-      "item": "bloomingnature:palm_planks"
+      "tag": "bloomingnature:palm_planks"
     }
   },
   "pattern": [

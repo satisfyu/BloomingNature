@@ -15,25 +15,27 @@ import net.minecraft.client.renderer.RenderType;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.FoliageColor;
 import satisfyu.bloomingnature.BloomingNature;
-import satisfyu.bloomingnature.entities.deer.DeerModel;
-import satisfyu.bloomingnature.entities.deer.DeerRenderer;
-import satisfyu.bloomingnature.entities.mossy_sheep.MossySheepRenderer;
-import satisfyu.bloomingnature.entities.muddy_pig.MuddyPigModel;
-import satisfyu.bloomingnature.entities.muddy_pig.MuddyPigRenderer;
-import satisfyu.bloomingnature.entities.owl.OwlModel;
-import satisfyu.bloomingnature.entities.owl.OwlRenderer;
-import satisfyu.bloomingnature.entities.pelican.PelicanModel;
-import satisfyu.bloomingnature.entities.pelican.PelicanRenderer;
-import satisfyu.bloomingnature.entities.raccoon.RaccoonModel;
-import satisfyu.bloomingnature.entities.raccoon.RaccoonRenderer;
-import satisfyu.bloomingnature.entities.red_wolf.RedWolfModel;
-import satisfyu.bloomingnature.entities.squirrel.SquirrelModel;
-import satisfyu.bloomingnature.entities.squirrel.SquirrelRenderer;
-import satisfyu.bloomingnature.entities.wandering_gardener.WanderingGardenerModel;
+import satisfyu.bloomingnature.entity.boar.BoarModel;
+import satisfyu.bloomingnature.entity.boar.BoarRenderer;
+import satisfyu.bloomingnature.entity.deer.DeerModel;
+import satisfyu.bloomingnature.entity.deer.DeerRenderer;
+import satisfyu.bloomingnature.entity.mossy_sheep.MossySheepRenderer;
+import satisfyu.bloomingnature.entity.muddy_pig.MuddyPigModel;
+import satisfyu.bloomingnature.entity.muddy_pig.MuddyPigRenderer;
+import satisfyu.bloomingnature.entity.owl.OwlModel;
+import satisfyu.bloomingnature.entity.owl.OwlRenderer;
+import satisfyu.bloomingnature.entity.pelican.PelicanModel;
+import satisfyu.bloomingnature.entity.pelican.PelicanRenderer;
+import satisfyu.bloomingnature.entity.raccoon.RaccoonModel;
+import satisfyu.bloomingnature.entity.raccoon.RaccoonRenderer;
+import satisfyu.bloomingnature.entity.red_wolf.RedWolfModel;
+import satisfyu.bloomingnature.entity.squirrel.SquirrelModel;
+import satisfyu.bloomingnature.entity.squirrel.SquirrelRenderer;
+import satisfyu.bloomingnature.entity.wandering_gardener.WanderingGardenerModel;
 import satisfyu.bloomingnature.client.render.block.FlowerBoxBlockEntityRenderer;
 import satisfyu.bloomingnature.client.render.block.FlowerPotBigBlockEntityRenderer;
-import satisfyu.bloomingnature.entities.red_wolf.RedWolfRenderer;
-import satisfyu.bloomingnature.entities.wandering_gardener.WanderingGardenerRenderer;
+import satisfyu.bloomingnature.entity.red_wolf.RedWolfRenderer;
+import satisfyu.bloomingnature.entity.wandering_gardener.WanderingGardenerRenderer;
 import satisfyu.bloomingnature.registry.BlockEntityRegistry;
 import satisfyu.bloomingnature.registry.EntityRegistry;
 import satisfyu.bloomingnature.registry.ObjectRegistry;
@@ -103,8 +105,7 @@ public class BloomingNatureClient {
         EntityRendererRegistry.register(EntityRegistry.MOSSY_SHEEP, MossySheepRenderer::new);
         EntityRendererRegistry.register(EntityRegistry.DEER, DeerRenderer::new);
         EntityRendererRegistry.register(EntityRegistry.OWL, OwlRenderer::new);
-
-
+        EntityRendererRegistry.register(EntityRegistry.BOAR, BoarRenderer::new);
         }
 
     public static void registerEntityModelLayer() {
@@ -118,7 +119,7 @@ public class BloomingNatureClient {
         EntityModelLayerRegistry.register(MOSSY_SHEEP_MODEL_LAYER, SheepModel::createBodyLayer);
         EntityModelLayerRegistry.register(MOSSY_SHEEP_FUR, SheepFurModel::createFurLayer);
         EntityModelLayerRegistry.register(OwlModel.LAYER_LOCATION, OwlModel::getTexturedModelData);
-
+        EntityModelLayerRegistry.register(BoarModel.LAYER_LOCATION, BoarModel::getTexturedModelData);
     }
 
 }

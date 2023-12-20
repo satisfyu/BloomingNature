@@ -4,7 +4,7 @@
   "group": "wooden_sign",
   "key": {
     "#": {
-      "item": "bloomingnature:palm_planks"
+      "tag": "bloomingnature:palm_planks"
     },
     "X": {
       "item": "minecraft:stick"

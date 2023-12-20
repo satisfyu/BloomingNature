@@ -8,16 +8,17 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
 import satisfyu.bloomingnature.BloomingNature;
-import satisfyu.bloomingnature.entities.deer.DeerEntity;
-import satisfyu.bloomingnature.entities.mossy_sheep.MossySheepEntity;
-import satisfyu.bloomingnature.entities.mossy_sheep.SheepEntity;
-import satisfyu.bloomingnature.entities.muddy_pig.MuddyPigEntity;
-import satisfyu.bloomingnature.entities.owl.OwlEntity;
-import satisfyu.bloomingnature.entities.pelican.PelicanEntity;
-import satisfyu.bloomingnature.entities.raccoon.RaccoonEntity;
-import satisfyu.bloomingnature.entities.red_wolf.RedWolfEntity;
-import satisfyu.bloomingnature.entities.squirrel.SquirrelEntity;
-import satisfyu.bloomingnature.entities.wandering_gardener.WanderingGardenerEntity;
+import satisfyu.bloomingnature.entity.boar.BoarEntity;
+import satisfyu.bloomingnature.entity.deer.DeerEntity;
+import satisfyu.bloomingnature.entity.mossy_sheep.MossySheepEntity;
+import satisfyu.bloomingnature.entity.mossy_sheep.SheepEntity;
+import satisfyu.bloomingnature.entity.muddy_pig.MuddyPigEntity;
+import satisfyu.bloomingnature.entity.owl.OwlEntity;
+import satisfyu.bloomingnature.entity.pelican.PelicanEntity;
+import satisfyu.bloomingnature.entity.raccoon.RaccoonEntity;
+import satisfyu.bloomingnature.entity.red_wolf.RedWolfEntity;
+import satisfyu.bloomingnature.entity.squirrel.SquirrelEntity;
+import satisfyu.bloomingnature.entity.wandering_gardener.WanderingGardenerEntity;
 import satisfyu.bloomingnature.util.BloomingNatureIdentifier;
 
 import java.util.function.Supplier;
@@ -80,6 +81,12 @@ public class EntityRegistry {
                     .build(new BloomingNatureIdentifier("owl").toString())
     );
 
+    public static final RegistrySupplier<EntityType<BoarEntity>> BOAR = create("boar",
+            () -> EntityType.Builder.of(BoarEntity::new, MobCategory.CREATURE)
+                    .sized(0.5f, 0.9f)
+                    .build(new BloomingNatureIdentifier("boar").toString())
+    );
+
 
 
     public static <T extends EntityType<?>> RegistrySupplier<T> create(final String path, final Supplier<T> type) {
@@ -98,6 +105,6 @@ public class EntityRegistry {
         EntityAttributeRegistry.register(SQUIRREL, SquirrelEntity::createMobAttributes);
         EntityAttributeRegistry.register(MUDDY_PIG, MuddyPigEntity::createMobAttributes);
         EntityAttributeRegistry.register(OWL, OwlEntity::createMobAttributes);
-
+        EntityAttributeRegistry.register(BOAR, BoarEntity::createMobAttributes);
     }
 }

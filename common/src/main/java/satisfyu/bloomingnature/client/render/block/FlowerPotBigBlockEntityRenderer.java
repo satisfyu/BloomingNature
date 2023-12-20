@@ -10,7 +10,7 @@ import net.minecraft.world.level.block.DoublePlantBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.DoubleBlockHalf;
 import satisfyu.bloomingnature.blocks.FlowerPotBigBlock;
-import satisfyu.bloomingnature.entities.FlowerPotBigBlockEntity;
+import satisfyu.bloomingnature.entity.FlowerPotBigBlockEntity;
 
 import static satisfyu.bloomingnature.util.GeneralUtil.renderBlock;
 
