@@ -41,6 +41,7 @@ import org.jetbrains.annotations.Nullable;
 import satisfyu.bloomingnature.entity.ai.FlyingFollowOwnerGoal;
 import satisfyu.bloomingnature.entity.ai.PredicateTemptGoal;
 import satisfyu.bloomingnature.registry.EntityRegistry;
+import satisfyu.bloomingnature.registry.SoundRegistry;
 import satisfyu.bloomingnature.registry.TagsRegistry;
 
 import java.util.Iterator;
@@ -294,19 +295,19 @@ public class OwlEntity extends ShoulderRidingEntity
     @Override
     protected SoundEvent getDeathSound()
     {
-        return SoundEvents.ALLAY_DEATH;
+        return SoundRegistry.OWL_DEATH.get();
     }
 
     @Override
     protected @Nullable SoundEvent getAmbientSound()
     {
-        return SoundEvents.ALLAY_DEATH;
+        return SoundRegistry.OWL_AMBIENT.get();
     }
 
     @Override
     protected @Nullable SoundEvent getHurtSound(DamageSource source)
     {
-        return SoundEvents.ALLAY_DEATH;
+        return SoundRegistry.OWL_HURT.get();
     }
 
 

@@ -17,6 +17,7 @@ public class BloomingNature {
         EntityRegistry.init();
         TabRegistry.init();
         PlacerTypesRegistry.init();
+        SoundRegistry.init();
     }
 
     public static void commonInit() {

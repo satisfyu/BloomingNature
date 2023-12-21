@@ -14,6 +14,7 @@ import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.Level;
 import org.jetbrains.annotations.Nullable;
 import satisfyu.bloomingnature.registry.EntityRegistry;
+import satisfyu.bloomingnature.registry.SoundRegistry;
 
 public class RaccoonEntity extends Fox {
     public RaccoonEntity(EntityType<? extends Fox> entityType, Level world) {
@@ -34,17 +35,17 @@ public class RaccoonEntity extends Fox {
 
     @Override
     protected SoundEvent getAmbientSound() {
-        return SoundEvents.CHICKEN_AMBIENT;
+        return SoundRegistry.RACCOON_AMBIENT.get();
     }
 
     @Override
     protected SoundEvent getHurtSound(DamageSource damageSource) {
-        return SoundEvents.CHICKEN_HURT;
+        return SoundRegistry.RACCOON_HURT.get();
     }
 
     @Override
     protected SoundEvent getDeathSound() {
-        return SoundEvents.CHICKEN_DEATH;
+        return SoundRegistry.RACCOON_DEATH.get();
     }
 
 

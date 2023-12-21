@@ -18,6 +18,7 @@ import satisfyu.bloomingnature.entity.pelican.PelicanEntity;
 import satisfyu.bloomingnature.entity.raccoon.RaccoonEntity;
 import satisfyu.bloomingnature.entity.red_wolf.RedWolfEntity;
 import satisfyu.bloomingnature.entity.squirrel.SquirrelEntity;
+import satisfyu.bloomingnature.entity.termite.TermiteEntity;
 import satisfyu.bloomingnature.entity.wandering_gardener.WanderingGardenerEntity;
 import satisfyu.bloomingnature.util.BloomingNatureIdentifier;
 
@@ -71,19 +72,21 @@ public class EntityRegistry {
 
     public static final RegistrySupplier<EntityType<DeerEntity>> DEER = create("deer",
             () -> EntityType.Builder.of(DeerEntity::new, MobCategory.CREATURE)
-                    .sized(0.9f, 1.3f)
                     .build(new BloomingNatureIdentifier("deer").toString())
     );
 
     public static final RegistrySupplier<EntityType<OwlEntity>> OWL = create("owl",
             () -> EntityType.Builder.of(OwlEntity::new, MobCategory.CREATURE)
-                    .sized(0.9f, 1.3f)
                     .build(new BloomingNatureIdentifier("owl").toString())
+    );
+
+    public static final RegistrySupplier<EntityType<TermiteEntity>> TERMITE = create("termite",
+            () -> EntityType.Builder.of(TermiteEntity::new, MobCategory.CREATURE)
+                    .build(new BloomingNatureIdentifier("termite").toString())
     );
 
     public static final RegistrySupplier<EntityType<BoarEntity>> BOAR = create("boar",
             () -> EntityType.Builder.of(BoarEntity::new, MobCategory.CREATURE)
-                    .sized(0.5f, 0.9f)
                     .build(new BloomingNatureIdentifier("boar").toString())
     );
 
@@ -106,5 +109,7 @@ public class EntityRegistry {
         EntityAttributeRegistry.register(MUDDY_PIG, MuddyPigEntity::createMobAttributes);
         EntityAttributeRegistry.register(OWL, OwlEntity::createMobAttributes);
         EntityAttributeRegistry.register(BOAR, BoarEntity::createMobAttributes);
+        EntityAttributeRegistry.register(TERMITE, TermiteEntity::createMobAttributes);
+
     }
 }

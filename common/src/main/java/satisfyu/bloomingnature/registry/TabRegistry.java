@@ -214,6 +214,8 @@ public class TabRegistry {
                 out.accept(ObjectRegistry.PELICAN_SPAWN_EGG.get());
                 out.accept(ObjectRegistry.BOAR_SPAWN_EGG.get());
                 out.accept(ObjectRegistry.OWL_SPAWN_EGG.get());
+                out.accept(ObjectRegistry.TERMITE_SPAWN_EGG.get());
+
             })
             .build());
 

@@ -31,6 +31,8 @@ import satisfyu.bloomingnature.entity.raccoon.RaccoonRenderer;
 import satisfyu.bloomingnature.entity.red_wolf.RedWolfModel;
 import satisfyu.bloomingnature.entity.squirrel.SquirrelModel;
 import satisfyu.bloomingnature.entity.squirrel.SquirrelRenderer;
+import satisfyu.bloomingnature.entity.termite.TermiteModel;
+import satisfyu.bloomingnature.entity.termite.TermiteRenderer;
 import satisfyu.bloomingnature.entity.wandering_gardener.WanderingGardenerModel;
 import satisfyu.bloomingnature.client.render.block.FlowerBoxBlockEntityRenderer;
 import satisfyu.bloomingnature.client.render.block.FlowerPotBigBlockEntityRenderer;
@@ -105,6 +107,7 @@ public class BloomingNatureClient {
         EntityRendererRegistry.register(EntityRegistry.MOSSY_SHEEP, MossySheepRenderer::new);
         EntityRendererRegistry.register(EntityRegistry.DEER, DeerRenderer::new);
         EntityRendererRegistry.register(EntityRegistry.OWL, OwlRenderer::new);
+        EntityRendererRegistry.register(EntityRegistry.TERMITE, TermiteRenderer::new);
         EntityRendererRegistry.register(EntityRegistry.BOAR, BoarRenderer::new);
         }
 
@@ -119,6 +122,7 @@ public class BloomingNatureClient {
         EntityModelLayerRegistry.register(MOSSY_SHEEP_MODEL_LAYER, SheepModel::createBodyLayer);
         EntityModelLayerRegistry.register(MOSSY_SHEEP_FUR, SheepFurModel::createFurLayer);
         EntityModelLayerRegistry.register(OwlModel.LAYER_LOCATION, OwlModel::getTexturedModelData);
+        EntityModelLayerRegistry.register(TermiteModel.LAYER_LOCATION, TermiteModel::getTexturedModelData);
         EntityModelLayerRegistry.register(BoarModel.LAYER_LOCATION, BoarModel::getTexturedModelData);
     }
 

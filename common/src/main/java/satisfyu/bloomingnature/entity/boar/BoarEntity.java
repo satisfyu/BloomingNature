@@ -30,17 +30,17 @@ public class BoarEntity extends Pig {
 
     @Override
     protected SoundEvent getAmbientSound() {
-        return SoundEvents.CHICKEN_AMBIENT;
+        return SoundEvents.HOGLIN_AMBIENT;
     }
 
     @Override
     protected SoundEvent getHurtSound(DamageSource damageSource) {
-        return SoundEvents.CHICKEN_HURT;
+        return SoundEvents.HOGLIN_HURT;
     }
 
     @Override
     protected SoundEvent getDeathSound() {
-        return SoundEvents.CHICKEN_DEATH;
+        return SoundEvents.HOGLIN_DEATH;
     }
 
     public static AttributeSupplier.Builder createMobAttributes() {

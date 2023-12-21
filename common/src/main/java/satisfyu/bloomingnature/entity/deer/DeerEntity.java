@@ -17,6 +17,7 @@ import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.Level;
 import org.jetbrains.annotations.Nullable;
 import satisfyu.bloomingnature.registry.EntityRegistry;
+import satisfyu.bloomingnature.registry.SoundRegistry;
 
 public class DeerEntity extends Animal {
     public DeerEntity(EntityType<? extends Animal> entityType, Level world) {
@@ -81,17 +82,17 @@ public class DeerEntity extends Animal {
 
     @Override
     protected SoundEvent getAmbientSound() {
-        return SoundEvents.CHICKEN_AMBIENT;
+        return SoundRegistry.DEER_AMBIENT.get();
     }
 
     @Override
     protected SoundEvent getHurtSound(DamageSource damageSource) {
-        return SoundEvents.CHICKEN_HURT;
+        return SoundRegistry.DEER_HURT.get();
     }
 
     @Override
     protected SoundEvent getDeathSound() {
-        return SoundEvents.CHICKEN_DEATH;
+        return SoundRegistry.DEER_DEATH.get();
     }
 
 

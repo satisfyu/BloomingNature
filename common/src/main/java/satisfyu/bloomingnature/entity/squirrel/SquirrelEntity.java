@@ -8,6 +8,7 @@ import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.network.syncher.EntityDataSerializers;
 import net.minecraft.network.syncher.SynchedEntityData;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.tags.BlockTags;
@@ -32,6 +33,7 @@ import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.state.BlockState;
 import org.jetbrains.annotations.Nullable;
 import satisfyu.bloomingnature.registry.EntityRegistry;
+import satisfyu.bloomingnature.registry.SoundRegistry;
 import satisfyu.bloomingnature.registry.TagsRegistry;
 import satisfyu.bloomingnature.util.BetterWallClimberNavigation;
 
@@ -245,25 +247,21 @@ public class SquirrelEntity extends Animal {
         return super.getDimensions(pose).scale(1.0f, this.isBaby() ? 1.4f : 1.0f);
     }
 
-    /**
-     *
-     *
-     * /TODO
     @Override
     protected SoundEvent getAmbientSound() {
-        return ModSoundEvents.SQUIRREL_AMBIENT.get();
+        return SoundRegistry.SQUIRREL_AMBIENT.get();
     }
 
     @Override
     protected SoundEvent getHurtSound(DamageSource pDamageSource) {
-        return ModSoundEvents.SQUIRREL_HURT.get();
+        return SoundRegistry.SQUIRREL_HURT.get();
     }
 
     @Override
     protected SoundEvent getDeathSound() {
-        return ModSoundEvents.SQUIRREL_DEATH.get();
+        return SoundRegistry.SQUIRREL_DEATH.get();
     }
-**/
+
     static class SquirrelSearchForSaplingsGoal extends Goal {
         private final SquirrelEntity squirrel;
 

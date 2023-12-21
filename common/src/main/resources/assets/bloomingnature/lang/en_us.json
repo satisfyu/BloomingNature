@@ -213,6 +213,7 @@
   "entity.bloomingnature.red_wolf": "Red Wolf",
   "entity.bloomingnature.squirrel": "Squirrel",
   "entity.bloomingnature.owl": "Owl",
+  "entity.bloomingnature.termite": "Termite",
   "entity.bloomingnature.wandering_gardener": "Wandering Gardener",
   "item.bloomingnature.aspen_boat": "Aspen Boat",
   "item.bloomingnature.aspen_chest_boat": "Aspen Chest Boat",
@@ -238,6 +239,7 @@
   "item.bloomingnature.swamp_oak_boat": "Swamp Oak Boat",
   "item.bloomingnature.swamp_oak_chest_boat": "Swamp Oak Chest Boat",
   "item.bloomingnature.wandering_gardener_spawn_egg": "Wandering Gardener Spawn Egg",
+  "item.bloomingnature.termite_spawn_egg": "Termite Spawn Egg",
   "tooltip.bloomingnature.canbeplaced": "Can be Placed",
   "biome.bloomingnature.swamp": "Swamp",
   "biome.bloomingnature.mangrove_swamp": "Mangrove Swamp",
@@ -258,5 +260,18 @@
   "biome.bloomingnature.larch_forest": "Larch Forest",
   "biome.bloomingnature.sunflower_plains": "Sunflower Plains",
   "biome.bloomingnature.aspen_forest": "Aspen Forest",
-  "biome.bloomingnature.cherry_grove": "Cherry Grove"
+  "biome.bloomingnature.cherry_grove": "Cherry Grove",
+  "subtitles.bloomingnature.deer_death": "Deer Death",
+  "subtitles.bloomingnature.deer_ambient": "Deer Ambient",
+  "subtitles.bloomingnature.deer_hurt": "Deer Hurt",
+  "subtitles.bloomingnature.raccoon_death": "Raccoon Death",
+  "subtitles.bloomingnature.raccoon_ambient": "Raccoon Ambient",
+  "subtitles.bloomingnature.raccoon_hurt": "Raccoon Hurt",
+  "subtitles.bloomingnature.squirrel_death": "Squirrel Death",
+  "subtitles.bloomingnature.squirrel_ambient": "Squirrel Ambient",
+  "subtitles.bloomingnature.squirrel_hurt": "Squirrel Hurt",
+  "subtitles.bloomingnature.owl_death": "Owl Death",
+  "subtitles.bloomingnature.owl_ambient": "Owl Ambient",
+  "subtitles.bloomingnature.owl_hurt": "Owl Hurt"
+
 }
