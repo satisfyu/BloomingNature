@@ -83,5 +83,30 @@
       "bloomingnature:owl_ambient2",
       "bloomingnature:owl_ambient3"
     ]
+  },
+  "bison_hurt": {
+    "subtitle": "subtitles.bloomingnature.bison_hurt",
+    "sounds": [
+      "bloomingnature:bison_hurt"
+    ]
+  },
+  "bison_death": {
+    "subtitle": "subtitles.bloomingnature.bison_death",
+    "sounds": [
+      "bloomingnature:bison_death"
+    ]
+  },
+  "bison_ambient": {
+    "subtitle": "subtitles.bloomingnature.bison_ambient",
+    "sounds": [
+      "bloomingnature:bison_ambient1",
+      "bloomingnature:bison_ambient2",
+      "bloomingnature:bison_ambient3",
+      "bloomingnature:bison_ambient4",
+      "bloomingnature:bison_ambient5",
+      "bloomingnature:bison_ambient6",
+      "bloomingnature:bison_ambient7"
+
+    ]
   }
 }

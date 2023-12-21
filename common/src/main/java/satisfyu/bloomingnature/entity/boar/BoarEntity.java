@@ -25,7 +25,7 @@ public class BoarEntity extends Pig {
 
     @Override
     protected float getStandingEyeHeight(Pose pose, EntityDimensions entityDimensions) {
-        return this.isBaby() ? entityDimensions.height * 0.4F : entityDimensions.height * 0.5F;
+        return this.isBaby() ? entityDimensions.height * 0.2F : entityDimensions.height * 0.3F;
     }
 
     @Override

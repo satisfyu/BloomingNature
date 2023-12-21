@@ -8,6 +8,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
 import satisfyu.bloomingnature.BloomingNature;
+import satisfyu.bloomingnature.entity.bison.BisonEntity;
 import satisfyu.bloomingnature.entity.boar.BoarEntity;
 import satisfyu.bloomingnature.entity.deer.DeerEntity;
 import satisfyu.bloomingnature.entity.mossy_sheep.MossySheepEntity;
@@ -81,13 +82,18 @@ public class EntityRegistry {
     );
 
     public static final RegistrySupplier<EntityType<TermiteEntity>> TERMITE = create("termite",
-            () -> EntityType.Builder.of(TermiteEntity::new, MobCategory.CREATURE)
+            () -> EntityType.Builder.of(TermiteEntity::new, MobCategory.MONSTER)
                     .build(new BloomingNatureIdentifier("termite").toString())
     );
 
     public static final RegistrySupplier<EntityType<BoarEntity>> BOAR = create("boar",
             () -> EntityType.Builder.of(BoarEntity::new, MobCategory.CREATURE)
                     .build(new BloomingNatureIdentifier("boar").toString())
+    );
+
+    public static final RegistrySupplier<EntityType<BisonEntity>> BISON = create("bison",
+            () -> EntityType.Builder.of(BisonEntity::new, MobCategory.CREATURE)
+                    .build(new BloomingNatureIdentifier("bison").toString())
     );
 
 
@@ -110,6 +116,6 @@ public class EntityRegistry {
         EntityAttributeRegistry.register(OWL, OwlEntity::createMobAttributes);
         EntityAttributeRegistry.register(BOAR, BoarEntity::createMobAttributes);
         EntityAttributeRegistry.register(TERMITE, TermiteEntity::createMobAttributes);
-
+        EntityAttributeRegistry.register(BISON, BisonEntity::createMobAttributes);
     }
 }

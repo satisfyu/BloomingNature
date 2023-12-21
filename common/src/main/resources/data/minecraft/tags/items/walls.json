@@ -1,7 +1,7 @@
 {
   "values": [
-    "minecraft:red_brick_wall",
-    "minecraft:red_travertin_wall",
-    "minecraft:travertin_wall"
+    "bloomingnature:red_brick_wall",
+    "bloomingnature:travertin_brick_wall",
+    "bloomingnature:red_travertin_brick_wall"
   ]
 }

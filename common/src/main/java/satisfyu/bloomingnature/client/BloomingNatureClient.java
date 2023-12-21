@@ -15,6 +15,8 @@ import net.minecraft.client.renderer.RenderType;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.FoliageColor;
 import satisfyu.bloomingnature.BloomingNature;
+import satisfyu.bloomingnature.entity.bison.BisonModel;
+import satisfyu.bloomingnature.entity.bison.BisonRenderer;
 import satisfyu.bloomingnature.entity.boar.BoarModel;
 import satisfyu.bloomingnature.entity.boar.BoarRenderer;
 import satisfyu.bloomingnature.entity.deer.DeerModel;
@@ -109,6 +111,7 @@ public class BloomingNatureClient {
         EntityRendererRegistry.register(EntityRegistry.OWL, OwlRenderer::new);
         EntityRendererRegistry.register(EntityRegistry.TERMITE, TermiteRenderer::new);
         EntityRendererRegistry.register(EntityRegistry.BOAR, BoarRenderer::new);
+        EntityRendererRegistry.register(EntityRegistry.BISON, BisonRenderer::new);
         }
 
     public static void registerEntityModelLayer() {
@@ -124,6 +127,7 @@ public class BloomingNatureClient {
         EntityModelLayerRegistry.register(OwlModel.LAYER_LOCATION, OwlModel::getTexturedModelData);
         EntityModelLayerRegistry.register(TermiteModel.LAYER_LOCATION, TermiteModel::getTexturedModelData);
         EntityModelLayerRegistry.register(BoarModel.LAYER_LOCATION, BoarModel::getTexturedModelData);
+        EntityModelLayerRegistry.register(BisonModel.LAYER_LOCATION, BisonModel::getTexturedModelData);
     }
 
 }
