@@ -98,6 +98,20 @@
     "bloomingnature:swamp_cypress_door",
     "bloomingnature:swamp_cypress_fence",
     "bloomingnature:swamp_cypress_fence_gate",
-    "bloomingnature:swamp_cypress_window"
+    "bloomingnature:swamp_cypress_window",
+    "bloomingnature:chestnut_log",
+    "bloomingnature:chestnut_wood",
+    "bloomingnature:stripped_chestnut_wood",
+    "bloomingnature:stripped_chestnut_log",
+    "bloomingnature:chestnut_planks",
+    "bloomingnature:chestnut_stairs",
+    "bloomingnature:chestnut_slab",
+    "bloomingnature:chestnut_pressure_plate",
+    "bloomingnature:chestnut_button",
+    "bloomingnature:chestnut_trapdoor",
+    "bloomingnature:chestnut_door",
+    "bloomingnature:chestnut_fence",
+    "bloomingnature:chestnut_fence_gate",
+    "bloomingnature:chestnut_window"
   ]
 }

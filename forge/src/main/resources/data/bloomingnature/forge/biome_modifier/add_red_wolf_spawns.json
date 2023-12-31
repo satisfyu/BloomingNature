@@ -1,0 +1,12 @@
+{
+  "type": "forge:add_spawns",
+  "biomes": [
+    "bloomingnature:larch_forest"
+  ],
+  "spawners": {
+    "type": "bloomingnature:red_wolf",
+    "weight": 7,
+    "minCount": 2,
+    "maxCount": 3
+  }
+}

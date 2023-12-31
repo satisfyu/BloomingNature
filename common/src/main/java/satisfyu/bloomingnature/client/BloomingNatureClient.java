@@ -71,7 +71,8 @@ public class BloomingNatureClient {
                 ObjectRegistry.POTTED_BEACH_BUSH.get(), ObjectRegistry.BAOBAB_WINDOW.get(), ObjectRegistry.ASPEN_WINDOW.get(), ObjectRegistry.SWAMP_CYPRESS_WINDOW.get(),
                 ObjectRegistry.FIR_WINDOW.get(), ObjectRegistry.BAOBAB_DOOR.get(), ObjectRegistry.ASPEN_DOOR.get(), ObjectRegistry.SWAMP_CYPRESS_DOOR.get(),
                 ObjectRegistry.ASPEN_TRAPDOOR.get(), ObjectRegistry.SWAMP_CYPRESS_TRAPDOOR.get(), ObjectRegistry.BAOBAB_SAPLING.get(),  ObjectRegistry.ASPEN_SAPLING.get(),
-                ObjectRegistry.SWAMP_CYPRESS_SAPLING.get(), ObjectRegistry.FIR_SAPLING.get()
+                ObjectRegistry.SWAMP_CYPRESS_SAPLING.get(), ObjectRegistry.FIR_SAPLING.get(), ObjectRegistry.CHESTNUT_DOOR.get(), ObjectRegistry.CHESTNUT_SAPLING.get(),
+                ObjectRegistry.CHESTNUT_WINDOW.get(), ObjectRegistry.CHESTNUT_TRAPDOOR.get()
 
                 );
 

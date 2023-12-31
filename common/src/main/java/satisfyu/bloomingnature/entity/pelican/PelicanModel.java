@@ -4,15 +4,16 @@ import com.google.common.collect.ImmutableList;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import net.minecraft.client.model.AgeableListModel;
+import net.minecraft.client.model.ChickenModel;
 import net.minecraft.client.model.geom.ModelLayerLocation;
 import net.minecraft.client.model.geom.ModelPart;
 import net.minecraft.client.model.geom.PartPose;
 import net.minecraft.client.model.geom.builders.*;
 import net.minecraft.util.Mth;
+import net.minecraft.world.entity.Entity;
 import satisfyu.bloomingnature.util.BloomingNatureIdentifier;
 
-public class PelicanModel<T extends PelicanEntity> extends AgeableListModel<T> {
-
+public class PelicanModel<T extends Entity> extends AgeableListModel<T> {
     public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(new BloomingNatureIdentifier("pelican"), "main");
 
     private final ModelPart body;
@@ -37,6 +38,7 @@ public class PelicanModel<T extends PelicanEntity> extends AgeableListModel<T> {
     public static LayerDefinition getTexturedModelData() {
         MeshDefinition modelData = new MeshDefinition();
         PartDefinition modelPartData = modelData.getRoot();
+
         PartDefinition body = modelPartData.addOrReplaceChild("body", CubeListBuilder.create().texOffs(17, 1).addBox(-3.0F, -4.0F, -4.0F, 6.0F, 11.0F, 8.0F, new CubeDeformation(0.0F))
                 .texOffs(18, 18).addBox(0.0F, -2.0F, 4.0F, 0.0F, 3.0F, 3.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(0.0F, 16.0F, 0.0F, 1.5708F, 0.0F, 0.0F));
 
@@ -78,20 +80,14 @@ public class PelicanModel<T extends PelicanEntity> extends AgeableListModel<T> {
         return ImmutableList.of(this.body, this.leg0, this.leg1, this.wing0, this.wing1);
     }
 
-    @Override
-    public void setupAnim(T entity, float limbAngle, float limbDistance, float animationProgress, float headYaw, float headPitch) {
-        this.head.xRot = headPitch * ((float)Math.PI / 180);
-        this.head.yRot = headYaw * ((float)Math.PI / 180);
-
-        this.leg0.xRot = Mth.cos(limbAngle * 0.6662f) * 1.4f * limbDistance;
-        this.leg1.xRot = Mth.cos(limbAngle * 0.6662f + (float)Math.PI) * 1.4f * limbDistance;
-
-        float wingFlapAngle = Mth.sin(animationProgress * 0.3f) * 0.5f;
-        this.wing0.yRot = wingFlapAngle;
-        this.wing1.yRot = -wingFlapAngle;
-
-
-        float beakMovement = Mth.sin(animationProgress * 0.2f) * 0.2f;
-        this.beak.xRot = Mth.clamp(beakMovement, -0.5f, 0.5f);
+    public void setupAnim(T entity, float f, float g, float h, float i, float j) {
+        this.head.xRot = j * 0.017453292F;
+        this.head.yRot = i * 0.017453292F;
+        this.beak.xRot = this.head.xRot;
+        this.beak.yRot = this.head.yRot;
+        this.leg0.xRot = Mth.cos(f * 0.6662F) * 1.4F * g;
+        this.leg1.xRot = Mth.cos(f * 0.6662F + 3.1415927F) * 1.4F * g;
+        this.wing0.zRot = h;
+        this.wing1.zRot = -h;
     }
 }

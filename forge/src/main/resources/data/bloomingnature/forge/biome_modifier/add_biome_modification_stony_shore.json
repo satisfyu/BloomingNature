@@ -1,0 +1,17 @@
+{
+  "type": "forge:add_features",
+  "biomes": [
+    "minecraft:stony_shore",
+    "minecraft:stony_peaks"
+  ],
+  "features": [
+    "bloomingnature:terrain/stone_slabs",
+    "bloomingnature:terrain/terrain/stone_pillars",
+    "bloomingnature:terrain/terrain/stone_mound",
+    "bloomingnature:terrain/terrain/stone_cliffs",
+    "bloomingnature:terrain/terrain/stone_boulder",
+    "bloomingnature:terrain/terrain/cobblestone_beach",
+    "bloomingnature:terrain/terrain/cobblestone_beach_mossy"
+  ],
+  "step": "vegetal_decoration"
+}

@@ -53,6 +53,7 @@ public class SquirrelModel extends AgeableListModel<SquirrelEntity> {
                 .texOffs(0, 13).addBox(-2.5F, -7.0F, -6.0F, 2.0F, 2.0F, 1.0F, new CubeDeformation(0.0F))
                 .texOffs(0, 7).addBox(-0.5F, -2.0F, -9.0F, 2.0F, 1.0F, 0.0F, new CubeDeformation(0.0F)), PartPose.offset(0.0F, 22.0F, 0.0F));
 
+
         PartDefinition body = partdefinition.addOrReplaceChild("body", CubeListBuilder.create().texOffs(0, 0).addBox(-2.0F, -6.0F, -4.0F, 5.0F, 5.0F, 8.0F, new CubeDeformation(0.0F)), PartPose.offset(0.0F, 23.0F, 0.0F));
 
         PartDefinition tail = body.addOrReplaceChild("tail", CubeListBuilder.create().texOffs(0, 25).addBox(-1.0F, -4.7929F, 5.7071F, 3.0F, 4.0F, 3.0F, new CubeDeformation(0.0F))
@@ -84,47 +85,51 @@ public class SquirrelModel extends AgeableListModel<SquirrelEntity> {
         this.head.resetPose();
 
         float swingCorrectionFactor = 0.1F;
-        float correctedLimbSwing = entity.isBaby() ? limbSwing / 3 : limbSwing;
 
         this.head.xRot = headPitch * Mth.DEG_TO_RAD;
         this.head.yRot = netHeadYaw * Mth.DEG_TO_RAD;
-        this.head.xRot += Mth.cos((float) Math.toRadians(-45) + correctedLimbSwing) * (swingCorrectionFactor * 0.4F) * limbSwingAmount;
-        this.head.y += (-1 - Mth.cos(correctedLimbSwing)) * (entity.isBaby() ? 1 : 2) * limbSwingAmount;
+        this.head.xRot += Mth.cos((float) Math.toRadians(-45) + limbSwing) * (swingCorrectionFactor * 0.4F) * limbSwingAmount;
+        this.head.y += (-1 - Mth.cos(limbSwing)) * 0 * limbSwingAmount;
         this.head.z += 1 * limbSwingAmount;
 
-        this.body.xRot += (float) ((Math.toRadians(10) - Mth.cos((float) Math.toRadians(-30) + correctedLimbSwing)) * (swingCorrectionFactor * 3.5F) * limbSwingAmount);
-        this.body.y += (-1 - Mth.cos(correctedLimbSwing)) * 2.0f * limbSwingAmount;
+        if (entity.isBaby()) {
+            this.head.y -= -10.0F;
+            this.head.z -= -1.5F;
+        }
 
-        this.leftArm.xRot += (float) ((Math.toRadians(-15) - Mth.cos((float) Math.toRadians(-35) + correctedLimbSwing)) * (swingCorrectionFactor * 7.5F) * limbSwingAmount);
+        this.body.xRot += (float) ((Math.toRadians(10) - Mth.cos((float) Math.toRadians(-30) + limbSwing)) * (swingCorrectionFactor * 3.5F) * limbSwingAmount);
+        this.body.y += (-1 - Mth.cos(limbSwing)) * 2.0f * limbSwingAmount;
+
+        this.leftArm.xRot += (float) ((Math.toRadians(-15) - Mth.cos((float) Math.toRadians(-35) + limbSwing)) * (swingCorrectionFactor * 7.5F) * limbSwingAmount);
         this.leftArm.yRot += (float) Math.toRadians(-5);
-        this.leftArm.zRot += (float) ((Math.toRadians(-15) - Mth.cos(correctedLimbSwing)) * (swingCorrectionFactor * 2.0F) * limbSwingAmount);
-        leftArm.z += (0.5F + Mth.cos(correctedLimbSwing)) * (swingCorrectionFactor * 0.05F) * limbSwingAmount;
+        this.leftArm.zRot += (float) ((Math.toRadians(-15) - Mth.cos(limbSwing)) * (swingCorrectionFactor * 2.0F) * limbSwingAmount);
+        leftArm.z += (0.5F + Mth.cos(limbSwing)) * (swingCorrectionFactor * 0.05F) * limbSwingAmount;
 
-        this.rightArm.xRot += (float) ((Math.toRadians(-15) - Mth.cos((float) Math.toRadians(-45) + correctedLimbSwing)) * (swingCorrectionFactor * 7.5F) * limbSwingAmount);
+        this.rightArm.xRot += (float) ((Math.toRadians(-15) - Mth.cos((float) Math.toRadians(-45) + limbSwing)) * (swingCorrectionFactor * 7.5F) * limbSwingAmount);
         this.rightArm.yRot += (float) Math.toRadians(-5);
-        this.rightArm.zRot += (float) ((Math.toRadians(15) - Mth.cos(correctedLimbSwing)) * (swingCorrectionFactor * 2.0F) * limbSwingAmount);
-        rightArm.z += (0.5F + Mth.cos((float) Math.toRadians(-25) + correctedLimbSwing)) * (swingCorrectionFactor * 0.05F) * limbSwingAmount;
+        this.rightArm.zRot += (float) ((Math.toRadians(15) - Mth.cos(limbSwing)) * (swingCorrectionFactor * 2.0F) * limbSwingAmount);
+        rightArm.z += (0.5F + Mth.cos((float) Math.toRadians(-25) + limbSwing)) * (swingCorrectionFactor * 0.05F) * limbSwingAmount;
 
-        this.leftThigh.xRot += (float) ((Math.toRadians(45) - Mth.cos((float) Math.toRadians(-45) + correctedLimbSwing)) * (swingCorrectionFactor * 6.5F) * limbSwingAmount);
+        this.leftThigh.xRot += (float) ((Math.toRadians(45) - Mth.cos((float) Math.toRadians(-45) + limbSwing)) * (swingCorrectionFactor * 6.5F) * limbSwingAmount);
         this.leftThigh.y += -3 * (swingCorrectionFactor * 7) * limbSwingAmount;
-        this.leftThigh.z += Mth.cos((float) Math.toRadians(-35) + correctedLimbSwing) * (swingCorrectionFactor * 0.1F) * limbSwingAmount;
+        this.leftThigh.z += Mth.cos((float) Math.toRadians(-35) + limbSwing) * (swingCorrectionFactor * 0.1F) * limbSwingAmount;
 
-        this.leftFoot.xRot += (float) ((Math.toRadians(25) + Mth.cos((float) Math.toRadians(-125) + correctedLimbSwing)) * (swingCorrectionFactor * 6.0F) * limbSwingAmount);
+        this.leftFoot.xRot += (float) ((Math.toRadians(25) + Mth.cos((float) Math.toRadians(-125) + limbSwing)) * (swingCorrectionFactor * 6.0F) * limbSwingAmount);
         this.leftFoot.y += -1 * (swingCorrectionFactor * 2.0F) * limbSwingAmount;
-        this.leftFoot.z += (-0.5F + Mth.cos(correctedLimbSwing)) * (swingCorrectionFactor * 0.025F) * limbSwingAmount;
+        this.leftFoot.z += (-0.5F + Mth.cos(limbSwing)) * (swingCorrectionFactor * 0.025F) * limbSwingAmount;
 
         this.rightLeg.y += -1 * swingCorrectionFactor * limbSwingAmount;
 
-        this.rightThigh.xRot += (float) ((Math.toRadians(45) - Mth.cos((float) Math.toRadians(-25) + correctedLimbSwing)) * (swingCorrectionFactor * 6.5F) * limbSwingAmount);
+        this.rightThigh.xRot += (float) ((Math.toRadians(45) - Mth.cos((float) Math.toRadians(-25) + limbSwing)) * (swingCorrectionFactor * 6.5F) * limbSwingAmount);
         this.rightThigh.y += -2 * (swingCorrectionFactor * 7) * limbSwingAmount;
-        this.rightThigh.z += Mth.cos((float) Math.toRadians(-35) + correctedLimbSwing) * (swingCorrectionFactor * 0.1F) * limbSwingAmount;
+        this.rightThigh.z += Mth.cos((float) Math.toRadians(-35) + limbSwing) * (swingCorrectionFactor * 0.1F) * limbSwingAmount;
 
-        this.rightFoot.xRot += (float) ((Math.toRadians(15) + Mth.cos((float) Math.toRadians(-85) + correctedLimbSwing)) * (swingCorrectionFactor * 6.0F) * limbSwingAmount);
+        this.rightFoot.xRot += (float) ((Math.toRadians(15) + Mth.cos((float) Math.toRadians(-85) + limbSwing)) * (swingCorrectionFactor * 6.0F) * limbSwingAmount);
         this.rightFoot.y += -1 * (swingCorrectionFactor * 2.0F) * limbSwingAmount;
-        this.rightFoot.z += (-0.5F + Mth.cos(correctedLimbSwing)) * (swingCorrectionFactor * 0.025F) * limbSwingAmount;
+        this.rightFoot.z += (-0.5F + Mth.cos(limbSwing)) * (swingCorrectionFactor * 0.025F) * limbSwingAmount;
 
-        this.tail.xRot += (float) ((Math.toRadians(-40) - Mth.cos((float) Math.toRadians(-120) + correctedLimbSwing)) * (swingCorrectionFactor * 1.8F) * limbSwingAmount);
-        this.tail.z += Mth.cos((float) Math.toRadians(-100) + correctedLimbSwing) * (swingCorrectionFactor * 0.03F) * limbSwingAmount;
+        this.tail.xRot += (float) ((Math.toRadians(-40) - Mth.cos((float) Math.toRadians(-120) + limbSwing)) * (swingCorrectionFactor * 1.8F) * limbSwingAmount);
+        this.tail.z += Mth.cos((float) Math.toRadians(-100) + limbSwing) * (swingCorrectionFactor * 0.03F) * limbSwingAmount;
     }
 
     @Override

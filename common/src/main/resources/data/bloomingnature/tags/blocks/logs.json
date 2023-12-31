@@ -28,6 +28,10 @@
     "bloomingnature:swamp_cypress_log",
     "bloomingnature:swamp_cypress_wood",
     "bloomingnature:stripped_swamp_cypress_log",
-    "bloomingnature:stripped_swamp_cypress_wood"
+    "bloomingnature:stripped_swamp_cypress_wood",
+    "bloomingnature:chestnut_log",
+    "bloomingnature:chestnut_wood",
+    "bloomingnature:stripped_chestnut_log",
+    "bloomingnature:stripped_chestnut_wood"
   ]
 }

@@ -13,6 +13,7 @@ import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.goal.*;
 import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
 import net.minecraft.world.entity.animal.Animal;
+import net.minecraft.world.entity.animal.Chicken;
 import net.minecraft.world.entity.animal.Cod;
 import net.minecraft.world.entity.animal.Salmon;
 import net.minecraft.world.entity.player.Player;
@@ -21,13 +22,15 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.gameevent.GameEvent;
 import net.minecraft.world.level.pathfinder.BlockPathTypes;
 import net.minecraft.world.phys.Vec3;
 import org.jetbrains.annotations.Nullable;
 import satisfyu.bloomingnature.registry.EntityRegistry;
+import satisfyu.bloomingnature.registry.SoundRegistry;
 
 
-public class PelicanEntity extends Animal {
+public class PelicanEntity extends Chicken {
     private static final Ingredient FOOD_ITEMS;
     public float flap;
     public float flapSpeed;
@@ -42,6 +45,8 @@ public class PelicanEntity extends Animal {
         this.setPathfindingMalus(BlockPathTypes.WATER, 0.0F);
     }
 
+
+    @Override
     protected void registerGoals() {
         this.goalSelector.addGoal(0, new FloatGoal(this));
         this.goalSelector.addGoal(1, new PanicGoal(this, 1.4));
@@ -71,12 +76,13 @@ public class PelicanEntity extends Animal {
         return Mob.createMobAttributes().add(Attributes.MAX_HEALTH, 8.0).add(Attributes.MOVEMENT_SPEED, 0.22);
     }
 
+    @Override
     public void aiStep() {
         super.aiStep();
         this.oFlap = this.flap;
         this.oFlapSpeed = this.flapSpeed;
-        this.flapSpeed += (this.onGround() ? -1.0F : 4.0F) * 0.3F;
-        this.flapSpeed = Mth.clamp(this.flapSpeed, 0.0F, 1.0F);
+        this.flapSpeed += (this.onGround() ? -1.0F : 3.0F) * 0.2F;
+        this.flapSpeed = Mth.clamp(this.flapSpeed, 0.0F, 0.5F);
         if (!this.onGround() && this.flapping < 1.0F) {
             this.flapping = 1.0F;
         }
@@ -86,6 +92,8 @@ public class PelicanEntity extends Animal {
         if (!this.onGround() && vec3.y < 0.0) {
             this.setDeltaMovement(vec3.multiply(1.0, 0.6, 1.0));
         }
+
+        this.flap += this.flapping * 2.0F;
     }
 
     protected boolean isFlapping() {
@@ -96,27 +104,33 @@ public class PelicanEntity extends Animal {
         this.nextFlap = this.flyDist + this.flapSpeed / 2.0F;
     }
 
+    @Override
     protected SoundEvent getAmbientSound() {
-        return SoundEvents.CHICKEN_AMBIENT;
+        return SoundRegistry.PELICAN_AMBIENT.get();
     }
 
+    @Override
     protected SoundEvent getHurtSound(DamageSource damageSource) {
-        return SoundEvents.CHICKEN_HURT;
+        return SoundRegistry.PELICAN_HURT.get();
     }
 
+    @Override
     protected SoundEvent getDeathSound() {
-        return SoundEvents.CHICKEN_DEATH;
+        return SoundRegistry.PELICAN_DEATH.get();
     }
 
+    @Override
     protected void playStepSound(BlockPos blockPos, BlockState blockState) {
         this.playSound(SoundEvents.CHICKEN_STEP, 0.15F, 1.0F);
     }
 
+    @Override
     @Nullable
     public PelicanEntity getBreedOffspring(ServerLevel serverLevel, AgeableMob ageableMob) {
         return (PelicanEntity)EntityRegistry.PELICAN.get().create(serverLevel);
     }
 
+    @Override
     public boolean isFood(ItemStack itemStack) {
         return FOOD_ITEMS.test(itemStack);
     }
@@ -124,40 +138,33 @@ public class PelicanEntity extends Animal {
         FOOD_ITEMS = Ingredient.of(Items.COD, Items.SALMON, Items.PUFFERFISH, Items.COOKED_COD, Items.COOKED_SALMON);
     }
 
+    @Override
     public int getExperienceReward() {
-        return this.isPelicanJockey() ? 10 : super.getExperienceReward();
+        return this.isPelicanJockey() ? 12 : super.getExperienceReward();
     }
 
-    public void readAdditionalSaveData(CompoundTag compoundTag) {
-        super.readAdditionalSaveData(compoundTag);
-        this.isPelicanJockey = compoundTag.getBoolean("IsPelicanJockey");
-    }
 
-    public void addAdditionalSaveData(CompoundTag compoundTag) {
-        super.addAdditionalSaveData(compoundTag);
-        compoundTag.putBoolean("IsPelicanJockey", this.isPelicanJockey);
-    }
-
-    public boolean removeWhenFarAway(double d) {
-        return this.isPelicanJockey();
-    }
-
+    @Override
     protected void positionRider(Entity entity, Entity.MoveFunction moveFunction) {
         super.positionRider(entity, moveFunction);
         float f = Mth.sin(this.yBodyRot * 0.017453292F);
         float g = Mth.cos(this.yBodyRot * 0.017453292F);
         float h = 0.1F;
         float i = 0.0F;
-        moveFunction.accept(entity, this.getX() + (double)(0.1F * f), this.getY(0.5) + entity.getMyRidingOffset() + 0.0, this.getZ() - (double)(0.1F * g));
+        double yOffset = -0.18;
+
+        moveFunction.accept(entity, this.getX() + (double)(0.1F * f), this.getY(0.5) + entity.getMyRidingOffset() + yOffset, this.getZ() - (double)(0.1F * g));
+
         if (entity instanceof LivingEntity) {
             ((LivingEntity)entity).yBodyRot = this.yBodyRot;
         }
-
     }
+
 
     public boolean isPelicanJockey() {
         return this.isPelicanJockey;
     }
+
 
     public void setPelicanJockey(boolean bl) {
         this.isPelicanJockey = bl;

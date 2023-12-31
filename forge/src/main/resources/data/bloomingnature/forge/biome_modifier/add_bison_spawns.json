@@ -1,0 +1,14 @@
+{
+  "type": "forge:add_spawns",
+  "biomes": [
+    "minecraft:savanna",
+    "minecraft:savanna_plateau",
+    "bloomingnature:savanna",
+    "bloomingnature:savanna_plateau"
+  ],  "spawners": {
+  "type": "bloomingnature:bison",
+  "weight": 8,
+  "minCount": 3,
+  "maxCount": 4
+}
+}

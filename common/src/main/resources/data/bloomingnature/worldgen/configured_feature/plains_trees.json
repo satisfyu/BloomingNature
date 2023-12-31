@@ -7,10 +7,11 @@
         "feature": "bloomingnature:plains_oak_straight_checked"
       },
       {
-        "chance": 0.00777778,
-        "feature": "bloomingnature:plains_oak_bush_checked"
+        "chance": 0.022555556,
+        "feature": "bloomingnature:plains_chestnut_tree_checked"
       }
     ],
-    "default": "bloomingnature:plains_oak_bush_checked"
+    "default": "bloomingnature:plains_oak_bush_checked",
+    "default_chance": 0.00000006
   }
 }

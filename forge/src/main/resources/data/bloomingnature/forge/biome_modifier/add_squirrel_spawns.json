@@ -1,0 +1,16 @@
+{
+  "type": "forge:add_spawns",
+  "biomes": [
+    "minecraft:plains",
+    "minecraft:meadow",
+    "#minecraft:is_forest",
+    "bloomingnature:plains",
+    "bloomingnature:larch_forest",
+    "bloomingnature:aspen_forest"
+  ],  "spawners": {
+  "type": "bloomingnature:squirrel",
+  "weight": 7,
+  "minCount": 1,
+  "maxCount": 2
+}
+}

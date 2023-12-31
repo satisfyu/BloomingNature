@@ -50,6 +50,10 @@ public class EntitySpawnFabric {
         BiomeModifications.addSpawn(BiomeSelectors.includeByKey(BloomingNatureBiome.LARCH_FOREST_KEY, BloomingNatureBiome.OLD_GROWTH_SPRUCE_TAIGA_KEY, BloomingNatureBiome.TAIGA_KEY, BloomingNatureBiome.BIRCH_FOREST_KEY, Biomes.DARK_FOREST, BloomingNatureBiome.ASPEN_FOREST_KEY, BloomingNatureBiome.SAVANNA_KEY, BloomingNatureBiome.SAVANNA_PLATEAU_KEY), MobCategory.CREATURE,
                 EntityRegistry.BOAR.get(), 10, 3, 5);
 
+        BiomeModifications.addSpawn(BiomeSelectors.includeByKey(BloomingNatureBiome.SAVANNA_PLATEAU_KEY, BloomingNatureBiome.SAVANNA_KEY), MobCategory.CREATURE,
+                EntityRegistry.BISON.get(), 10, 3, 5);
+
+
 
         SpawnPlacements.register(EntityRegistry.SQUIRREL.get(), SpawnPlacements.Type.ON_GROUND,
                 Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, AmbientCreature::checkMobSpawnRules);
@@ -66,6 +70,8 @@ public class EntitySpawnFabric {
         SpawnPlacements.register(EntityRegistry.RED_WOLF.get(), SpawnPlacements.Type.ON_GROUND,
                 Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, AmbientCreature::checkMobSpawnRules);
         SpawnPlacements.register(EntityRegistry.BOAR.get(), SpawnPlacements.Type.ON_GROUND,
+                Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, AmbientCreature::checkMobSpawnRules);
+        SpawnPlacements.register(EntityRegistry.BISON.get(), SpawnPlacements.Type.ON_GROUND,
                 Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, AmbientCreature::checkMobSpawnRules);
     }
 }
