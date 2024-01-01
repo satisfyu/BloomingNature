@@ -39,12 +39,6 @@
         "maxCount": 6
       },
       {
-        "type": "minecraft:chicken",
-        "weight": 10,
-        "minCount": 4,
-        "maxCount": 4
-      },
-      {
         "type": "minecraft:donkey",
         "weight": 1,
         "minCount": 1,
@@ -106,12 +100,6 @@
         "weight": 10,
         "minCount": 1,
         "maxCount": 4
-      },
-      {
-        "type": "minecraft:fox",
-        "maxCount": 4,
-        "minCount": 2,
-        "weight": 8
       },
       {
         "type": "minecraft:witch",

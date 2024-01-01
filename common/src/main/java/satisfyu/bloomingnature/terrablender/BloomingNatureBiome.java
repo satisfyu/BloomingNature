@@ -3,6 +3,7 @@ package satisfyu.bloomingnature.terrablender;
 import com.mojang.datafixers.util.Pair;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.Registries;
+import net.minecraft.data.worldgen.BootstapContext;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.biome.Biome;
@@ -10,11 +11,10 @@ import net.minecraft.world.level.biome.Biomes;
 import net.minecraft.world.level.biome.Climate;
 import satisfyu.bloomingnature.BloomingNature;
 import satisfyu.bloomingnature.world.BloomingNatureSurfaceRules;
-import terrablender.api.Region;
-import terrablender.api.RegionType;
-import terrablender.api.Regions;
-import terrablender.api.SurfaceRuleManager;
+import terrablender.api.*;
 
+import java.util.List;
+import java.util.Objects;
 import java.util.function.Consumer;
 
 public class BloomingNatureBiome extends Region {

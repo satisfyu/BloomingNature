@@ -7,6 +7,7 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.pathfinder.BlockPathTypes;
 import net.minecraft.world.level.pathfinder.WalkNodeEvaluator;
 
+// Owl by Lemonszz: https://github.com/Lemonszz/Biome-Makeover/blob/1.20/LICENCE
 public class FlyingFollowOwnerGoal extends BetterFollowOwnerGoal {
 
     public FlyingFollowOwnerGoal(TamableAnimal tameable, double speed, float minDistance, float maxDistance, boolean leavesAllowed) {

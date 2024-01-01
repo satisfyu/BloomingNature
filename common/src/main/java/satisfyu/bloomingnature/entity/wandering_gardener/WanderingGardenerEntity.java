@@ -24,6 +24,8 @@ public class WanderingGardenerEntity extends WanderingTrader {
         HashMap<Integer, VillagerTrades.ItemListing[]> trades = new HashMap<>();
         trades.put(1, new VillagerTrades.ItemListing[]{
                 new VillagerUtil.SellItemFactory(ObjectRegistry.JOE_PYE.get(), 2, 4, 3, 15),
+                new VillagerUtil.SellItemFactory(ObjectRegistry.CATTAIL.get(), 2, 4, 3, 15),
+                new VillagerUtil.SellItemFactory(ObjectRegistry.REED.get(), 2, 4, 3, 15),
                 new VillagerUtil.SellItemFactory(ObjectRegistry.HYSSOP.get(), 2, 4, 3, 15),
                 new VillagerUtil.SellItemFactory(ObjectRegistry.MOUNTAIN_SNOWBELL.get(), 2, 4, 3, 15),
                 new VillagerUtil.SellItemFactory(ObjectRegistry.CARDINAL.get(), 2, 4, 3, 15),
@@ -41,21 +43,14 @@ public class WanderingGardenerEntity extends WanderingTrader {
                 new VillagerUtil.SellItemFactory(ObjectRegistry.FREESIA_YELLOW.get(), 2, 4, 3, 15),
                 new VillagerUtil.SellItemFactory(ObjectRegistry.FREESIA_PINK.get(), 2, 4, 3, 15),
                 new VillagerUtil.SellItemFactory(ObjectRegistry.LUPINE_BLUE.get(), 2, 4, 3, 15),
-                new VillagerUtil.SellItemFactory(ObjectRegistry.LUPINE_PURPLE.get(), 2, 4, 3, 15)
+                new VillagerUtil.SellItemFactory(ObjectRegistry.LUPINE_PURPLE.get(), 2, 4, 3, 15),
+                new VillagerUtil.SellItemFactory(ObjectRegistry.BEACH_BUSH.get(), 2, 4, 3, 15),
+                new VillagerUtil.SellItemFactory(ObjectRegistry.BEACH_GRASS.get(), 2, 4, 3, 15),
+                new VillagerUtil.SellItemFactory(ObjectRegistry.BEACH_BUSH_TALL.get(), 2, 4, 3, 15)
+
+
+
         });
-        if (trades.get(1).length >= 6) {
-            List<VillagerTrades.ItemListing> itemListingList = new ArrayList<>();
-            Collections.addAll(itemListingList, trades.get(1));
-
-            Collections.shuffle(itemListingList);
-
-            VillagerTrades.ItemListing[] selectedItems = new VillagerTrades.ItemListing[6];
-            for (int i = 0; i < 6; i++) {
-                selectedItems[i] = itemListingList.get(i);
-            }
-            trades.put(1, selectedItems);
-        }
-
         return trades;
     }
 
@@ -63,17 +58,11 @@ public class WanderingGardenerEntity extends WanderingTrader {
         super(entityType, world);
     }
 
-    protected @NotNull SoundEvent getDrinkingSound(@NotNull ItemStack itemStack) {
-        return SoundEvents.GENERIC_EAT;
-    }
-
-
     @Override
     protected void updateTrades() {
         if (this.offers == null) {
             this.offers = new MerchantOffers();
         }
-        this.addOffersFromItemListings(this.offers, TRADES.get(1), 6);
+        this.addOffersFromItemListings(this.offers, TRADES.get(1), 8);
     }
-
 }

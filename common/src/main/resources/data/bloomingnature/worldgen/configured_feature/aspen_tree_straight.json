@@ -34,7 +34,7 @@
     "dirt_provider": {
       "type": "minecraft:simple_state_provider",
       "state": {
-        "Name": "bloomingnature:aspen_log",
+        "Name": "minecraft:dirt",
         "Properties": {
           "axis": "y"
         }

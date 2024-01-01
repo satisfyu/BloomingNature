@@ -107,6 +107,14 @@
       "bloomingnature:bison_ambient7"
     ]
   },
+  "bison_angry": {
+    "subtitle": "subtitles.bloomingnature.bison_angry",
+    "sounds": [
+      "bloomingnature:bison_angry1",
+      "bloomingnature:bison_angry2",
+      "bloomingnature:bison_angry3"
+    ]
+  },
   "pelican_hurt": {
     "subtitle": "subtitles.bloomingnature.pelican_hurt",
     "sounds": [
@@ -133,6 +141,25 @@
       "bloomingnature:pelican_ambient5",
       "bloomingnature:pelican_ambient6",
       "bloomingnature:pelican_ambient7"
+    ]
+  },
+  "turkey_hurt": {
+    "subtitle": "subtitles.bloomingnature.turkey_hurt",
+    "sounds": [
+      "bloomingnature:turkey_hurt"
+    ]
+  },
+  "turkey_death": {
+    "subtitle": "subtitles.bloomingnature.turkey_death",
+    "sounds": [
+      "bloomingnature:turkey_death"
+    ]
+  },
+  "turkey_ambient": {
+    "subtitle": "subtitles.bloomingnature.turkey_ambient",
+    "sounds": [
+      "bloomingnature:turkey_ambient1",
+      "bloomingnature:turkey_ambient2"
     ]
   }
 }

@@ -16,6 +16,7 @@ import satisfyu.bloomingnature.util.RandomUtil;
 
 import java.util.EnumSet;
 
+// Owl by Lemonszz: https://github.com/Lemonszz/Biome-Makeover/blob/1.20/LICENCE
 public class BetterFollowOwnerGoal extends Goal
 {
     protected final TamableAnimal tameable;

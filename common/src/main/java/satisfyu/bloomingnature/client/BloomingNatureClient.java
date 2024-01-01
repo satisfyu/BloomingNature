@@ -35,6 +35,8 @@ import satisfyu.bloomingnature.entity.squirrel.SquirrelModel;
 import satisfyu.bloomingnature.entity.squirrel.SquirrelRenderer;
 import satisfyu.bloomingnature.entity.termite.TermiteModel;
 import satisfyu.bloomingnature.entity.termite.TermiteRenderer;
+import satisfyu.bloomingnature.entity.turkey.TurkeyModel;
+import satisfyu.bloomingnature.entity.turkey.TurkeyRenderer;
 import satisfyu.bloomingnature.entity.wandering_gardener.WanderingGardenerModel;
 import satisfyu.bloomingnature.client.render.block.FlowerBoxBlockEntityRenderer;
 import satisfyu.bloomingnature.client.render.block.FlowerPotBigBlockEntityRenderer;
@@ -113,6 +115,7 @@ public class BloomingNatureClient {
         EntityRendererRegistry.register(EntityRegistry.TERMITE, TermiteRenderer::new);
         EntityRendererRegistry.register(EntityRegistry.BOAR, BoarRenderer::new);
         EntityRendererRegistry.register(EntityRegistry.BISON, BisonRenderer::new);
+        EntityRendererRegistry.register(EntityRegistry.TURKEY, TurkeyRenderer::new);
         }
 
     public static void registerEntityModelLayer() {
@@ -129,6 +132,7 @@ public class BloomingNatureClient {
         EntityModelLayerRegistry.register(TermiteModel.LAYER_LOCATION, TermiteModel::getTexturedModelData);
         EntityModelLayerRegistry.register(BoarModel.LAYER_LOCATION, BoarModel::getTexturedModelData);
         EntityModelLayerRegistry.register(BisonModel.LAYER_LOCATION, BisonModel::getTexturedModelData);
+        EntityModelLayerRegistry.register(TurkeyModel.LAYER_LOCATION, TurkeyModel::getTexturedModelData);
     }
 
 }

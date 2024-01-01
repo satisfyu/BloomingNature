@@ -2,6 +2,7 @@ package satisfyu.bloomingnature.entity.bison;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
+import net.minecraft.client.model.CowModel;
 import net.minecraft.client.model.HierarchicalModel;
 import net.minecraft.client.model.QuadrupedModel;
 import net.minecraft.client.model.geom.ModelLayerLocation;
@@ -21,7 +22,6 @@ public class BisonModel<T extends Entity> extends HierarchicalModel<T> {
     private final ModelPart body;
     private final ModelPart head;
     private final ModelPart bison;
-
 
     public BisonModel(ModelPart root) {
         this.bison = root.getChild("bison");
@@ -60,17 +60,13 @@ public class BisonModel<T extends Entity> extends HierarchicalModel<T> {
         return LayerDefinition.create(meshdefinition, 128, 128);
     }
 
-    @Override
-    public void setupAnim(T entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
-        this.root().getAllParts().forEach(ModelPart::resetPose);
-
-        this.head.yRot = netHeadYaw * 0.0089453292F;
-        this.head.xRot = headPitch * 0.0047453292F;
-
-        this.rightHindLeg.xRot = Mth.cos(limbSwing * 0.6662F) * 0.5F * limbSwingAmount;
-        this.leftHindLeg.xRot = Mth.cos(limbSwing * 0.6662F + 3.1415927F) * 0.5F * limbSwingAmount;
-        this.rightFrontLeg.xRot = Mth.cos(limbSwing * 0.6662F + 3.1415927F) * 0.5F * limbSwingAmount;
-        this.leftFrontLeg.xRot = Mth.cos(limbSwing * 0.6662F) * 0.5F * limbSwingAmount;
+    public void setupAnim(T entity, float f, float g, float h, float i, float j) {
+        this.head.xRot = j * 0.017453292F;
+        this.head.yRot = i * 0.017453292F;
+        this.rightHindLeg.xRot = Mth.cos(f * 0.6662F) * 1.4F * g;
+        this.leftHindLeg.xRot = Mth.cos(f * 0.6662F + 3.1415927F) * 1.4F * g;
+        this.rightFrontLeg.xRot = Mth.cos(f * 0.6662F + 3.1415927F) * 1.4F * g;
+        this.leftFrontLeg.xRot = Mth.cos(f * 0.6662F) * 1.4F * g;
     }
 
     @Override

@@ -13,14 +13,12 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.Mth;
 import satisfyu.bloomingnature.BloomingNature;
 
-// Owl by Lemonszz: https://github.com/Lemonszz/Biome-Makeover/blob/1.20/LICENCE
 public class OwlRenderer extends MobRenderer<OwlEntity, OwlModel>
 {
     private static final ResourceLocation TEXTURE = new ResourceLocation(BloomingNature.MOD_ID, "textures/entity/owl.png");
 
     public OwlRenderer(EntityRendererProvider.Context context) {
         super(context, new OwlModel(context.bakeLayer(OwlModel.LAYER_LOCATION)), 0.5F);
-        addLayer(new OwlRenderer.OwnEyesRenderer(this));
     }
 
     @Override
@@ -53,19 +51,5 @@ public class OwlRenderer extends MobRenderer<OwlEntity, OwlModel>
             poseStack.mulPose(Axis.XP.rotationDegrees(Mth.lerp(i, 0, -7.0F)));
         }
         poseStack.scale(0.75F, 0.75F, 0.75F);
-    }
-
-    public static class OwnEyesRenderer extends EyesLayer<OwlEntity, OwlModel>
-    {
-        private static RenderType renderType = RenderType.eyes(new ResourceLocation(BloomingNature.MOD_ID, "textures/entity/owl_eyes.png"));
-
-        public OwnEyesRenderer(RenderLayerParent<OwlEntity, OwlModel> renderLayerParent) {
-            super(renderLayerParent);
-        }
-
-        @Override
-        public RenderType renderType() {
-            return renderType;
-        }
     }
 }

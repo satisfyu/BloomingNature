@@ -178,7 +178,7 @@ public class ObjectRegistry {
     public static final RegistrySupplier<Block> RED_TRAVERTIN_BRICK_STAIRS = registerWithItem("red_travertin_brick_stairs", () -> new StairBlock(RED_TRAVERTIN_BRICKS.get().defaultBlockState(), BlockBehaviour.Properties.copy(RED_BRICKS.get())));
     public static final RegistrySupplier<Block> RED_TRAVERTIN_BRICK_SLAB = registerWithItem("red_travertin_brick_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(RED_TRAVERTIN_BRICKS.get())));
     public static final RegistrySupplier<Block> RED_TRAVERTIN_BRICK_WALL = registerWithItem("red_travertin_brick_wall", () -> new WallBlock(BlockBehaviour.Properties.copy(RED_TRAVERTIN_BRICKS.get())));
-    public static final RegistrySupplier<Block> FOREST_MOSS = registerWithItem("forest_moss", () -> new MudBlock(BlockBehaviour.Properties.copy(Blocks.GRASS_BLOCK)));
+    public static final RegistrySupplier<Block> FOREST_MOSS = registerWithItem("forest_moss", () -> new MudBlock(BlockBehaviour.Properties.copy(Blocks.GRASS_BLOCK).speedFactor(0.05F)));
     public static final RegistrySupplier<Block> MARSH_BLOCK = registerWithItem("marsh_block", () -> new SinkInBlock(BlockBehaviour.Properties.copy(Blocks.MUD)));
     public static final RegistrySupplier<Block> TERMITE_MOUND = registerWithItem("termite_mound", () -> new TermiteBlock(Blocks.ROOTED_DIRT, BlockBehaviour.Properties.of().mapColor(MapColor.CLAY)));
     public static final RegistrySupplier<Block> QUICKSAND = registerWithItem("quicksand", () -> new SinkInSandBlock(BlockBehaviour.Properties.copy(Blocks.SAND)));
@@ -244,6 +244,10 @@ public class ObjectRegistry {
     public static final RegistrySupplier<Item> OWL_SPAWN_EGG = registerItem("owl_spawn_egg", () -> new ArchitecturySpawnEggItem(EntityRegistry.OWL, -1, -1, getSettings()));
     public static final RegistrySupplier<Item> BOAR_SPAWN_EGG = registerItem("boar_spawn_egg", () -> new ArchitecturySpawnEggItem(EntityRegistry.BOAR, -1, -1, getSettings()));
     public static final RegistrySupplier<Item> TERMITE_SPAWN_EGG = registerItem("termite_spawn_egg", () -> new ArchitecturySpawnEggItem(EntityRegistry.TERMITE, -1, -1, getSettings()));
+    public static final RegistrySupplier<Item> BISON_SPAWN_EGG = registerItem("bison_spawn_egg", () -> new ArchitecturySpawnEggItem(EntityRegistry.BISON, -1, -1, getSettings()));
+    public static final RegistrySupplier<Item> TURKEY_SPAWN_EGG = registerItem("turkey_spawn_egg", () -> new ArchitecturySpawnEggItem(EntityRegistry.TURKEY, -1, -1, getSettings()));
+
+
     public static final RegistrySupplier<Block> COCONUT_HANGING = registerWithoutItem("coconut_hanging", () -> new HangingCoconutBlock(BlockBehaviour.Properties.copy(Blocks.BAMBOO)));
     public static final RegistrySupplier<Block> POTTED_LARCH_SAPLING = registerWithoutItem("potted_larch_sapling", () -> new FlowerPotBlock(LARCH_SAPLING.get(), BlockBehaviour.Properties.copy(Blocks.FLOWER_POT)));
     public static final RegistrySupplier<Block> POTTED_FIR_SAPLING = registerWithoutItem("potted_fir_sapling", () -> new FlowerPotBlock(FIR_SAPLING.get(), BlockBehaviour.Properties.copy(Blocks.FLOWER_POT)));

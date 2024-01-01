@@ -12,7 +12,7 @@
     "dirt_provider": {
       "type": "minecraft:simple_state_provider",
       "state": {
-        "Name": "bloomingnature:chestnut_log",
+        "Name": "minecraft:dirt",
         "Properties": {
           "axis": "y"
         }
@@ -40,14 +40,14 @@
     },
     "trunk_placer": {
       "type": "minecraft:fancy_trunk_placer",
-      "base_height": 4,
-      "height_rand_a": 2,
-      "height_rand_b": 4
+      "base_height": 5,
+      "height_rand_a": 3,
+      "height_rand_b": 5
     },
     "foliage_placer": {
-      "radius": 2,
-      "offset": 5,
-      "height": 5,
+      "radius": 3,
+      "offset": 6,
+      "height": 6,
       "type": "minecraft:fancy_foliage_placer"
     },
     "decorators": [

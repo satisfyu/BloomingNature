@@ -20,6 +20,7 @@ import satisfyu.bloomingnature.entity.raccoon.RaccoonEntity;
 import satisfyu.bloomingnature.entity.red_wolf.RedWolfEntity;
 import satisfyu.bloomingnature.entity.squirrel.SquirrelEntity;
 import satisfyu.bloomingnature.entity.termite.TermiteEntity;
+import satisfyu.bloomingnature.entity.turkey.TurkeyEntity;
 import satisfyu.bloomingnature.entity.wandering_gardener.WanderingGardenerEntity;
 import satisfyu.bloomingnature.util.BloomingNatureIdentifier;
 
@@ -71,6 +72,12 @@ public class EntityRegistry {
                     .build(new BloomingNatureIdentifier("muddy_pig").toString())
     );
 
+    public static final RegistrySupplier<EntityType<TurkeyEntity>> TURKEY = create("turkey",
+            () -> EntityType.Builder.of(TurkeyEntity::new, MobCategory.CREATURE)
+                    .sized(0.9f, 1.3f)
+                    .build(new BloomingNatureIdentifier("turkey").toString())
+    );
+
     public static final RegistrySupplier<EntityType<DeerEntity>> DEER = create("deer",
             () -> EntityType.Builder.of(DeerEntity::new, MobCategory.CREATURE)
                     .build(new BloomingNatureIdentifier("deer").toString())
@@ -117,5 +124,6 @@ public class EntityRegistry {
         EntityAttributeRegistry.register(BOAR, BoarEntity::createMobAttributes);
         EntityAttributeRegistry.register(TERMITE, TermiteEntity::createMobAttributes);
         EntityAttributeRegistry.register(BISON, BisonEntity::createMobAttributes);
+        EntityAttributeRegistry.register(TURKEY, TurkeyEntity::createMobAttributes);
     }
 }

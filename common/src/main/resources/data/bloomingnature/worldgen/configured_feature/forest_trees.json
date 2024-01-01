@@ -7,7 +7,7 @@
         "feature": "bloomingnature:forest_oak_branched_checked"
       },
       {
-        "chance": 0.4,
+        "chance": 0.14,
         "feature": "bloomingnature:forest_birch_branched_checked"
       },
       {
@@ -15,7 +15,7 @@
         "feature": "bloomingnature:forest_oak_straight_checked"
       },
       {
-        "chance": 0.25,
+        "chance": 0.1,
         "feature": "bloomingnature:forest_birch_small_checked"
       },
       {
