@@ -3,7 +3,7 @@
     "features": [
       {
         "feature": "bloomingnature:snowy_slopes_fir_checked",
-        "chance": 0.0666667
+        "chance": 0.1666667
       }
     ],
     "default": "bloomingnature:snowy_slopes_fir_checked"

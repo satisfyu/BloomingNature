@@ -11,7 +11,7 @@
     "sources": "https://github.com/satisfyu/bloomingnature"
   },
   "license": "ARR",
-  "icon": "assets.bloomingnature.icon.png",
+  "icon": "pack.png",
   "environment": "*",
   "entrypoints": {
     "main": [
@@ -19,16 +19,12 @@
     ],
     "client": [
       "satisfyu.bloomingnature.fabric.client.BloomingNatureClientFabric"
-    ],
-    "terrablender":  [
-      "satisfyu.bloomingnature.fabric.terrablender.TerrablenderFabric"
     ]
   },
   "depends": {
     "fabric": "*",
     "minecraft": ">=1.20",
     "architectury": ">=9.0.8",
-    "doapi": ">=1.2.8",
-    "terrablender": ">=3.0.0.163"
+    "doapi": ">=1.2.8"
   }
 }
