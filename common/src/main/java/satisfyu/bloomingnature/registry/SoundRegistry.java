@@ -34,6 +34,9 @@ public class SoundRegistry {
     public static final RegistrySupplier<SoundEvent> TURKEY_AMBIENT = create("turkey_ambient");
     public static final RegistrySupplier<SoundEvent> TURKEY_HURT = create("turkey_hurt");
     public static final RegistrySupplier<SoundEvent> TURKEY_DEATH = create("turkey_death");
+    public static final RegistrySupplier<SoundEvent> BOAR_AMBIENT = create("boar_ambient");
+    public static final RegistrySupplier<SoundEvent> BOAR_HURT = create("boar_hurt");
+    public static final RegistrySupplier<SoundEvent> BOAR_DEATH = create("boar_death");
 
 
 

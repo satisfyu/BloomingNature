@@ -3,7 +3,7 @@
   "start_pool": "bloomingnature:tree_stump/start_pool",
   "size": 2,
   "max_distance_from_center": 80,
-  "biomes": "#bloomingnature:taiga_biomes",
+  "biomes": "#minecraft:is_taiga",
   "step": "surface_structures",
   "terrain_adaptation": "beard_thin",
   "start_height": {

@@ -33,7 +33,7 @@
     ]
   },
   "raccoon_ambient": {
-    "subtitle": "subtitles.bloomingnature.racoon_ambient",
+    "subtitle": "subtitles.bloomingnature.raccoon_ambient",
     "sounds": [
       "bloomingnature:raccoon_ambient1",
       "bloomingnature:raccoon_ambient2",
@@ -55,7 +55,7 @@
     ]
   },
   "squirrel_ambient": {
-    "subtitle": "subtitles.bloomingnature.racoon_ambient",
+    "subtitle": "subtitles.bloomingnature.raccoon_ambient",
     "sounds": [
       "bloomingnature:squirrel_ambient1",
       "bloomingnature:squirrel_ambient2",
@@ -77,7 +77,7 @@
     ]
   },
   "owl_ambient": {
-    "subtitle": "subtitles.bloomingnature.racoon_ambient",
+    "subtitle": "subtitles.bloomingnature.owl_ambient",
     "sounds": [
       "bloomingnature:owl_ambient1",
       "bloomingnature:owl_ambient2"
@@ -160,6 +160,32 @@
     "sounds": [
       "bloomingnature:turkey_ambient1",
       "bloomingnature:turkey_ambient2"
+    ]
+  },
+  "boar_hurt": {
+    "subtitle": "subtitles.bloomingnature.boar_hurt",
+    "sounds": [
+      "bloomingnature:boar_hurt1",
+      "bloomingnature:boar_hurt2",
+      "bloomingnature:boar_hurt3",
+      "bloomingnature:boar_hurt4"
+
+    ]
+  },
+  "boar_death": {
+    "subtitle": "subtitles.bloomingnature.boar_death",
+    "sounds": [
+      "bloomingnature:boar_death"
+    ]
+  },
+  "boar_ambient": {
+    "subtitle": "subtitles.bloomingnature.boar_ambient",
+    "sounds": [
+      "bloomingnature:boar_ambient1",
+      "bloomingnature:boar_ambient2",
+      "bloomingnature:boar_ambient3",
+      "bloomingnature:boar_ambient4",
+      "bloomingnature:boar_ambient5"
     ]
   }
 }

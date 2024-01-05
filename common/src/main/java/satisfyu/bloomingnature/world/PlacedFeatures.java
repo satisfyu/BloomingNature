@@ -126,6 +126,11 @@ public class PlacedFeatures {
     public static final ResourceKey<PlacedFeature> LARCH_GRASS_PATCH = registerKey("larch_grass_patch");
     public static final ResourceKey<PlacedFeature> LARCH_FLOWERS = registerKey("larch_flowers");
 
+    public static final ResourceKey<PlacedFeature> DARK_FOREST_VEGETATION = registerMCKey("dark_forest_vegetation");
+    public static final ResourceKey<PlacedFeature> DARK_FOREST_TREES = registerKey("dark_forest_trees");
+    public static final ResourceKey<PlacedFeature> DARK_FOREST_GRASS_PATCH = registerKey("dark_forest_grass_patch");
+    public static final ResourceKey<PlacedFeature> DARK_FOREST_TREE_FALLEN = registerKey("dark_forest_tree_fallen");
+
     public static final ResourceKey<PlacedFeature> TREES_SAVANNA = registerMCKey("trees_savanna");
     public static final ResourceKey<PlacedFeature> PATCH_GRASS_SAVANNA = registerMCKey("patch_grass_savanna");
     public static final ResourceKey<PlacedFeature> BROWN_MUSHROOM_NORMAL = registerMCKey("brown_mushroom_normal");

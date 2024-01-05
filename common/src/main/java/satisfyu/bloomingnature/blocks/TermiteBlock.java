@@ -7,7 +7,7 @@ import java.util.function.Supplier;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.level.block.Block;
-import satisfyu.bloomingnature.entity.termite.TermiteEntity; // Import your TermiteEntity class
+import satisfyu.bloomingnature.entity.TermiteEntity; // Import your TermiteEntity class
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.enchantment.EnchantmentHelper;
 import net.minecraft.world.item.enchantment.Enchantments;

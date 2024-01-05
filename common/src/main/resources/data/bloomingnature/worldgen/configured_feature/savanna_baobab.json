@@ -137,27 +137,27 @@
                       },
                       "trunk_placer": {
                         "type": "minecraft:cherry_trunk_placer",
-                        "base_height": 14,
+                        "base_height": 17,
                         "height_rand_a": 1,
-                        "height_rand_b": 0,
+                        "height_rand_b": 1,
                         "branch_count": {
                           "type": "minecraft:weighted_list",
                           "distribution": [
                             {
                               "weight": 1,
-                              "data": 2
+                              "data": 1
                             },
                             {
                               "weight": 1,
-                              "data": 3
+                              "data": 2
                             }
                           ]
                         },
                         "branch_horizontal_length": {
                           "type": "minecraft:uniform",
                           "value": {
-                            "min_inclusive": 7,
-                            "max_inclusive": 9
+                            "min_inclusive": 6,
+                            "max_inclusive": 7
                           }
                         },
                         "branch_start_offset_from_top": {
@@ -219,7 +219,7 @@
                   },
                   "trunk_placer": {
                     "type": "minecraft:straight_trunk_placer",
-                    "base_height": 13,
+                    "base_height": 15,
                     "height_rand_a": 0,
                     "height_rand_b": 0
                   },
@@ -229,7 +229,11 @@
                     "offset": 0,
                     "height": 16
                   },
-                  "decorators": []
+                  "decorators": [
+                    {
+                      "type": "minecraft:trunk_vine"
+                    }
+                  ]
                 }
               },
               "placement": [

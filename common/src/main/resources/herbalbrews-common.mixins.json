@@ -6,8 +6,7 @@
   "client": [
   ],
   "mixins": [
-    "WanderingTraderManagerMixin",
-    "SpawnMobAccessor"
+    "WanderingTraderManagerMixin"
   ],
   "injectors": {
     "defaultRequire": 1

@@ -3,7 +3,7 @@
   "start_pool": "bloomingnature:beach_ruin/start_pool",
   "size": 2,
   "max_distance_from_center": 80,
-  "biomes": "#bloomingnature:beach_biomes",
+  "biomes": "#minecraft:is_beach",
   "step": "surface_structures",
   "terrain_adaptation": "beard_thin",
   "start_height": {
